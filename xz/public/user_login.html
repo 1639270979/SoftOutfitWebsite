@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style>
+		#main{
+			width:1050px;
+			height:566px;
+			background-image:url(img/bg.png);
+			background-repeat:no-repeat;
+			margin:auto;
+		}
+		#contain{
+			width:300px;
+			height:350px;
+			background-color:rgba(20,20,20,0.3);
+			margin-top:120px;
+			margin-left:600px;
+		}
+		#d3{
+			font-size:20px;
+			margin-top:20px;
+			margin-left:10px;
+
+			color:white;
+		}
+		#d4{
+			
+			margin-left:70px;
+			margin-top:20px;
+			margin-right:10px;
+			color:white;
+			text-decoration:none;
+		}
+		.text{
+			border:0px;
+			height:40px;
+			background:url(img/yhm.png);
+			background-repeat:no-repeat;
+			background-position:95% 50%;
+			background-color:white;
+		}
+		.pawd{
+			border:0px;
+			height:40px;
+			background:url(img/mm.png);
+			background-repeat:no-repeat;
+			background-position:95% 50%;
+			background-color:white;
+		}
+		#d5{
+			display:block;
+			width:280px;
+			height:45px;
+			background-color:#0ba5df;
+			border:0px;
+			font-size:20px;
+			margin:auto;
+			color:white;
+		}
+		#d6{
+			margin-top:60px;
+			border:0px;
+			padding:0px;
+		}
+		#d8{
+			display:inline-block;
+			margin-left:100px;
+			margin-top:20px;
+			margin-right:10px;
+			
+		}
+		.alink:link{
+			color:white;
+			text-decoration:none;
+		}
+		.alink:visited{
+			color:white;
+		}
+		#d10{
+			display:inline-block;
+			margin-left:15px;
+			color:white;
+		}
+		hr{
+			width:280px;
+			margin-top:20px;
+		}
+	</style>
+ </head>
+ <body>
+  <div id="main">
+	<table></table>
+	<form method='post' action="/user/login">
+		<div id="contain">
+			<table></table>
+			<div style="margin-top:20px">	
+				<span color="white" id="d3">登录学子商城</span>
+				<a href="" class="alink" color="white" id="d4">新用户注册</a>
+			</div>
+			<hr/><br>
+			<div class="info" align="center">
+				<input type="text" name='uname' placeholder=" &nbsp &nbsp请输入您的用户名" size="35px" class="text"><br><br><br>
+				<input type="password" name='upwd' placeholder=" &nbsp &nbsp请输入您的密码" size="35px" class="pawd">
+			</div>
+			<div id="d10">
+				<input type="checkbox">自动登录
+			</div>
+			<div color="white" id="d8">
+				<a href="" class="alink">忘记密码?</a>
+			</div><br><br>
+			<input type="submit" value="登 &nbsp &nbsp录" id="d5">
+		</div>
+	</form>
+  </div>
+ </body>
+</html>

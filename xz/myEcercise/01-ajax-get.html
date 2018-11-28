@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>发送异步请求</title>
+ </head>
+ <body>
+  <button onclick="genMsg()">发送异步请求</button>
+  <script src="common.js"></script>
+  <script>
+	function genMsg(){
+		//1.创建xhr
+		var xhr=createXhr();
+		//2.监听事件
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				var result=xhr.responseText;
+				console.log(result);
+			}
+		}
+		//3.打开连接
+		xhr.open("get","/demo/ajaxDemo",true);
+		//4.发送请求
+		xhr.send(null);
+	}
+  </script>
+ </body>
+</html>
