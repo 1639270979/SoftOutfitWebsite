@@ -1,0 +1,42 @@
+/*welcome 样式*/
+*{
+	margin:0px;
+	padding:0px;
+}
+/*主*/
+.welcome-top-second{
+	width:1400px;
+	height:30px;
+	margin:0 auto;
+	border:1px solid black;
+	
+}
+/*用户浮动*/
+.welcome-top-second .user{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	float:right;
+}
+/*欢迎*/
+.welcome-top-second .welcome{
+	width:200px;
+	height:30px;
+	line-height:30px;
+	float:left;
+}
+
+.welcome-top-second .user>div{
+	float:left;
+}
+/*a标签点击前的状态*/
+.welcome-top-second .user>div a:link{
+	color:black;
+	text-decoration:none;
+}
+.welcome-top-second .user>div a:visited{
+	color:black;
+}
+.welcome-top-second .user>div:first-child{
+	margin-right:20px;
+}
