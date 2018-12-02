@@ -5,11 +5,10 @@
 }
 /*主*/
 .welcome-top-second{
-	width:1400px;
+	width:1300px;
 	height:30px;
 	margin:0 auto;
 	border:1px solid black;
-	
 }
 /*用户浮动*/
 .welcome-top-second .user{
@@ -39,4 +38,30 @@
 }
 .welcome-top-second .user>div:first-child{
 	margin-right:20px;
+}
+/*logo-wrap*/
+.logo-wrap>.box-center{
+	width:1300px;
+	height:80px;
+	border:1px solid red;
+	margin:0 auto;
+}
+.logo-wrap .box-logo{
+	width:200px;
+	height:80px;
+	border:1px solid yellow;
+}
+.logo-wrap .box-logo a{
+	display:inline-block;
+	width:200px;
+	height:60px;
+	border:1px solid black;
+	margin-left:5px;
+	margin-top:16px;
+	line-height:60px;
+	font-size:30px;
+	color:
+}
+.logo-wrap .box-logo img{
+	height:100%;
 }
