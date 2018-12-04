@@ -48,20 +48,37 @@
 }
 .logo-wrap .box-logo{
 	width:200px;
-	height:80px;
+	height:60px;
 	border:1px solid yellow;
+	float:left;
+	margin-top:15px;
+	margin-left:5px;
+	margin-right:200px;
 }
 .logo-wrap .box-logo a{
-	display:inline-block;
+	display:block;
 	width:200px;
 	height:60px;
 	border:1px solid black;
-	margin-left:5px;
-	margin-top:16px;
 	line-height:60px;
 	font-size:30px;
-	color:
+	background:url("../img/LOGO/logo.jpg") no-repeat;
+	background-size:60px 60px;
 }
+/*
 .logo-wrap .box-logo img{
 	height:100%;
+}
+*/
+/*搜索框*/
+.logo-wrap>.box-center .search-wrap{
+	width:200px;
+	height:60px;
+	float:left;
+}
+/*书架*/
+.logo-wrap>.box-center .book-shelf{
+	width:100px;
+	height:60px;
+	float:right;
 }
