@@ -2,6 +2,7 @@
 *{
 	margin:0px;
 	padding:0px;
+	border:0px;
 }
 /*主*/
 .welcome-top-second{
@@ -49,7 +50,7 @@
 .logo-wrap .box-logo{
 	width:200px;
 	height:60px;
-	border:1px solid yellow;
+	border:0px solid yellow;
 	float:left;
 	margin-top:15px;
 	margin-left:5px;
@@ -59,7 +60,7 @@
 	display:block;
 	width:200px;
 	height:60px;
-	border:1px solid black;
+	border:0px solid black;
 	line-height:60px;
 	font-size:30px;
 	background:url("../img/LOGO/logo.jpg") no-repeat;
@@ -72,9 +73,34 @@
 */
 /*搜索框*/
 .logo-wrap>.box-center .search-wrap{
-	width:200px;
-	height:60px;
+	width:350px;
+	height:40px;
 	float:left;
+	margin-top:25px;
+	border:0px solid #d3d1d1;
+	border-right:2px;
+	border-radius:4px;
+}
+.logo-wrap>.box-center .search-wrap p{
+	float:left;
+	overflow:hidden;
+	width:280px;
+	height:40px;
+	border:1px solid #dbdbdb;
+	border-right:none;
+	border-radius:20px 0 0 20px;
+}
+.logo-wrap>.box-center .search-wrap>p input{
+	width:280px;
+	height:40px;
+	margin-left:15px;
+}
+.logo-wrap>.box-center .search-wrap>input{
+	float:left;
+	border-radius:0 20px 20px 0;
+	width:65px;
+	height:40px;
+	background:#ff5e66;
 }
 /*书架*/
 .logo-wrap>.box-center .book-shelf{
