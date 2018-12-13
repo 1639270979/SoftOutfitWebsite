@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		用户名称：<input type="text" id="uname" onblur="checkUname()">
+		<span id="d1"></span>
+	</div>
+	<div>
+		用户密码：<input type="password" id="upwd">
+	</div>
+	<div>
+		密码验证：<input type="password" id="upwd1" onblur="checkUpwd()">
+		<span id="d2"></span>
+	</div>
+	<div>
+		用户电话：<input type="text" id="phone" onblur="checkphone()">
+		<span id="d3"></span>
+	</div>
+	<div>
+		用户邮箱：<input type="email" id="email">
+	</div>
+	<div>
+		用户头像：<input type="text" id="avatar">
+		<span id="d5"></span>
+	</div>
+	<div>
+		用户姓名：<input type="text" id="user_name"">
+	</div>
+	<div>
+		用户性别：
+		<select id="gender">
+			<option value="1">男</option>
+			<option value="0">女</option>
+			<option value="2">不详</option>
+		</select>
+	</div>
+	<button onclick="register()">注册</button>
+	<script>
+		//用户注册
+		var isRegister=false;
+		function register(){
+			if(!isRegister){
+				alert('不能注册');
+				return;
+			}
+			if(!isUpwd){
+				alert('不能注册');
+				return;
+			}
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					console.log(result);
+					if(result==0){
+						d1.innerHTML="可以注册";
+						isRegister=true;
+					}else{
+						d1.innerHTML="用户名已被注册"
+						isRegister=false;
+					}
+				}
+			}
+			xhr.open('post',"/myPro/register",true);
+			var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&avatar="+avatar.value+"&user_name="+user_name.value+"&gender="+gender.value;
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xhr.send(formdata);
+		}
+		//失去焦点时调用的事件
+		function checkUname(){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					//console.log(result);
+					if(result==0){
+						d1.innerHTML="可以注册";
+						isRegister=true;
+					}else if(result==1){
+						d1.innerHTML="用户名已被注册";
+						isRegister=false;
+					}else{
+						d1.innerHTML="用户名不能为空";
+					}
+				}
+			}
+			xhr.open('get',"/myPro/checkUname?uname=" + uname.value,true);
+			xhr.send(null);
+		}
+		//检验密码
+		var isUpwd="";
+		function checkUpwd(){
+			if(upwd.value==upwd1.value){
+				d2.innerHTML="密码正确";
+				isUpwd=true;
+			}else{
+				d2.innerHTML="密码不可用";
+				isUpwd=false;
+			}
+		}
+		var isPhone="";
+		function checkphone(){
+			var str=phone.value;
+			if(str.length==11){
+				d3.innerHTML="号码格式正确"
+				isPhone=true;
+			}else{
+				d3.innerHTML="号码格式不正确";
+				isPhone=false;
+			}
+		}
+	</script>
+</body>
+</html>

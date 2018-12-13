@@ -1,4 +1,4 @@
-USE NAMES UTF8;
+SET NAMES UTF8;
 #删除数据库
 DROP DATABASE IF EXISTS novel;
 #创建数据库
@@ -6,7 +6,7 @@ CREATE DATABASE novel CHARSET UTF8;
 #使用数据库
 USE novel;
 #创建推荐表
-CREATE TABLE recommend(
+CREATE TABLE novel_recommend(
 	rid SMALLINT PRIMARY KEY AUTO_INCREMENT, #编号
 	rname VARCHAR(24),                       #书名
 	author VARCHAR(12),			 #作者
@@ -18,7 +18,7 @@ CREATE TABLE recommend(
 	detail VARCHAR(128)			 #详情
 );
 /**插入推荐表数据**/
-INSERT INTO recommend VALUES
+INSERT INTO novel_recommend VALUES
 (1,'同桌凶猛','柳下挥','连载','签约 VIP 都市 都市生活','29.02万','起点男生','过去、畅想未来、梦幻现实，再塑传奇人生！','青梅竹马的同桌竟然成了大明星，又凶又萌。'),
 (NULL,'明朝败家子','上山打老虎','连载','签约 VIP 历史 两宋元明','245.08万','起点男生','醒掌天下权，醉卧美人膝，五千年风华烟雨，是非成败转头空！','弘治十一年。这是一个美好的清晨。此时朱厚照初成年。此时王守仁和唐伯虎磨刀霍霍，预备科举。此时小冰河期已经来临，绵长的严寒肆虐着大地。此时在南和伯府里，地主家的傻儿子，南和伯的嫡传继承人方继藩……开始了他没羞没躁的败家人生。'),
 (NULL,'全职武神','流浪的蛤蟆','连载','签约 VIP 仙侠 古典仙侠','97.03万','QQ小说','醒掌天下权，醉卧美人膝，五千年风华烟雨，是非成败转头空！','这是一个有侠气的故事…………………………'),
@@ -32,9 +32,8 @@ INSERT INTO recommend VALUES
 #创建推荐小说图片表
 CREATE TABLE recommend_picture(
 	pid SMALLINT PRIMARY KEY AUTO_INCREMENT, #编号
-	purl CHARSET(24),			 #路径
-	title CHARSET(54),			 #标题
-	href CHARSET(128)
+	purl VARCHAR(24),			 #路径
+	title VARCHAR(54)			 #标题
 );
 #往推荐表中插入数据
 INSERT INTO recommend_picture VALUES
@@ -49,7 +48,7 @@ INSERT INTO recommend_picture VALUES
 (9,'./img/recommended/8.jpg','轮播广告图9')
 ;
 /**用户信息**/
-CREATE TABLE xz_user(
+CREATE TABLE novel_user(
   uid INT PRIMARY KEY AUTO_INCREMENT,
   uname VARCHAR(32),
   upwd VARCHAR(32),
@@ -61,7 +60,7 @@ CREATE TABLE xz_user(
   gender INT                  #性别  0-女  1-男
 );
 /**用户信息**/
-INSERT INTO xz_user VALUES
+INSERT INTO novel_user VALUES
 (NULL, 'dingding', '123456', 'ding@qq.com', '13501234567', 'img/avatar/default.png', '丁伟', '1'),
 (NULL, 'dangdang', '123456', 'dang@qq.com', '13501234568', 'img/avatar/default.png', '林当', '1'),
 (NULL, 'doudou', '123456', 'dou@qq.com', '13501234569', 'img/avatar/default.png', '窦志强', '1'),

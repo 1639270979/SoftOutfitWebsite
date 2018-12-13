@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload="list()">
+	<input type="button" value="查询">
+	<table border="1px" width="800px">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>用户名</th>
+				<th>密码</th>
+				<th>邮箱</th>
+				<th>电话</th>
+				<th>图片</th>
+				<th>用户姓名</th>
+				<th>用户性别</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody id="d1">
+		</tbody>
+	</table>
+	<script>
+		function list(){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					console.log(result);
+					var arr=JSON.parse(result);
+					console.log(arr);
+					for(var i=0;i<arr.length;i++){
+						if(arr[i].gender==1){
+							arr[i].gender="男"
+						}else if(arr[i].gender==0){
+							arr[i].gender="女"
+						}else{
+							arr[i].gender="未知"
+						}
+
+						d1.innerHTML+=
+						`<tr>
+							<td> ${arr[i].uid} </td>
+							<td> ${arr[i].uname} </td>
+							<td> ${arr[i].upwd} </td>
+							<td> ${arr[i].email} </td>
+							<td> ${arr[i].phone} </td>
+							<td> ${arr[i].avatar} </td>
+							<td> ${arr[i].user_name} </td>
+							<td> ${arr[i].gender}  </td>
+							<td>
+								<a href="javascript:del(${arr[i].uid})">删除</a>
+								<a href="04_userupdate.html?uid=${arr[i].uid}">修改</a>
+							</td>
+						</tr>`;
+					}
+				}
+			}
+			xhr.open('get','/myPro/list',true);
+			xhr.send(null);
+		}
+		function del(uid){
+			console.log(uid);
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					if(result==1){
+						alert('删除成功');
+						list();
+					}else{
+						alert('删除失败');
+						list();
+					}
+					//console.log(result);
+					d1.innerHTML=result;
+				}
+			}
+			xhr.open('post',"/myPro/delete",true);
+			var formdata="uid="+uid;
+			//修改请求头，可以发送任意文本
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xhr.send(formdata);
+		}
+	</script>
+</body>
+</html>

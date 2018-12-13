@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!--<input type="text" id="uid">-->
+	<input type="button" onclick="show()" value="获取">
+	<table id="d1" border="1px"></table>
+	<script>
+		function show(){
+			var xhr =new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					var arr=JSON.parse(result);
+					//d1.innerHTML=arr;
+					console.log(arr);
+					for(var i=0;i<arr.length;i++){
+						d1.innerHTML+="<tr><td>"+arr[i].uname+"</td><td>"+arr[i].upwd+"</td></tr>";
+					//}
+					}
+				}
+			}
+			xhr.open("get","/demo/ajaxList",true);
+			xhr.send(null);
+			
+		}
+	</script>
+</body>
+</html>

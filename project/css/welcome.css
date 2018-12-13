@@ -3,26 +3,37 @@
 	margin:0px;
 	padding:0px;
 	border:0px;
+	text-decoration:none;
+}
+body{
+	font-size:16px;
+}
+input{
+	outline:0;
+}
+/* top-nav */
+.welcome-top-nav{
+	height:35px;
+	background:#f7f7f7;
 }
 /*主*/
 .welcome-top-second{
-	width:1300px;
-	height:30px;
+	width:1200px;
+	height:35px;
 	margin:0 auto;
-	border:1px solid black;
 }
 /*用户浮动*/
 .welcome-top-second .user{
 	width:100px;
-	height:30px;
-	line-height:30px;
+	height:35px;
+	line-height:35px;
 	float:right;
 }
 /*欢迎*/
 .welcome-top-second .welcome{
 	width:200px;
-	height:30px;
-	line-height:30px;
+	height:35px;
+	line-height:35px;
 	float:left;
 }
 
@@ -31,20 +42,26 @@
 }
 /*a标签点击前的状态*/
 .welcome-top-second .user>div a:link{
-	color:black;
+	color:#4c4c4c;
 	text-decoration:none;
 }
 .welcome-top-second .user>div a:visited{
-	color:black;
+	color:#4c4c4c;
+}
+.welcome-top-second .user>div a:hover{
+	color:#ff9800;
+}
+.welcome-top-second .user>div a:focus{
+	color:#f3e480;
 }
 .welcome-top-second .user>div:first-child{
 	margin-right:20px;
 }
 /*logo-wrap*/
 .logo-wrap>.box-center{
-	width:1300px;
+	width:1200px;
 	height:80px;
-	border:1px solid red;
+	border-bottom:1px solid red;
 	margin:0 auto;
 }
 .logo-wrap .box-logo{
@@ -63,7 +80,7 @@
 	border:0px solid black;
 	line-height:60px;
 	font-size:30px;
-	background:url("../img/LOGO/logo.jpg") no-repeat;
+	background:url("../img/header/logo.jpg") no-repeat;
 	background-size:60px 60px;
 }
 /*
@@ -73,7 +90,7 @@
 */
 /*搜索框*/
 .logo-wrap>.box-center .search-wrap{
-	width:350px;
+	width:400px;
 	height:40px;
 	float:left;
 	margin-top:25px;
@@ -84,27 +101,46 @@
 .logo-wrap>.box-center .search-wrap p{
 	float:left;
 	overflow:hidden;
-	width:280px;
-	height:40px;
-	border:1px solid #dbdbdb;
+	width:320px;
+	height:38px;
 	border-right:none;
-	border-radius:20px 0 0 20px;
+	border:1px solid #dbdbdb;
 }
 .logo-wrap>.box-center .search-wrap>p input{
-	width:280px;
-	height:40px;
+	width:305px;
+	height:38px;
 	margin-left:15px;
 }
 .logo-wrap>.box-center .search-wrap>input{
 	float:left;
-	border-radius:0 20px 20px 0;
-	width:65px;
+	width:60px;
 	height:40px;
-	background:#ff5e66;
+	background:url("../img/header/search1.png") no-repeat;
+	background-position:left center;
+	background-size:40px;
 }
 /*书架*/
-.logo-wrap>.box-center .book-shelf{
-	width:100px;
-	height:60px;
+.logo-wrap .book-shelf{
+	width:150px;
+	height:50px;
 	float:right;
+	margin-top:15px;
+	border-radius:20px;
+	border:1px solid #e6e6e6;
+}
+/* 我的书架 */
+.logo-wrap .book-shelf a{
+	line-height:50px;
+	font-size:25px;
+	color:#4c4c4c;
+	text-decoration:none;
+}
+.logo-wrap .book-shelf a:link,a:visited{
+	color:#000;
+}
+.logo-wrap .book-shelf a:hover{
+	color:#ff9800;
+}
+.logo-wrap .book-shelf a:focus{
+	color:#f3e480;
 }

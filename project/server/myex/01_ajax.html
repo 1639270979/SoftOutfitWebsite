@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		用户登录：<input type="text" id="uname" onfocus="o_focus()" onblur="o_blur()">
+		<span id="s1"></span>
+	</div>
+	<div>
+		用户注册：<input type="password" id="upwd" onfocus="n_focus()" onblur="n_blur()">
+		<span id="s2"></span>
+	</div>
+	<input type="button" value="登录" onclick="getMsg()">
+	<div id="login"></div>
+	<script>
+			function o_focus(){
+				s1.innerHTML="请输入用户名";
+			}
+			function o_blur(){
+				var e=uname.value;
+				if(!e){
+					s1.innerHTML="用户名不能为空";
+				}else{
+					s1.innerHTML="用户名格式正确";
+				}
+				
+			}
+			function n_focus(){
+				s2.innerHTML="请输入密码";
+			}
+			function n_blur(){
+				var ele=upwd.value;
+				if(!ele){
+					s2.innerHTML="密码不能为空";
+				}else{
+					s2.innerHTML="密码格式正确"
+				}
+			}
+		function getMsg(){
+			var xhr=new XMLHttpRequest();
+			//console.log(xhr);
+			//2.
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					login.innerHTML=result;
+					console.log(result);
+				}
+			}
+			//3.
+			var un=uname.value;
+			var up=upwd.value;
+			var url="/demo/ajaxlogin?uname="+un+"&upwd="+up;
+			xhr.open("get",url,true);
+			//4
+			xhr.send(null);
+		}
+	</script>
+</body>
+</html>

@@ -1,26 +1,24 @@
-//使用express构建web服务器
+//引入express模块
 const express = require('express');
-const user = require('./routes/user.js');
-var product = require('./routes/product.js');
-var shoppingcart = require('./routes/shoppingcart');
-var demo = require('./routes/demo.js');
 const bodyParser = require('body-parser');
-var app = express();
-var server = app.listen(3000);
-//使用body-parser中间件
-app.use(bodyParser.urlencoded({extended:false}));
-
+const userRouter = require('./routes/user.js');
+const productRouter = require('./routes/product.js');
+const demoRouter=require('./routes/demo.js');
+const myProRouter=require('./routes/myPro.js');
+var server = express();
+//连接服务器
+server.listen(3000);
 //托管静态资源
-app.use(express.static('public'));
-//托管静态资源到myExercise目录下
-app.use(express.static('myEcercise'));
-//使用路由器管理路由
-//把user路由器挂载到/user下
-app.use('/user',user);
-//把product路由器挂载到/product下
-app.use('/product',product);
-//把shoppingcart路由器挂载到/shoppingcart下
-app.use('/shoppingcart',shoppingcart);
-//把demo挂载到/demo 下
-app.use('/demo',demo);
- 
+server.use(express.static('public'));
+server.use(express.static('myex'));
+server.use(express.static('myPro'));
+//引入bodyParser中间件将post请求数据解析为对象，一定要写在路由的前面
+server.use(bodyParser.urlencoded({extended:false}));
+//将/user路由器挂载到userRouter下
+server.use('/user',userRouter);
+//将/product路由器挂载到productRouter下
+server.use('/product',productRouter);
+//将/demo路由器挂载到demo下
+server.use('/demo',demoRouter);
+//将/myPro路由器挂载到myProRouter下
+server.use('/myPro',myProRouter);

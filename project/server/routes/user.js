@@ -1,172 +1,152 @@
-//user模块
 const express = require('express');
-//const bodyParser = require('body-parser');
 var router = express.Router();
-
-//引用连接池
+//引入连接池
 var pool = require('../pool.js');
-//一.用户注册
+
+//添加路由
+//1.用户注册
 router.post('/register',(req,res)=>{
 	//res.send('注册成功');
-	//获取表单中的数据
-	//console.log(req.body);
-	//在这块执行把数据插入到数据库中
-	//1.检测用户名不能为空
-	var $uname = req.body.uname;
+	var $uname=req.body.uname;
+	var $upwd=req.body.upwd;
+	var $email=req.body.email;
+	var $phone=req.body.phone;
+	
 	if(!$uname){
 		res.send({code:401,msg:'uname required'});
-		return;//阻止程序继续执行
+		return;
 	}
-	//2.检测密码不能为空
-	var $upwd = req.body.upwd;
 	if(!$upwd){
-		res.send({code:402,msg:'upwd reequired'});
+		res.send({code:401,msg:'uname required'});
 		return;
 	}
-	//3.检测邮箱不能为空
-	var $email = req.body.email;
 	if(!$email){
-		res.send({code:403,msg:'email required'});
+		res.send({code:401,msg:'uname required'});
 		return;
 	}
-	//4.检测电话不能为空
-	var $phone = req.body.phone;
 	if(!$phone){
-		res.send({code:404,msg:'phone require'});
+		res.send({code:401,msg:'uname required'});
 		return;
 	}
-	//注册
-	var sql = `INSERT INTO xz_user VALUES(NULL,?,?,?,?,NULL,NULL,NULL)`;
+	//插入数据
+	var sql = `INSERT INTO xz_user VALUES(null,?,?,?,?,NULL,NULL,NULL)`;
 	pool.query(sql,[$uname,$upwd,$email,$phone],(err,result)=>{
-		if(err){
-			throw err;//抛出异常
+		if(err) throw err;
+		//console.log(result);
+		if(result.affectedRows>0){
+			res.send({code:200,msg:'register success'});
+		}else{
+			res.send({code:401,msg:'register success'});
 		}
-		res.send({code:200,msg:'register success'});
 	});
 });
-//二.用户登录
+//2.创建登录路由
 router.post('/login',(req,res)=>{
-	//console.log(req.body);
-	//练习：检测用户名和密码不能为空
-	var $uname = req.body.uname;
+	var obj=req.body;
+	var $uname = obj.uname;
+	var $upwd = obj.upwd;
 	if(!$uname){
-		res.send({
-			code:401,msg:'uname required'
-		});
+		res.send({code:401,msg:'uname required'});
+		return;
 	}
-	var $upwd = req.body.upwd;
 	if(!$upwd){
-		res.send({
-			code:402,msg:'upwd required'
-		});
+		res.send({code:401,msg:'upwd required'});
+		return;
 	}
-	//console.log(req.body);
-	//2.在数据库中查找用户名和密码匹配的数据
 	var sql = `SELECT * FROM xz_user WHERE uname=? AND upwd=?`;
 	pool.query(sql,[$uname,$upwd],(err,result)=>{
+		if(err) throw err;
 		console.log(result);
-		//如果result数组长度大于0，说明登录成功，否则说明用户名或者密码错误
 		if(result.length>0){
-			res.send({code:200,msg:'login success'});
+			res.send({code:200,msg:'登陆成功'});
 		}else{
-			res.send({code:301,msg:'uname or upwd is error'});
+			res.send({code:301,msg:'登录失败'});
 		}
 	});
 });
-//3.用户列表
+//3.用户检索
+router.get('/detail',(req,res)=>{
+	var obj = req.query;
+	var $uid=obj.uid;
+	if(!$uid){
+		res.send({code:401,msg:'uid required'});
+	}
+	var sql=`SELECT * FROM xz_user WHERE uid=?`;
+	pool.query(sql,[$uid],(err,result)=>{
+		if(err) throw err;
+		//console.log(result);
+		if(result.length>0){
+			res.send(result);
+		}else{
+			res.send({code:301,msg:'检索失败'});
+		}
+	});
+});
+//4.用户修改
+router.post('/update',(req,res)=>{
+	var obj = req.body;
+	var $uid=obj.uid;
+	var $email=obj.email;
+	var $phone = obj.phone;
+	var $user_name=obj.user_name;
+	var $gender=obj.gender;
+	//console.log(obj);
+	var j=400;
+	for(var proName in obj){
+		j++;
+		if(!obj[proName]){
+			res.send({code:j,msg:`${proName} required`});
+			return;
+		}
+	}
+	var sql = `UPDATE xz_user SET email=?,phone=?,user_name=?,gender=? WHERE uid=?`;
+	pool.query(sql,[$email,$phone,$user_name,$gender,$uid],(err,result)=>{
+		if(err) throw err;
+		console.log(result);
+		if(result.affectedRows>0){
+			res.send(result);
+		}else{
+			res.send({code:301,msg:'修改失败'});
+		}
+	});
+});
+//5.用户列表
 router.get('/list',(req,res)=>{
-	//获取提交的数据
-	//console.log(req.query);
-	//如果页码为空，默认设置为1
-	var $pno = req.query.pno;
+	var obj=req.query;
+	var $pno=parseInt(obj.pno);
+	var $count=parseInt(obj.count);
 	if(!$pno){
 		$pno=1;
 	}
-	//如果每页大小为空，默认设置为5
-	//否则就把用户的值转为整型
-	var $pageSize  =  req.query.pageSize;
-	if(!$pageSize){
-		$pageSize=5;
-	}else{
-		$pageSize = parseInt($pageSize);
+	if(!$count){
+		$count=7;
 	}
-	//根据每页页码和大小查询用户列表
-	//开始 = (当前页码-1)*每页大小
 	var sql = `SELECT * FROM xz_user ORDER BY uid ASC LIMIT ?,?`;
-	pool.query(sql,[($pno-1)*$pageSize,$pageSize],(err,result)=>{
-		if(err){
-			throw error;
-		}else{
-			//console.log(result);
+	pool.query(sql,[($pno-1)*$count,$count],(err,result)=>{
+		if(err) throw err;
+		console.log(result);
+		if(result.length>0){
 			res.send(result);
 		}
 	});
 });
-//4.用户检索
-router.get('/query',(req,res)=>{
-	var $uid = req.query.uid;
+//6.用户删除
+router.get('/delete',(req,res)=>{
+	var $uid=req.query.uid;
 	if(!$uid){
-		res.send({code:401,msg:'uid required'});
-		return;
-	}
-	var sql = `SELECT * FROM xz_user WHERE uid=?`;
-	pool.query(sql,[$uid],(err,result)=>{
-		res.send(result[0]);
-	});
-});
-//5.删除用户
-router.post('/delete',(req,res)=>{
-	var $uid = req.body.uid;
-	if(!$uid){
-		res.send({code:401,msg:'uid required'});
+		res.send({code:200,msg:'uid required'});
 		return;
 	}
 	var sql = `DELETE FROM xz_user WHERE uid=?`;
 	pool.query(sql,[$uid],(err,result)=>{
-		if(err){
-			throw error;
+		if(err) throw err;
+		//console.log(result);
+		if(result.affectedRows>0){
+			res.send('删除成功');
 		}else{
-			res.send({code:200,msg:'delete success'});
+			res.send({code:301,msg:'delete false'});
 		}
-	});
-});
-//6.修改用户
-router.post('/update',(req,res)=>{
-	//拿到客户端数据，分别检测
-	var $uid = req.body.uid;
-	if(!$uid){
-		res.send({code:401,msg:'uid required'});
-		return;
-	}
-	var $user_name = req.body.user_name;
-	if(!$user_name){
-		res.send({code:402,msg:'user_name required'});
-		return;
-	}
-	var $gender = req.body.gender;
-	if(!$gender){
-		res.send({code:403,msg:'gender required'});
-		return;
-	}
-	var $phone = req.body.phone;
-	if(!$phone){
-		res.send({code:404,msg:'phone required'});
-		return;
-	}
-	var $email = req.body.email;
-	if(!$email){
-		res.send({code:405,msg:'email required'});
-		return;
-	}
-	var sql = `UPDATE xz_user SET user_name=?,gender=?,phone=?,email=? WHERE uid=?`;
-	pool.query(sql,[$user_name,$gender,$phone,$email,$uid],(err,result)=>{
-		if(err){
-			throw error;
-		}
-		res.send({code:200,msg:'update success'});
-		console.log(result);
 	});
 });
 
-//导出
-module.exports = router; 
+module.exports = router;
