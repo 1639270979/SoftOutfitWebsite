@@ -1,0 +1,28 @@
+*{
+	margin:0px;
+	padding:0px;
+	border:0px;
+	text-decoration:none;
+}
+body{
+	font-size:16px;
+}
+input{
+	outline:0;
+}
+ul{
+    list-style:none;
+}
+a{
+	cursor: pointer;
+}
+/* 内容生成 */
+.content:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.content:before{
+	content:"";
+	display:table;
+}

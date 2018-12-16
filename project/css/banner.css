@@ -1,0 +1,22 @@
+.banner{
+    width:1000px;
+    margin:0 auto;
+}
+/* 轮播图 */
+.banner-box{
+    width:750px;
+    height:250px;
+    overflow:hidden;
+}
+.banner-box li{
+    float:left;
+}
+.banner-box li img{
+    width:750px;
+    height:250px;
+}
+/* 公告 */
+.banner .notice{
+    width:250px;
+
+}

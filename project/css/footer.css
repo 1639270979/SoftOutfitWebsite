@@ -13,7 +13,7 @@
 }
 /* 上 */
 .footer .footer-nav{
-	width:1200px;
+	width:1000px;
 	margin:0 auto;
 	margin-top:20px;
 	margin-bottom:20px;
@@ -27,11 +27,11 @@
 	color:#4c4c4c;
 }
 .footer .footer-nav a:hover{
-	color:#ff9800;
+	color:#FBB03B;
 }
 /* 中 */
 .footer .footer-center{
-	width:1200px;
+	width:1000px;
 	margin:0 auto;
 	text-align:center;
 }
@@ -40,7 +40,7 @@
 	margin-bottom:10px;
 }
 .footer .footer-bottom{
-	width:1200PX;
+	width:1000PX;
 	margin:0 auto;
 	margin-top:20px;
 	text-align:center;
