@@ -1,11 +1,44 @@
+/* 轮播图 */
 .banner{
-    width:1000px;
+    width:1200px;
     margin:0 auto;
+    margin-top:10px;
+    position:relative;
+    font-family:PingFangSC-Regular;
+}
+/* 书友力荐 */
+.banner .b-recommend{
+    width:210px;
+    height:250px;
+    position:absolute;
+    top:0px;
+    left:10px;
+    background: #fafafa;
+    border: 1px solid #f5f5f5;
+    border-radius:3px;
+}
+.banner .b-recommend li{
+    margin-top:13px;
+}
+.banner .b-recommend li span{
+    margin-right:5px;
+    color:#999;
+}
+.banner .b-recommend>a{
+    width:95%;
+    display:block;
+}
+.banner .b-recommend h3{
+    width:70px;
+    height:35px;
+    line-height:35px;
+    border-bottom:2px solid #FBB03B;
 }
 /* 轮播图 */
 .banner-box{
     width:750px;
     height:250px;
+    margin-left:227px;
     overflow:hidden;
 }
 .banner-box li{
@@ -15,8 +48,28 @@
     width:750px;
     height:250px;
 }
-/* 公告 */
+/* 右侧公告 */
 .banner .notice{
-    width:250px;
-
+    width:210px;
+    height:250px;
+    position:absolute;
+    top:0px;
+    right:5px;
+    border-radius:3px;
+    background: #fafafa;
+    border: 1px solid #f5f5f5;
+}
+.banner .notice li{
+    margin-top:13px;
+}
+.banner .notice li span{
+    margin-right:5px;
+    color:#999;
+}
+.banner .notice h3{
+    padding-bottom:5px;
+    text-align:center;
+    margin-top:5px;
+    line-height:30px;
+    border-bottom:1px solid #1a1a1a;
 }
