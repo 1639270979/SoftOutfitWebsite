@@ -72,13 +72,13 @@ INSERT INTO details VALUES
 
 
 #创建小说图片表
-CREATE TABLE recommend_picture(
+CREATE TABLE picture(
 	pid SMALLINT PRIMARY KEY AUTO_INCREMENT,  #编号
 	purl VARCHAR(24),			 #路径
 	title VARCHAR(54)			 #标题
 );
 #往图片表中插入数据
-INSERT INTO details VALUES
+INSERT INTO picture VALUES
 (1,'./img/index/recommended/0.jpg','轮播广告图1'),
 (2,'./img/index/recommended/1.jpg','轮播广告图2'),
 (3,'./img/index/recommended/2.jpg','轮播广告图3'),
@@ -93,7 +93,7 @@ INSERT INTO details VALUES
 (NULL,'./img/classic/3.jpg','完本3'),
 (NULL,'./img/classic/4.jpg','完本4'),
 (NULL,'./img/classic/5.jpg','完本5'),
-(NULL,'./img/classic/6.jpg','完本6'),
+(NULL,'./img/classic/6.jpg','完本6')
 ;
 /**用户信息**/
 CREATE TABLE novel_user(

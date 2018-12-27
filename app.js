@@ -12,6 +12,7 @@ server.listen(5050);
 server.use(express.static('public'));
 server.use(express.static('myex'));
 server.use(express.static('myPro'));
+server.use(express.static('novel'));
 //引入bodyParser中间件将post请求数据解析为对象，一定要写在路由的前面
 server.use(bodyParser.urlencoded({extended:false}));
 //将/user路由器挂载到userRouter下
