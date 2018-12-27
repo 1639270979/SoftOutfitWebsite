@@ -7,7 +7,7 @@ const demoRouter=require('./routes/demo.js');
 const myProRouter=require('./routes/myPro.js');
 var server = express();
 //连接服务器
-server.listen(3000);
+server.listen(5050);
 //托管静态资源
 server.use(express.static('public'));
 server.use(express.static('myex'));

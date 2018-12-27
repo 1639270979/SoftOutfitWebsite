@@ -1,0 +1,33 @@
+{
+  "name": "novel",
+  "version": "1.0.0",
+  "description": "exercise project for novel students",
+  "main": "app.js",
+  "scripts": {
+    "test": "node ./test.js",
+    "start": "node ./app.js",
+    "stop": "node ./stop.js",
+    "rebuild": "node ./bin/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resume/novel.git"
+  },
+  "keywords": [
+    "exercise",
+    "novel",
+    "node",
+    "webpack",
+    "app.js"
+  ],
+  "dependencies": {
+    "express": "^4.13.3",
+    "mysql":"^2.16.0"
+  },
+  "author": "xiaolaoge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1639270979@qq.com/resume/issues"
+  },
+  "homepage": "https://github.com/1639270979@qq.com/resume#readme"
+}
