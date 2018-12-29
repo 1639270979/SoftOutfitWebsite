@@ -1,8 +1,15 @@
-*{
-	margin:0px;
-	padding:0px;
+
+/* blockquote, body, button, dd, dl, dt, 
+embed, fieldset, form, h1, h2, h3, h4, 
+h5, h6, input, li, object, ol, pre, table, 
+td, th, ul, p, a*/
+*{ 
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif,Simsun;
+	color: #333;
 	border:0px;
-	text-decoration:none;
 }
 body{
 	font-size:14px;
@@ -15,6 +22,8 @@ ul{
 }
 a{
 	cursor: pointer;
+	text-decoration:none;
+	transition: all 0.4s ease-out;
 }
 a:visited{
 	color:#4c4c4c;
