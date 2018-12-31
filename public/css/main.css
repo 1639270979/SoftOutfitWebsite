@@ -651,7 +651,7 @@
     background-image: linear-gradient(to bottom,#FBB03B 0%,#f4a933 100%);
     transition: all 0.5s linear;
 }
-.hot-work-wrap .slide-box li .book-details{
+.hot-work-wrap .slide-box li .book-details:hover{
     opacity: 0.8;
     color:#fff !important;
 }
@@ -721,11 +721,283 @@
     width:52px;
     height:87px;
     position:absolute;
-    top:15px;
+    top:0px;
     right:10px;
 }
+.hot-classify-wrap .list-l .list-l-b .hot-img2{
+    position:absolute;
+    top:110px;
+    right:10px;
+}
+.hot-classify-wrap .list-l .list-l-top h4 a{
+    color:#333;
+}
+.hot-classify-wrap .list-l .list-l-top h4{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.hot-classify-wrap .list-l .list-l-top .digital b{
+    font-family: Arial;
+    font-size: 18px;
+    color:#262626;
+    margin-right: -1px;
+}
+.hot-classify-wrap .list-l .list-l-top .digital{
+    margin-bottom:10px;
+}
+.hot-classify-wrap .list-l .list-l-top em{
+    font: 12px PingFangSC-Regular,'-apple-system',Simsun;;
+    height:20px;
+    line-height: 20px;
+}
+.hot-classify-wrap .list-l .list-l-top .details{
+    font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 12px;
+    overflow: hidden;
+    height: 16px;
+    color: #666;
+}
+ /* 5楼 限时免费  */
+.time-limit-wrap>ul{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.time-limit-wrap>ul>li{
+    width:171px;
+    position: relative;
+    /* height:222px; */
+}
+/* time-box */
+/* 背景 */
+.time-limit-wrap{
+    width:1200px;
+    margin:0 auto;
+    margin-bottom:20px;
+}
+.time-limit-wrap .time-box{
+    padding-top:25px;
+    width:170px;
+    border: 1px solid #f7f6f2;
+    background: #f7f6f2;
+}
+/* 背景颜色 */
+.time-limit-wrap .even{
+    border: 1px solid #fcfcfa;
+    background: #fcfcfa;
+}
+.time-limit-wrap .obb{
+    border: 1px solid #f7f6f2;
+    background: #f7f6f2;
+}
+/* 定时器 */
+.time-limit-wrap .time-box .title{
+    text-align: center;
+    font-size:16px;
+    height:21px;
+    font-family: 700;
+    color:#FBB03B;
+}
+.time-limit-wrap .time-box .free{
+    font-size:12px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    color:#999;
+}
+/* 定时器 */
+.time-limit-wrap .time-box .timer{
+    font-size:18px;
+    height:22px;
+    text-align: center;
+    margin-bottom:10px;
+}
+.time-limit-wrap .time-box .timer i{
+    color:#FBB03B;
+    font:18px Arial;
+}
+.time-limit-wrap .time-box .timer cite{
+    color:#FBB03B;
+    font:18px Arial;
+    margin-right: 4px;
+}
+.time-limit-wrap .time-box .timer>cite{
+    margin-right: -4px;
 
+}
+.time-limit-wrap .time-box .timer>em{
+    color:#FBB03B;
+    font:18px Arial;
+}
+/* 图 */
+.time-limit-wrap .time-box>em{
+    display: block;
+    height:80px;
+    background: url(../img/index/timer-free/6.png) no-repeat;
+    background-position:center center;
+    background-size:60px 60px;  
+}
+.time-limit-wrap .time-box .blue{
+    font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    color:#3f5a93;
+    height: 19px;
+    vertical-align: middle;
+    margin-bottom: 23px;
+}
+.time-limit-wrap .time-box .blue span{
+    color:#3f5a93;
+}
+/* even obb */
+.time-limit-wrap li:not(:first-child) div{
+    width:66px;
+    height:88px;
+    margin:20px 0 10px 50px;
+    position: relative;
+    overflow: hidden;
+}
+/* 鼠标悬停时的状态 */
+.time-limit-wrap li:not(:first-child){
+    transition: box-shadow 0.5s linear;
+    
+}
+.time-limit-wrap li:not(:first-child):hover{
+    box-shadow: 0px 5px 13px 3px #d1cece;
+    z-index: 1;
+}
+.time-limit-wrap li:not(:first-child) div img{
+    width:66px;
+    height: 88px;
+    transition: all 0.5s linear;
+}
 
+.time-limit-wrap li:not(:first-child) div img:hover{
+    transform:scale(1.1);
+}
+.time-limit-wrap li:not(:first-child) div>span{
+    font: 12px/18px Arial;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 17px;
+    padding: 0 3px 0 2px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 0 0;
+    background: #ed4259;
+}
+.time-limit-wrap li:not(:first-child) .name{
+    font-size:16px;
+    display: block;
+    font-weight: 600px;
+    color:#333;
+    padding:0 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.time-limit-wrap li:not(:first-child) s{
+    color:#666;
+    font-size:12px;
+    display: block;
+    text-align: center;
+    margin-bottom: 7px;
+}
+.time-limit-wrap li:not(:first-child) .free-blue-btn{
+    font: 14px/29px PingFangSC-Regular,'-apple-system',Simsun;
+    display: block;
+    overflow: hidden;
+    width: 88px;
+    height: 28px;
+    text-align: center;
+    margin:0 auto;
+    color: #3f5a93;
+    border:1px solid #3f5a93;
+    border-radius: 20px;
+}
+.time-limit-wrap li:not(:first-child) .free-blue-btn:hover{
+    border:1px solid #FBB03B;
+}
+/* 悬浮导航 */
+.pin-nav-wrap{
+	width:100%;
+	height:45px;	
+	background:#fb7a3b;
+}
+.pin-nav-wrap .box-center{
+	width:1200px;
+	margin:0 auto;	
+	position:relative;
+}
+.pin-nav-wrap .left-nav>ul{
+	width:600px;
+	display:flex;
+	justify-content:space-between;
+}
+.pin-nav-wrap .left-nav a{
+	line-height:45px;
+	font-size:15px;	
+	color:#fff;
+}
+/* 导航右侧 */
+.pin-nav-wrap .right-nav{
+	position:absolute;
+	top:0;
+	right:0;
+	display:flex;
+	justify-content:space-between;
+}
+.pin-nav-wrap .right-nav a{
+	line-height:45px;
+    margin-right:5px;
+    margin-left:5px;
+	color:#fff;
+}
+.pin-nav-wrap .right-nav .pin-search{
+    width:160px;
+    height:20px;
+    vertical-align: middle;
+    padding-left: 5px;
+    color:#999;
+    font-size: 14px;
+    background: #fb7a3b;
+    border-bottom:1px solid #f0d683;
+}
+.pin-nav-wrap .right-nav .pin-search::placeholder{ 
+    color: #ddd; 
+} 
+.pin-nav-wrap .right-nav #top-pin-box{
+    display: none;
+}
+.pin-nav-wrap .right-nav label em{
+    display: inline-block;
+    width:20px;
+    height:45px;
+    line-height:45px; 
+    margin-left:5px;
+    margin-right:10px;
+    vertical-align: middle;
+    background: url(../img/index/shelf/8.png) no-repeat;
+    background-position:center center; 
+    background-size:20px 20px;
+}
+.pin-nav-wrap .right-nav p em{
+    display: inline-block;
+    width:20px;
+    height:45px;
+    line-height:45px;
+    margin-left:5px;
+    vertical-align: middle;
+    background: url(../img/index/shelf/2.png) no-repeat;
+    background-position:center center; 
+    background-size:20px 20px;
+    border-radius:4px;
+}
+.pin-nav-wrap .right-nav>p{
+    color:#e9c80f;
+}
 
 
 
