@@ -1,0 +1,182 @@
+.top-wrap{
+    width:1200px;
+    margin:0 auto;
+    color:#999;
+    font-size:28px;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding-bottom:15px;
+}
+.top-wrap a{
+    display:inline-block;
+	border-radius:20px;
+	width:60px;
+	height:60px;
+	background-image:linear-gradient(to bottom,#FBB03B 0%,#fb7a3b 100%);
+	line-height:60px;
+	text-align:center;
+	font-size:28px;
+	font-family:"楷书";
+	color:#fff !important;
+	margin-right:20px;
+	margin-left: 10px;
+}
+.top-wrap span{
+    font-size:28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left:10px;
+    color:#333;
+}
+/* register */
+.box-center{
+    width:1200px;
+    margin:0 auto; 
+}
+.box-center .reg-step{
+    height:37px;
+    border-bottom:1px solid #d8d8d8;
+    text-align: center; 
+    padding-left:350px;
+}
+.box-center .reg-step::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.box-center .reg-step p{
+    width:150px;
+    height:24px;
+    line-height:24px;
+    font-size:18px;
+    text-align: center;
+    padding:0 50px 0 50px;
+    float:left;
+    padding-bottom:10px;
+    font-family: "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+}
+.box-center .reg-step .step-one{
+    border-bottom:2px solid #fb7a3b;
+}
+.box-center .reg-step .step-two{
+    margin-left:0px;
+}
+.box-center .reg-step .step-one span{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    line-height:24px;
+    font-size:18px;
+    font-family: "黑体";
+    border-radius:50%;
+    background: #ff9933;
+    color:#fff;
+    margin-right:5px;
+}
+/* 注册成功透明度 */
+.box-center .reg-step .step-two{
+    opacity: 0.5;
+}
+.box-center .reg-step .step-two em{
+    display: inline-block;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    vertical-align: middle;
+    background:url(../img/index/register/1.png) no-repeat;
+    background-position:center center;
+    background-size:24px 24px;
+    margin:-2px 5px 0 0;
+}
+/* 注册主体 */
+.reg-form-wrap{
+    width:600px;
+    margin:0 auto;
+    margin-top:30px;
+    
+}
+.reg-form-wrap ul{
+    list-style: none;
+}
+.reg-form-wrap ul>li{
+    margin-bottom:35px;
+}
+/* <!-- 手机号 --> */
+.reg-form-wrap li span{
+    display: inline-block;
+    width: 60px;
+    height:44px;
+    font: 14px/44px "PingFangSC-Regular", "-apple-system", Simsun;
+    margin-right: 24px;
+    text-align: right;
+}
+.reg-form-wrap .phone>select{
+    display:inline-block;
+    width: 160px;
+    font-size: 14px;
+    position: relative;
+    height: 42px;
+    font-family: "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    color: #1A1A1A;
+    border:1px solid #bbb;
+}
+.reg-form-wrap .phone>input{
+    display: inline-block;
+    width:180px;
+    height:40px;
+    padding:0 15px 0 15px;
+    margin-left:-6px;
+    margin-top:-3px;
+    border:1px solid #bbb;
+    vertical-align: middle;
+}
+/* 手机验证吗 */
+.reg-form-wrap .phonecode input{
+    display: inline-block;
+    width:180px;
+    height:40px;
+    padding:0 15px 0 15px;
+    border:1px solid #bbb;
+}
+.reg-form-wrap .phonecode a{
+    display:inline-block;
+    width:120px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left:5px;
+    border:1px solid #bbb;
+    background:#efefef;
+    vertical-align: middle;
+}
+.reg-form-wrap .pwd input,.reg-form-wrap .pwd2 input{
+    display: inline-block;
+    width:340px;
+    height:40px;
+    padding:0 15px 0 15px;
+    border:1px solid #bbb;
+}
+/* 用户协议 */
+.reg-form-wrap .ui-deal{
+    padding-left:88px;
+}
+.reg-form-wrap .ui-deal label,
+.reg-form-wrap .ui-deal a{
+    color:#333;
+    font-size:13px;
+    vertical-align: top;
+}
+.reg-form-wrap .btn-sub{
+    display: block;
+    font: 16px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";;
+    width:340px;
+    height:40px;
+    line-height:40px;
+    margin-left:80px;
+    text-align: center;
+    color:#fff !important;
+    background:linear-gradient(to bottom,#f6b755 0%,#f8a92f 50%,#ffa820 100%);
+    transition:all 0.5 linear;
+}
+.reg-form-wrap .btn-sub:hover{
+    opacity:0.8;
+}

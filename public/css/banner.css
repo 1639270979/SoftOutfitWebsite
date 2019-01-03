@@ -20,6 +20,9 @@
 .banner .b-recommend li{
     margin-top:13px;
 }
+.banner .b-recommend li a{
+    color:#4c4c4c;
+}
 .banner .b-recommend li span{
     margin-right:5px;
     color:#999;
@@ -61,6 +64,9 @@
 }
 .banner .notice li{
     margin-top:13px;
+}
+.banner .notice li a{
+    color:#4c4c4c;
 }
 .banner .notice li span{
     margin-right:5px;

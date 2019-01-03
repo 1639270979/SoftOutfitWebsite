@@ -36,7 +36,6 @@
 	margin-left:250px;
 	height:38px;
 	width:400px;
-	
 	position: relative;
 }
 .header .box-search{
@@ -45,7 +44,10 @@
 	padding-left:5px;
 	border:1px solid #FBB03B;
 }
-.header .search-btn{
+.header #search-btn{
+	display:none;
+}
+.header .search-wrap .search-btn{
 	width:50px;
 	height:40px;
 	cursor:pointer;
@@ -76,8 +78,11 @@
 .header .user-wrap{
 	font-size: 14px;
     font-family: SimSun,'Microsoft YaHei',Helvetica,Arial,sans-serif;
-	color:#c4c4c4;
 	margin-top:20px;
+}
+.header .user-wrap a{
+	color:#4c4c4c;
+	margin-right:5px;
 }
 /* 页面导航nav */
 .header .top-nav{

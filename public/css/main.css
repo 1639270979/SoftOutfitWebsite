@@ -61,27 +61,32 @@
 .main-one .banner-details{
     margin-top:20px;
 }
-.main-one .banner-details>a:first-child{
+.main-one .banner-details h3{
     font-size:18px;
+    text-align:center;
+    margin-bottom:7px;
+}
+.main-one .banner-details h3 a{
     color:#333;
 }
-.main-one .banner-details>a{
+.main-one .banner-details .auther{
     display:block;
+    color:#999;
     text-align:center;
     margin-bottom:10px;
 }
 .main-one .banner-details>p{
     text-align: center;
     margin-bottom:20px;
-    color:#999;
-
 }
 /* main-one  1楼 左 小轮博图布局 */
 .main-one .banner-details>p a{
     margin-right:10px;
+    color:#666;
 }
 .main-one .banner-details>p span{
     margin-left:5px;
+    color:#666;
 }
 .main-one .banner-details>p a:visited{
     color:#999;
@@ -96,10 +101,13 @@
 }
 /* main-one  1楼 左 立即略读按钮 */
 .main-one-left .d-box{
+    display:block;
     width:100px;
     height:30px;
+    text-align:center;
     margin:0 auto;
     margin-top:20px;
+    margin-bottom:10px;
     line-height:30px;
     color:#fff;
     border-radius:8px;
@@ -921,25 +929,51 @@
     border:1px solid #FBB03B;
 }
 /* 悬浮导航 */
+/* 动画 */
+@keyframes pin-nav-wrap{
+    0%{
+        top:-45px;
+    }
+    100%{
+        top:0;
+    }
+}
 .pin-nav-wrap{
 	width:100%;
 	height:45px;	
-	background:#fb7a3b;
+    background:#fb7a3b;
+    /* display: none; */
+    position: fixed;
+    top:-45px;
+    /* animation:all 0.5s linear; */
 }
+
 .pin-nav-wrap .box-center{
 	width:1200px;
 	margin:0 auto;	
 	position:relative;
 }
 .pin-nav-wrap .left-nav>ul{
-	width:600px;
+    width:700px;
+    text-align: center;
 	display:flex;
 	justify-content:space-between;
 }
+.pin-nav-wrap .left-nav>ul>li{
+    width:90px;
+}
+.pin-nav-wrap .left-nav>ul>li:hover{
+    border-top:2px solid #ff0000;
+    background: #ce6f40;
+    height:43px;
+}
 .pin-nav-wrap .left-nav a{
-	line-height:45px;
+    line-height:45px;
 	font-size:15px;	
-	color:#fff;
+	color:#ddd;
+}
+.pin-nav-wrap .left-nav a:hover{
+    color:#fff !important;
 }
 /* 导航右侧 */
 .pin-nav-wrap .right-nav{
@@ -960,18 +994,20 @@
     height:20px;
     vertical-align: middle;
     padding-left: 5px;
-    color:#999;
+    color:#ddd;
     font-size: 14px;
     background: #fb7a3b;
+    border:0;
     border-bottom:1px solid #f0d683;
 }
 .pin-nav-wrap .right-nav .pin-search::placeholder{ 
     color: #ddd; 
+    font-size:13px;
 } 
 .pin-nav-wrap .right-nav #top-pin-box{
     display: none;
 }
-.pin-nav-wrap .right-nav label em{
+.pin-nav-wrap .right-nav>div label em{
     display: inline-block;
     width:20px;
     height:45px;
@@ -982,6 +1018,7 @@
     background: url(../img/index/shelf/8.png) no-repeat;
     background-position:center center; 
     background-size:20px 20px;
+    cursor: pointer;
 }
 .pin-nav-wrap .right-nav p em{
     display: inline-block;
@@ -995,10 +1032,15 @@
     background-size:20px 20px;
     border-radius:4px;
 }
-.pin-nav-wrap .right-nav>p{
-    color:#e9c80f;
+.pin-nav-wrap .right-nav>p a{
+    color:#ddd;
 }
-
+.pin-nav-wrap .right-nav>p{
+    color:#eccaa0;
+}
+.pin-nav-wrap .right-nav>p a:hover{
+    color:#fff !important;
+}
 
 
 
