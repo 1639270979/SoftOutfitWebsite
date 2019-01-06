@@ -44,12 +44,68 @@
     margin-left:227px;
     overflow:hidden;
 }
-.banner-box li{
-    float:left;
-}
 .banner-box li img{
     width:750px;
     height:250px;
+}
+.banner-box{
+    width:750px;
+    height:250px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+.banner-image{
+    list-style:none;
+    width:4500px;
+    height:250px;
+    position:absolute;
+    /* left:-1000px; */
+}
+.banner-image li{
+    float:left;
+}
+.banner-box .ck-side{
+    width:35px;
+    height:70px;
+    color:#fff;
+    cursor:pointer;
+    position:absolute;
+    top:90px;
+    border-radius:5px;
+    animation:all 1s linear;
+}
+
+.banner-box .ck-left{
+    left:5px;
+    background:url(../img/banner/arrow-left.png) no-repeat center center;
+}
+.banner-box .ck-side:hover{
+    background-color:rgba(0,0,0,0.1);
+}
+.banner-box .ck-right{
+    background:url(../img/banner/arrow-right.png) no-repeat center center;
+    right:5px;
+}
+.banner-box .btn{
+    list-style:none;
+    position:absolute;
+    bottom:25px;
+    left:360px;
+    width:100%;
+}
+.banner-box .btn span{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background:#fff;
+    float:left;
+    margin-right:20px;
+    cursor:pointer;
+}
+.banner-box .btn .active{
+    background:#0aa1ed;
 }
 /* 右侧公告 */
 .banner .notice{

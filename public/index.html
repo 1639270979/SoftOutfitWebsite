@@ -28,8 +28,13 @@
 				</ul>
 			</div>
 			<!-- 1 楼中间轮播图 -->
-			<div class="banner-box">
-				<ul>
+			<div class="banner-box" id="banner">
+				<ul class="banner-image" data-toggle="slide" style="left:-750px">
+					<li>
+						<a href="#">
+							<img src="./img/banner/9.jpg" alt="">
+						</a>
+					</li>
 					<li>
 						<a href="#">
 							<img src="./img/banner/7.jpg" alt="">
@@ -56,6 +61,15 @@
 						</a>
 					</li>
 				</ul>
+				<a class="ck-left ck-side" data-toggle="prev" href="javascript:;"></a>
+				<a class="ck-right ck-side" data-toggle="next" href="javascript:;"></a>
+				<div class="btn">
+					<span class="active"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 			<!-- 右公告 -->
 			<div class="notice">
@@ -1182,6 +1196,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/jquery-1.11.3.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
