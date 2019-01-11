@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+    <!-- 悬浮导航栏 -->
+    <div class="pin-nav-wrap clearfix" id="pin">
+		<div class="box-center">
+			<div class="left-nav">
+				<ul>
+                    <!-- 导航列表 -->
+					<li><a href="javascript:;">首页</a> </li>
+					<li><a href="javascript:;">玄幻</a> </li>
+					<li><a href="javascript:;">都市</a> </li>
+					<li><a href="javascript:;">仙侠</a> </li>
+					<li><a href="javascript:;">科幻</a> </li>
+					<li><a href="javascript:;">历史</a> </li>
+					<li><a href="javascript:;">排行</a> </li>
+					<!-- 下拉选项 -->
+					<li class="dropdown">
+						<!-- 下拉按钮 -->
+						<a data-toggle="dropdown" href="javascript:;">更多</a> 
+						<span class="angle"></span>
+						<dl class="dropdown">
+							<dd><a href="javascript:;">全部作品</a></dd>
+							<dd><a href="javascript:;">二次元</a></dd>
+							<dd><a href="javascript:;">奇幻</a></dd>
+							<dd><a href="javascript:;">武侠</a></dd>
+							<dd><a href="javascript:;">悬疑灵异</a></dd>
+							<dd><a href="javascript:;">军事</a></dd>
+							<dd><a href="javascript:;">现实</a></dd>
+							<dd><a href="javascript:;">体育</a></dd>
+							<dd><a href="javascript:;">短篇</a></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>	
+			<!-- 导航右侧 -->
+			<div class="right-nav">
+				<div>
+					<!-- 搜索框 -->
+					<input class="pin-search" type="text" placeholder="我真是个富二代">
+					<label for="top-pin-box">
+						<em></em>
+					</label>
+					<input id="top-pin-box" type="submit">
+				</div>
+				<p>
+                    <!-- 登陆注册按钮 -->
+					|<a href="javascript:;" data-toggle="login-box">登陆</a>
+					<a href="register.html">注册</a>|
+					<a href="javascript:;">
+						<i class="iconfont icon-shujia"></i>
+						我的书架</a> 
+				</p>
+			</div>
+		</div>
+    </div>
+    <!-- 游戏game大图 -->
+    <div class="game-img">
+        <a href="">
+            <img src="./img/details/game.jpg" alt="">
+        </a>
+    </div>
+    <!--1. 详情主体 -->
+    <div class="book-details-wrap">
+        <!-- 书籍信息 -->
+        <div class="book-info clearfix">
+            <!-- 图 -->
+            <div class="book-img-wrap">
+                <a href="javascript:;">
+                    <img src="./img/index/recommended/0.jpg" alt="">
+                </a>
+            </div>
+            <!-- 信息 -->
+            <div class="book-detail">
+                <!-- 标题 -->
+                <h1>
+                    同桌凶猛
+                    <span><a href="javascript:;">柳下挥</a>著</span>
+                </h1>
+                <!-- 标签 -->
+                <p class="tag">
+                    <span>连载</span>    
+                    <span>签约</span>
+                    <span>VIP</span>
+                    <a href="javascript:;">都市</a>
+                    <a href="javascript:;">都市生活</a>
+                </p>
+                <!-- 推荐语 -->
+                <p class="discrible">重生过去、畅想未来、梦幻现实，再塑传奇人生！</p>
+                <!-- 详情汇总 -->
+                <p class="collect">
+                    <!-- 字数 -->
+                    <span>45.03</span>
+                    <cite>万字</cite>|
+                    <!-- 总点击 -->
+                    <span>2671.42</span>
+                    <cite>万阅文总点击</cite>|
+                    <!-- 周点击 -->
+                    <span>181.16</span>
+                    <cite>万会员周点击</cite>|
+                    <!-- 总推荐 -->
+                    <span>502.02</span>
+                    <cite>万总推荐</cite>|
+                    <!-- 周推荐 -->
+                    <span>36.62</span>
+                    <cite>万周推荐</cite>
+                </p>
+                <!-- 按钮 -->
+                <p>
+                    <!-- 免费试读 -->
+                    <a href="javascript:;">免费试读</a>  
+                    <a href="javascript:;">加入书架</a>
+                    <a href="javascript:;">投票互动</a>
+                    <a href="javascript:;">下载App新人免费读</a>
+                </p>
+            </div>
+            <!-- 评分 -->
+            <div class="score">
+                <!-- 评分 -->
+                <h3>
+                    <span>8.</span><i>9</i> 
+                </h3>
+                <!-- 评价 --> 
+                <p class="number"><span>316</span>人评价</p>
+                <p class="assess">我要评价</p>
+                <div>
+                    <i class="iconfont icon-xingxing"></i>
+                    <i class="iconfont icon-xingxing"></i>
+                    <i class="iconfont icon-xingxing"></i>
+                    <i class="iconfont icon-xingxing"></i>
+                    <i class="iconfont icon-xingxing"></i>
+                </div>
+            </div>
+            <!-- 订阅和下载 -->
+            <div class="subscribe">
+                <a>
+                    <i class="iconfont icon-shu2"></i>
+                    订阅
+                </a>|
+                <a>
+                    <i class="iconfont icon-xiazai4"></i>
+                    下载
+                </a>
+            </div>
+        </div>
+        <!-- content-nav-wrap 内容导航 -->
+        <div class="content-nav-wrap">
+            <a class="active" href="javascript:;">作品信息</a>
+            <a href="javascript:;">目录<span>(142章)</span></a>
+            <a href="javascript:;">作品讨论<span>(4513条)</span></a>
+        </div>
+        <!-- 主体包裹 -->
+        <div class="book-content-wrap">
+            <!-- 详细信息 -->
+            <div class="book-info-details">
+                <!-- 简介 -->
+                <p class="book-intro"> 青梅竹马的同桌竟然成了大明星，又凶又萌。<br>
+                    近卫军冲锋右营：92411492</p>
+                <!-- 获得荣誉 -->
+                <div class="honor clearfix">
+                    <div>荣誉动态</div>
+                    <div>
+                        <strong>2018-10-28 累积获得十万个收藏</strong>
+                        <!-- 荣誉图 -->
+                        <p>
+                            <img src="./img/details/gengshangyicenglou.png" alt="">
+                            <img src="./img/details/jingpinpindao.png" alt="">
+                            <img src="./img/details/rijindoujin.png" alt="">
+                            <a href="javascript:;">荣誉殿堂</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- 最近更新状态 -->
+                <div class="update clearfix">
+                    <div>最近更新</div>
+                    <!-- 最新章节 -->
+                    <div>
+                        <p>
+                            <a href="javascript:;">第一百三十九章、劝架！劝人吵架！</a>
+                            <em>.</em>
+                            <span>昨日15:52</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 粉丝互动 -->
+            <div class="fans-zone">
+                <h3>粉丝互动</h3>
+                <dl class="clearfix">
+                    <!-- 月票 -->
+                    <dd>
+                        <h4>
+                            <span class="active">月票</span>|
+                            <span>推荐票</span>
+                        </h4>
+                        <p class="month-count">本月票数</p>
+                        <!-- 票数 -->
+                        <p class="mum">2517</p>
+                        <!-- 排名 -->
+                        <p class="rank">排名102·还差<em>10</em>  票追上前一名</p>
+                        <div class="icon-box"></div>
+                        <!-- 按钮 -->
+                        <a class="month-btn" href="javascript:;">投月票</a>
+                        <p class="tip"></p>
+                    </dd>
+                    <!-- 打赏 -->
+                    <dd>
+                        <h4>打赏</h4>
+                    </dd>
+                    <!-- 我的粉丝等级 -->
+                    <dd>
+                        <h4>我的粉丝等级</h4>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+</body>
+</html>

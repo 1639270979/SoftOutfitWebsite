@@ -35,13 +35,13 @@
     width:70px;
     height:35px;
     line-height:35px;
-    border-bottom:2px solid #FBB03B;
+    border-bottom:2px solid #BF2C24;
 }
 /* 轮播图 */
 .banner-box{
     width:750px;
     height:250px;
-    margin-left:227px;
+    margin-left:228px;
     overflow:hidden;
 }
 .banner-box li img{
@@ -51,7 +51,6 @@
 .banner-box{
     width:750px;
     height:250px;
-    margin:0 auto;
     overflow:hidden;
     position:relative;
 }
@@ -81,7 +80,7 @@
     background:url(../img/banner/arrow-left.png) no-repeat center center;
 }
 .banner-box .ck-side:hover{
-    background-color:rgba(0,0,0,0.1);
+    background-color:rgba(0,0,0,0.4);
 }
 .banner-box .ck-right{
     background:url(../img/banner/arrow-right.png) no-repeat center center;
@@ -90,22 +89,51 @@
 .banner-box .btn{
     list-style:none;
     position:absolute;
-    bottom:25px;
-    left:360px;
+    bottom:0px;
+    left:0px;
     width:100%;
 }
 .banner-box .btn span{
     display:inline-block;
-    width:15px;
-    height:15px;
-    border-radius:50%;
-    background:#fff;
+    width:141px;
+    height:36px;
+	font-size:16px;
+	color:#ddd;
+	border-right:1px solid #ddd;
+	text-align:center;
+	line-height:36px;
+    background:rgba(0,0,0,.7);
     float:left;
-    margin-right:20px;
     cursor:pointer;
 }
 .banner-box .btn .active{
-    background:#0aa1ed;
+    background:#ed4259;
+}
+/*slide 更多轮播图按钮*/
+.banner-box .many-slide{
+	display:block;
+	width:40px;
+	height:36px;
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	background:rgba(0,0,0,.7);
+}
+.banner-box .many-slide:hover{
+	background:rgba(0,0,0,.7);
+}
+/*小圆点*/
+.banner-box .many-slide>ul{
+	margin:16px 0 0 6px;
+}
+
+.banner-box .many-slide>ul li{
+	float:left;
+	width:5px;
+	height:5px;
+	margin-left:3px;
+	border-radius:50%;
+	background:#bbb;
 }
 /* 右侧公告 */
 .banner .notice{
@@ -117,6 +145,9 @@
     border-radius:3px;
     background: #fafafa;
     border: 1px solid #f5f5f5;
+}
+.banner .notice a{
+	color:#4c4c4c;
 }
 .banner .notice li{
     margin-top:13px;
@@ -133,5 +164,5 @@
     text-align:center;
     margin-top:5px;
     line-height:30px;
-    border-bottom:1px solid #1a1a1a;
+    border-bottom:1px solid #fd2d52;
 }

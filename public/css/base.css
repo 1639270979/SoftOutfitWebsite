@@ -23,13 +23,13 @@ ul{
 a{
 	cursor: pointer;
 	text-decoration:none;
-	transition: all 0.4s ease-out;
+	transition: all 0.3s linear;
 }
 a:visited{
 	color:#4c4c4c;
 }
 a:hover{
-	color:#FBB03B !important;
+	color:#ed4259 !important;
 }
 /* #my-hover:hover{
 	color:#FBB03B;

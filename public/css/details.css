@@ -1,0 +1,421 @@
+/* 顶部导航布局 */
+.pin-nav-wrap{
+    position:relative !important;
+    top:0px !important;
+    display:block !important;
+}
+/* 游戏广告图 */
+.game-img img{
+    height:338px;
+}
+/* 书籍详情 */
+.book-details-wrap{
+    width:990px;
+    margin:0 auto;
+    position: relative;
+    z-index: 10;
+    background:#fff;
+    margin-top:-120px;
+    border-top:1px solid #999;
+}
+.book-info{
+    padding:15px;
+    z-index: 999;
+    position: relative;
+}
+/* 图定位 书*/
+.book-details-wrap .book-img-wrap{
+    width:144px;
+    height:192px;
+    box-shadow: 0px 2px 6px 2px #ddd;
+    float:left;
+}
+.book-details-wrap .book-img-wrap a{
+    display: block;
+    width:144px;
+    height:192px;
+    overflow: hidden;
+}
+.book-details-wrap .book-img-wrap img{
+    width:144px;
+    height:192px;
+    transition:all .5s linear;
+}
+.book-details-wrap .book-img-wrap img:hover{
+    transform: scale(1.05);
+}
+/* 详情 */
+.book-details-wrap .book-detail{
+    margin-left:20px;
+    float:left;
+}
+/* 作者 */
+.book-details-wrap .book-detail>h1 span{
+    font: 14px PingFangSC-Regular,'-apple-system',Simsun;
+    margin-left:30px;
+    margin-right:10px;
+    color: #262626;
+}
+.book-details-wrap .book-detail>h1 a{
+    color: #262626;
+    margin-right:10px;
+}
+/* 标签 */
+.book-details-wrap .book-detail .tag{
+    margin:15px 0 15px 0;
+}
+/* 基本样式 */
+.book-details-wrap .book-detail .tag span,
+.book-details-wrap .book-detail .tag a{
+    display:inline-block;
+    width:46px;
+    height:24px;
+    font-size:12px;
+    text-align: center;
+    line-height: 24px;
+    border-radius:15px;
+}
+.book-details-wrap .book-detail .tag span{
+    color:#3f5a93;
+    border:1px solid #9fadc9;
+}
+.book-details-wrap .book-detail .tag a{
+    color:#bf2c24;
+    border:1px solid #ffb0b4;
+}
+/* 类型 */
+.book-details-wrap .book-detail .tag a:last-child{
+    width:70px;
+}
+/* 小说描述 */
+.book-details-wrap .book-detail .discrible{
+    color:#333;
+    letter-spacing: 2px;
+    margin-bottom:10px;
+}
+/* 详情汇总 */
+.book-details-wrap .book-detail .collect{
+    color:#bbb;
+    margin-bottom:10px;
+}
+.book-details-wrap .book-detail .collect span{
+    font-size:18px;
+    color:#222;
+    margin-left:10px;
+}
+.book-details-wrap .book-detail .collect span:first-child{
+    margin-left:0px;
+}
+.book-details-wrap .book-detail .collect cite{
+    font: 12px PingFangSC-Regular,'-apple-system',Simsun;
+    margin:0 12px 0 0px;
+    color:#666;
+    vertical-align: middle;
+}
+/* book 免费试读按钮 */
+.book-details-wrap .book-detail>p:last-child a{
+    display:inline-block;
+    width:102px;
+    height:34px;
+    font-size:14px;
+    color:#2972cc;
+    border:1px solid #2972cc;
+    text-align:center;
+    line-height:36px;
+    margin-right:15px;
+    vertical-align: middle;
+}
+/* 蓝色按钮 */
+.book-details-wrap .book-detail>p:last-child a:hover{
+    color: #2972cc !important;
+    border-color: #2972cc;
+    background: #f0f5ff
+}
+/* 红色按钮 */
+.book-details-wrap .book-detail>p:last-child a:first-child{
+    color:#ddd;
+    border:1px solid #ed4259;
+    background: #bf2c24;
+}
+.book-details-wrap .book-detail>p:last-child a:first-child:hover{
+    color: #fff !important;
+    border-color: #ed4259;
+    background: #ed4259
+}
+.book-details-wrap .book-detail>p:last-child a:last-child{
+    font-size:12px;
+    line-height: 16px;
+    color:#ddd;
+    border:1px solid #ed4259;
+    background: #bf2c24;
+}
+.book-details-wrap .book-detail>p:last-child a:last-child:hover{
+    color: #fff !important;
+    border-color: #ed4259;
+    background: #ed4259
+}
+/* 一楼 右边 评分 */
+.book-details-wrap .score{
+    position:absolute;
+    top:10px;
+    right:0px;
+    width:116px;
+    padding-right:30px;
+}
+/* 分数 */
+.book-details-wrap .score>h3{
+    text-align:right;
+}
+.book-details-wrap .score>h3 i{
+    font: 400 24px/38px FZZCYSK;
+}
+.book-details-wrap .score h3 span{
+    font: 400 32px/38px FZZCYSK;
+}
+/* 评价人数 */
+.book-details-wrap .score .number {
+    color:#999;
+    font-size:14px;
+    text-align:right;
+    margin:10px 0 15px 0;
+}
+.book-details-wrap .score .number span{
+    color:#999;
+    font-size:13px;
+    margin-right:5px;
+}
+/* 我要评价 */
+.book-details-wrap .score .assess{
+    color:#333;
+    font: 12px/16px PingFangSC-Regular,'-apple-system',Simsun;
+    text-align:right;
+}
+/* 星星评分 */
+.book-details-wrap .score>div{
+    color:#ddd;
+    font-size:24px;
+    letter-spacing: -1px;
+}
+.book-details-wrap .score>div i{
+    cursor: pointer;
+}
+/* 订阅和下载 */
+.book-details-wrap .subscribe{
+    position: absolute;
+    bottom:25px;
+    right:30px;
+    color:#3f5a93;
+}
+.book-details-wrap .subscribe>a:first-child{
+    font-size:14px;
+    color:#3f5a93;
+    margin-right:10px;
+}
+.book-details-wrap .subscribe>a:first-child:hover{
+    color:#2972cc !important;
+}
+.book-details-wrap .subscribe>a:last-child{
+    font-size:14px;
+    color:#3f5a93;
+    margin-left:10px;
+}
+.book-details-wrap .subscribe>a:last-child:hover{
+    color:#2972cc !important;
+}
+ /* content-nav-wrap 内容导航  */
+.content-nav-wrap{
+    margin:40px 0 30px 0;
+    border-bottom:1px solid #bbb;
+}
+.content-nav-wrap a{
+    display:inline-block;
+    padding:0 20px 0 20px;
+    font:400 18px FZZCYSK;
+    line-height: 40px;
+    color:#999;
+
+}
+/* 作品信息 */
+/* 目录 */
+/* 作品评论 */
+.content-nav-wrap>a:nth-child(2) span,
+.content-nav-wrap>a:last-child span{
+    font:400 14px FZZCYSK;
+    color:#999;
+}
+/* 选中状态 */
+.content-nav-wrap .active{
+    color:#ed4259;
+    border-bottom:2px solid #ed4259;
+    margin-bottom:-1px;
+}
+/* 主体包裹 */
+.book-content-wrap{
+    position: relative;
+}
+.book-content-wrap .book-info-details {
+    width:700px;
+}
+/* <!-- 简介 --> */
+.book-content-wrap .book-info-details>p{
+    font: 14px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    color:#333;
+    padding:0 0 20px 20px;
+    border-bottom:1px solid #bbb;
+}
+/* 获得荣誉 */
+.book-content-wrap .book-info-details .honor{
+    padding-top:20px;
+}
+/* 左浮动 */
+.book-content-wrap .book-info-details .honor>div{
+    float:left;
+}
+.book-content-wrap .book-info-details .honor>div:first-child{
+    width:98px;
+    font: 14px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    color:#999;
+    margin-right:15px;
+}
+/* 下边框 */
+.book-content-wrap .book-info-details .honor>div:last-child{
+    border-bottom:1px solid #bbb;
+    padding-bottom:20px;
+}
+.book-content-wrap .book-info-details .honor strong{
+    display: inline-block;
+    font: 14px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    color:#333;
+    margin-bottom:5px;
+}
+/* 荣誉图 */
+.book-content-wrap .book-info-details .honor p img{
+    width:50px;
+    height:50px;
+    margin-right:10px;
+    vertical-align: middle;
+}
+.book-content-wrap .book-info-details .honor p a{
+    font: 14px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    color:#3f5a93;
+    line-height:50px;
+    margin-left:30px;
+}
+/* 最近更新状态 */
+.book-content-wrap .book-info-details .update{
+    padding:20px 0 20px 0;
+}
+/* 最新章节 */
+.book-content-wrap .book-info-details .update>div{
+    float:left;
+}
+/* 最新更新 */
+.book-content-wrap .book-info-details .update>div:first-child{
+    width:98px;
+    font: 14px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    color:#999;
+    margin-right:15px;
+}
+/* 最新章节 */
+.book-content-wrap .book-info-details .update p a{
+    font: 14px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    color:#3f5a93;
+    margin-left:30px;
+}
+.book-content-wrap .book-info-details .update p em,
+.book-content-wrap .book-info-details .update p span{
+    font: 14px/22px Arial;
+    color:#999;
+}
+/* 粉丝互动 */
+/* 标题 */
+.book-content-wrap .fans-zone>h3{
+    margin-bottom:15px;
+    font-size: 22px;
+    line-height: 25px;
+    height: 25px;
+    font-family: FZZCYSK;
+}
+/* 背景 */
+.book-content-wrap .fans-zone dl{
+    text-align: center;
+    background: #f7f6f2;
+}
+.book-content-wrap .fans-zone dl dd{
+    float:left;
+    width:232px;
+    padding:24px 0;
+}
+/* 月票  */
+.book-content-wrap .fans-zone dd>h4{
+    margin-bottom:14px;
+}
+.book-content-wrap .fans-zone dd>h4 span{
+    font:400 18px FZZCYSK;
+    line-height: 22px;
+    color: #a6a6a6;
+    margin:0 10px 0 10px;
+}
+.book-content-wrap .fans-zone dd>h4 .active{
+    color:#ed4259;
+}
+/* 本月票数 */
+.book-content-wrap .fans-zone dd .month-count{
+    text-align:center;
+    font: 12px/16px PingFangSC-Regular,'-apple-system',Simsun;
+    height: 16px;
+    margin-bottom: 7px;
+    color: #a6a6a6;
+}
+/* 票数 */
+.book-content-wrap .fans-zone dd .mum{
+    text-align:center;
+    font: 30px/33px Arial;
+}
+/* 排名 */
+.book-content-wrap .fans-zone dd .rank{
+    text-align:center;
+    font: 12px/16px PingFangSC-Regular,'-apple-system',Simsun;
+    height: 16px;
+    margin-bottom: 14px;
+}
+.book-content-wrap .fans-zone dd .rank em{
+    color:#ed4259;
+}
+/* 按钮 */
+.book-content-wrap .fans-zone dd .month-btn{
+    font: 14px/34px PingFangSC-Regular,'-apple-system',Simsun;
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 140px;
+    height: 34px;
+    margin: 20px auto 3px;
+    text-align: center;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #bf2c24;
+}
+.book-content-wrap .fans-zone dd .tip{
+    font: 12px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    color: grey;
+    text-align: center;
+}
+/* 打赏 */
+/* 我的粉丝等级 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

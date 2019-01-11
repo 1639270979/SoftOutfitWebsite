@@ -5,92 +5,149 @@
 	<title>Document</title>
 	<style></style>
 	<link rel="stylesheet" href="css/banner.css">
+	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/iconfont.css">
 </head>
 <body>
-	<!--顶部header-->
-	<iframe src="header.html" frameborder="0" width="100%" height="140px" scrolling="no"></iframe>
-	<!--页面主体-->
+	<!--一.顶部header-->
+	 <div class="header">
+		<div class="head clearfix">
+			<!-- 顶部logo -->
+			<div class="logo">
+				<a href="index.html"><img src="./img/header/logo1.jpg" alt=""></a>
+			</div>
+			<!-- 顶部搜索框 -->
+			<div class="search-wrap clearfix">
+				<p class="box-i">
+					<input class="box-search" type="text" placeholder="吞噬星空">
+				</p>	
+					<input id="search-btn" type="submit" value="">
+					<label for="search-btn" class="search-btn">
+						<em class="iconfont1"></em>
+						<em class="iconfont2"></em>
+					</label>
+			</div>
+			<!-- 顶部登陆注册 -->
+			<div class="user-wrap clearfix">
+				<a href="javascript:;">
+					<i class="iconfont icon-book-2"></i>
+					我的书架</a>|
+				<span data-toggle="login-box">登陆</span>|
+				<a href="register.html" target="blank">注册</a>
+			</div>
+		</div>
+		<!--页面导航-->
+		<div class="top-nav clearfix">
+			<div class="nav-center">
+				<div class="left-nav">
+					<ul>
+						<li><a href="javascript:;">全部分类</a> </li>
+						<li><a href="javascript:;">排行</a> </li>
+						<li><a href="javascript:;">免费</a> </li>
+						<li><a href="javascript:;">完本</a> </li>
+						<li><a href="javascript:;">包月</a> </li>
+						<li><a href="javascript:;">最近更新</a> </li>
+						<li><a href="javascript:;">充值</a> </li>
+						<li><a href="javascript:;">论坛</a> </li>
+						<li><a href="javascript:;">作家专区</a> </li>
+					</ul>
+				</div>
+				<div class="right-nav">
+					<p><a href="javascript:;">手机客户端</a> </p>
+				</div>
+			</div>
+		</div>
+    </div>
+	<!--二.页面主体-->
 	<div class="main">
 		<!-- 轮播图 -->
 		<div class="banner">
 			<!-- 左公告 书友力荐 -->
 			<div class="b-recommend">
-				<a href=""><h3 class="reconmend-title">书友力荐</h3></a>
+				<h3 class="reconmend-title">书友力荐</h3>
 				<ul>
-					<li><a href="#"><span>[古言]</span>名门暖婚：权爷盛宠妻</a></li>
-					<li><a href="#"><span>[古言]</span>穿越之傻王哑妃</a></li>
-					<li><a href="#"><span>[短篇]</span>不良太子妃：公主萌萌哒</a></li>
-					<li><a href="#"><span>[古言]</span>我有破烂，你要收吗</a></li>
-					<li><a href="#"><span>[现言]</span>皇后在位手册</a></li>
-					<li><a href="#"><span>[玄幻]</span>霍总，养妻已成瘾</a></li>
+					<li><a href="javascript:;"><span>[古言]</span>名门暖婚：权爷盛宠妻</a></li>
+					<li><a href="javascript:;"><span>[古言]</span>穿越之傻王哑妃</a></li>
+					<li><a href="javascript:;"><span>[短篇]</span>不良太子妃：公主萌萌哒</a></li>
+					<li><a href="javascript:;"><span>[古言]</span>我有破烂，你要收吗</a></li>
+					<li><a href="javascript:;"><span>[现言]</span>皇后在位手册</a></li>
+					<li><a href="javascript:;"><span>[玄幻]</span>霍总，养妻已成瘾</a></li>
 				</ul>
 			</div>
 			<!-- 1 楼中间轮播图 -->
 			<div class="banner-box" id="banner">
 				<ul class="banner-image" data-toggle="slide" style="left:-750px">
 					<li>
-						<a href="#">
-							<img src="./img/banner/9.jpg" alt="">
+						<a href="javascript:;">
+							<img src="./img/banner/15.jpg" alt="">
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<img src="./img/banner/7.jpg" alt="">
+						<a href="javascript:;">
+							<img src="./img/banner/11.jpg" alt="">
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<img src="./img/banner/3.jpg" alt="">
+						<a href="javascript:;">
+							<img src="./img/banner/12.jpg" alt="">
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<img src="./img/banner/4.jpg" alt="">
+						<a href="javascript:;">
+							<img src="./img/banner/13.jpg" alt="">
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<img src="./img/banner/8.jpg" alt="">
+						<a href="javascript:;">
+							<img src="./img/banner/14.jpg" alt="">
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<img src="./img/banner/9.jpg" alt="">
+						<a href="javascript:;">
+							<img src="./img/banner/15.jpg" alt="">
 						</a>
 					</li>
 				</ul>
 				<a class="ck-left ck-side" data-toggle="prev" href="javascript:;"></a>
 				<a class="ck-right ck-side" data-toggle="next" href="javascript:;"></a>
 				<div class="btn">
-					<span class="active"></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
+					<span class="active">我真是个富二代</span>
+					<span>超级基因猎场</span>
+					<span>谋断九州</span>
+					<span>疯狂的手游</span>
+					<span>幕后</span>
 				</div>
+				<a class="many-slide" href="javscript:;">
+					<ul class="clearfix">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</a>
 			</div>
 			<!-- 右公告 -->
 			<div class="notice">
-				<a href=""><h3 class="text-title">唐家三少新作震撼来袭</h3></a>
+				<a href="javascript:;"><h3 class="text-title">唐家三少新作震撼来袭</h3></a>
 				<ul>
-					<li><a href="#"><span>[公告]</span>唐家三少新作震撼来袭</a> </li>
-					<li><a href="#"><span>[公告]</span>烟雨江南新作震撼来袭</a> </li>
-					<li><a href="#"><span>[公告]</span>横扫天涯，笔耕十年</a></li>
-					<li><a href="#"><span>[公告]</span>江雪落——芬芳满堂</a></li>
-					<li><a href="#"><span>[公告]</span>大神府天新书震撼发布</a></li>
-					<li><a href="#"><span>[公告]</span>迪巴拉爵士新书来袭</a></li>
+					<li><a href="javascript:;"><span>[公告]</span>唐家三少新作震撼来袭</a> </li>
+					<li><a href="javascript:;"><span>[公告]</span>烟雨江南新作震撼来袭</a> </li>
+					<li><a href="javascript:;"><span>[公告]</span>横扫天涯，笔耕十年</a></li>
+					<li><a href="javascript:;"><span>[公告]</span>江雪落——芬芳满堂</a></li>
+					<li><a href="javascript:;"><span>[公告]</span>大神府天新书震撼发布</a></li>
+					<li><a href="javascript:;"><span>[公告]</span>迪巴拉爵士新书来袭</a></li>
 				</ul>
 			</div>
 		</div>
-		<!-- 主体 1楼 -->
+		<!--三. 主体  1楼 -->
 		<div class="main-one">
 			<!-- 顶部 -->
 			<div class="main-one-left">
 				<div class="title clearfix">
 					<div class="fc">金典完本</div>
-					<div class="fb"><a href="">更多&gt;</a></div>
+					<div class="fb"><a href="javascript:;">更多&gt;</a></div>
 				</div>
 				<!-- 小轮播图 -->
 				<div class="banner-l">
@@ -113,10 +170,10 @@
 					</ul>
 					<!-- 详情 -->
 					<div class="banner-details">
-						<h3><a href="#">都市最强医仙</a></h3> 
-						<a class="auther" href="#">农民悍隐刀</a>
+						<h3><a href="javascript:;">都市最强医仙</a></h3> 
+						<a class="auther" href="javascript:;">农民悍隐刀</a>
 						<p>
-							<a href="#">都市娱乐</a>|
+							<a href="javascript:;">都市娱乐</a>|
 							<span>161.1万字</span>
 						</p>
 						<span>窦神医的唯一真传弟子汤真秋，原本随师父隐居深山，后来被师
@@ -126,7 +183,7 @@
 							让汤真秋有些头疼……
 						</span>
 						<!-- main-one  1楼 左 立即略读按钮 -->
-						<a class="d-box" href="#">立即阅读</a>
+						<a class="d-box" href="javascript:;">立即阅读</a>
 					</div>
 				</div>
 			</div>
@@ -138,35 +195,35 @@
 				<div class="main-index">
 					<div class="top-box-left">
 						<div class="r-left">
-							<a href="#">
+							<a href="javascript:;">
 								<img src="./img/index/recommended/0.jpg" alt="">
 							</a> 
 						</div>
 						<div class="r-right">
-							<a href="#">同桌凶猛</a>
+							<a href="javascript:;">同桌凶猛</a>
 							<p>青梅竹马的同桌竟然成了大明星，又凶又萌。</p>
 							<div>
-								<a href="">柳下挥</a>
-								<a class="mr-right" href="">都市娱乐</a>
+								<a href="javascript:;">柳下挥</a>
+								<a class="mr-right" href="javascript:;">都市娱乐</a>
 							</div>
 						</div>
 					</div>
 					<div class="top-box-right">
 						<div class="r-left">
-							<a href="#">
+							<a href="javascript:;">
 								<img src="./img/index/recommended/1.jpg" alt="">
 							</a> 
 							</div>
 						<div class="r-right">
-							<a href="#">明朝败家子</a>
+							<a href="javascript:;">明朝败家子</a>
 							<p>弘治十一年。这是一个美好的清晨。此时朱厚照初成年。此时
 								王守仁和唐伯虎磨刀霍霍，预备科举。此时小冰河期已经来临，
 								绵长的严寒肆虐着大地。此时在南和伯府里，地主家的傻儿子，
 								南和伯的嫡传继承人方继藩……开始了他没羞没躁的败家人生。
 							</p>
 							<div>
-								<a href="">上山打老虎</a>
-								<a class="mr-right" href="">两宋元明</a>
+								<a href="javascript:;">上山打老虎</a>
+								<a class="mr-right" href="javascript:;">两宋元明</a>
 							</div>
 						</div>
 					</div>
@@ -174,7 +231,7 @@
 				<div class="main-index">
 						<div class="top-box-left">
 								<div class="r-left">
-									<a href="#">
+									<a href="javascript:;">
 										<img src="./img/index/recommended/2.jpg" alt="">
 									</a> 
 								</div>
@@ -182,24 +239,24 @@
 									<a href="#">全职武神</a>
 									<p>这是一个有侠气的故事…………………………</p>
 									<div>
-										<a href="">流浪的蛤蟆</a>
-										<a class="mr-right" href="">古典仙侠</a>
+										<a href="javascript:;">流浪的蛤蟆</a>
+										<a class="mr-right" href="javascript:;">古典仙侠</a>
 									</div>
 								</div>
 							</div>
 							<div class="top-box-right">
 								<div class="r-left">
-									<a href="#">
+									<a href="javascript:;">
 										<img src="./img/index/recommended/3.jpg" alt="">
 									</a> 
 									</div>
 								<div class="r-right">
-									<a href="#">青梅仙道</a>
+									<a href="javascript:;">青梅仙道</a>
 									<p>挥手千尺浪，静坐转阴阳。异世成大道，造化玄元光！
 									</p>
 									<div>
-										<a href="">污泥</a>
-										<a class="mr-right" href="">古典仙侠</a>
+										<a href="javascript:;">污泥</a>
+										<a class="mr-right" href="javascript:;">古典仙侠</a>
 									</div>
 								</div>
 							</div>
@@ -207,30 +264,30 @@
 				<div class="main-index">
 						<div class="top-box-left">
 								<div class="r-left">
-									<a href="#">
+									<a href="javascript:;">
 										<img src="./img/index/recommended/4.jpg" alt="">
 									</a> 
 								</div>
 								<div class="r-right">
-									<a href="#">大劫主</a>
+									<a href="javascript:;">大劫主</a>
 									<p>一卷道元真解，三千大道奇经。寒门少年踏仙路，
 										十年苦读意难平。仙榜有吾名！无尽天骄崛起，
 										一剑败尽英雄。不愿逐流从庸众，只求仰首见苍穹。
 										此心本天生！</p>
 									<div>
-										<a href="">黑山老鬼</a>
-										<a class="mr-right" href="">修真文明</a>
+										<a href="javascript:;">黑山老鬼</a>
+										<a class="mr-right" href="javascript:;">修真文明</a>
 									</div>
 								</div>
 							</div>
 							<div class="top-box-right">
 								<div class="r-left">
-									<a href="#">
+									<a href="javascript:;">
 										<img src="./img/index/recommended/8.jpg" alt="">
 									</a> 
 									</div>
 								<div class="r-right">
-									<a href="#">史上最强赘婿</a>
+									<a href="javascript:;">史上最强赘婿</a>
 									<p>
 										穿越异世成为财主家的小白脸赘婿，因太废物被赶
 										出来。于是他发奋图强，找一个更有权有势绝美高
@@ -240,207 +297,207 @@
 										子打死你！
 									</p>
 									<div>
-										<a href="">沉默的糕点</a>
-										<a class="mr-right" href="">东方玄幻</a>
+										<a href="javascript:;">沉默的糕点</a>
+										<a class="mr-right" href="javascript:;">东方玄幻</a>
 									</div>
 								</div>
 							</div>
 				</div>
 			</div>
-			<!-- 一楼 right -->
+			<!--三. 1楼 right -->
 			<div class="main-one-right">
 				<!-- 一楼 right-top -->
 				<div class="title clearfix">
 					<div class="fc">新书推荐</div>
-					<div class="fb"><a href="">更多&gt;</a></div>
+					<div class="fb"><a href="javascript:;">更多&gt;</a></div>
 				</div>
 				<div class="main-r-body">
 					<ul><!-- 1 -->
 						<li>
 							<span class="main-r-no1">1</span>
-							<a class="main-rb-a" href="#">覆手</a>
-							<a href="#">虾写</a>
+							<a class="main-rb-a" href="javascript:;">覆手</a>
+							<a href="javascript:;">虾写</a>
 						</li>
 						<li><!-- 2 -->
 							<span class="main-r-no2">2</span>
-							<a class="main-rb-a" href="#">问道章</a>
-							<a href="#">文抄公</a>
+							<a class="main-rb-a" href="javascript:;">问道章</a>
+							<a href="javascript:;">文抄公</a>
 						</li>
 						<!-- 3 -->
 						<li><span class="main-r-no3">3</span>
-							<a class="main-rb-a" href="#">医路坦途</a>
-							<a href="#">臧福生</a>
+							<a class="main-rb-a" href="javascript:;">医路坦途</a>
+							<a href="javascript:;">臧福生</a>
 						</li>	
 						<!-- 4 -->
 						<li>	
 							<span>4</span>
-							<a class="main-rb-a" href="#">武人无敌</a>
-							<a href="#">奇燃</a>
+							<a class="main-rb-a" href="javascript:;">武人无敌</a>
+							<a href="javascript:;">奇燃</a>
 						</li>
 						<!-- 5 -->
 						<li>					
 							<span>5</span>
-							<a class="main-rb-a" href="#">乘龙佳婿</a>
-							<a href="#">府天</a>
+							<a class="main-rb-a" href="javascript:;">乘龙佳婿</a>
+							<a href="javascript:;">府天</a>
 						</li>
 						<!-- 6 -->
 						<li>
 							<span>6</span>
-							<a class="main-rb-a" href="#">高能来袭</a>
-							<a href="#">薪意</a>
+							<a class="main-rb-a" href="javascript:;">高能来袭</a>
+							<a href="javascript:;">薪意</a>
 						</li>
 						<!-- 7 -->
 						<li>
 							<span>7</span>
-							<a class="main-rb-a" href="#">九星毒奶</a>
-							<a href="#">育</a>
+							<a class="main-rb-a" href="javascript:;">九星毒奶</a>
+							<a href="javascript:;">育</a>
 						</li>
 						<!--8 -->
 						<li>
 							<span>8</span>
-							<a class="main-rb-a" href="#">北宋大丈夫</a>
-							<a href="#">迪巴拉爵士</a>
+							<a class="main-rb-a" href="javascript:;">北宋大丈夫</a>
+							<a href="javascript:;">迪巴拉爵士</a>
 						</li>
 						<!-- 9 -->
 						<li>
 							<span>9</span>
-							<a class="main-rb-a" href="#">吾皇，万岁</a>
-							<a href="#">龙鳞道</a>
+							<a class="main-rb-a" href="javascript:;">吾皇，万岁</a>
+							<a href="javascript:;">龙鳞道</a>
 						</li>
 						<!-- 10 -->
 						<li>
 							<span>10</span>
-							<a class="main-rb-a" href="#">恐怖修仙世界</a>
-							<a href="#">龙蛇枝</a>
+							<a class="main-rb-a" href="javascript:;">恐怖修仙世界</a>
+							<a href="javascript:;">龙蛇枝</a>
 						</li>
 						<!-- 11 -->
 						<li>
 							<span>11</span>
-							<a class="main-rb-a" href="#">这个地球有点凶</a>
-							<a href="#">傅啸尘</a>
+							<a class="main-rb-a" href="javascript:;">这个地球有点凶</a>
+							<a href="javascript:;">傅啸尘</a>
 						</li>
 						<!-- 12 -->
 						<li>	
 							<span>12</span>
-							<a class="main-rb-a" href="#">反派都想打死我</a>
-							<a href="#">骗人</a>
+							<a class="main-rb-a" href="javascript:;">反派都想打死我</a>
+							<a href="javascript:;">骗人</a>
 						</li>
 						<!-- 13 -->
 						<li>	
 							<span>13</span>
-							<a class="main-rb-a" href="#">别吃那个鬼</a>
-							<a href="#">黑暗荔枝</a>
+							<a class="main-rb-a" href="javascript:;">别吃那个鬼</a>
+							<a href="javascript:;">黑暗荔枝</a>
 						</li>
 						<!-- 14 -->
 						<li>
 							<span>14</span>
-							<a class="main-rb-a" href="#">舌尖上的霍格沃茨</a>
-							<a href="#">幽萌之羽</a>
+							<a class="main-rb-a" href="javascript:;">舌尖上的霍格沃茨</a>
+							<a href="javascript:;">幽萌之羽</a>
 						</li>
 						<!-- 15 -->
 						<li>
 							<span>15</span>
-							<a class="main-rb-a" href="#">成为仙兽师的小民警</a>
-							<a href="#">七星荔枝肉</a>
+							<a class="main-rb-a" href="javascript:;">成为仙兽师的小民警</a>
+							<a href="javascript:;">七星荔枝肉</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<!-- 主体 2楼 尚武阁 -->
+		<!--二. 主体 2楼 尚武阁 308-->
 		<div class="main-two clearfix">
 			<!-- 左 -->
-			<div class="main-two-fu" title="尚武阁">
+			<div class="main-two-fu" title="武">
 				<div class="main-fu-img">
 					<img src="" alt="">
 				</div>
 			</div>
 			<!-- 右轮播 -->
 			<div class="book-slide-wrap">
-				<a class="two-prev" href="">
-					<img src="./img/index/kangfu/arrow-left.png" alt="">
+				<a class="two-prev" href="javascript:;">
+					<img src="./img/index/Martial/arrow-left.png" alt="">
 				</a>
-				<a class="two-next" href="">
-					<img src="./img/index/kangfu/arrow-right.png" alt="">
+				<a class="two-next" href="javascript:;">
+					<img src="./img/index/Martial/arrow-right.png" alt="">
 				</a>
-				<ul>
+				<ul class="clearfix">
 					<!-- 1 -->
 					<li>
 						<div class="book-box">
-							<a href="#">
-								<img src="./img/index/kangfu/0.jpg" alt="">
+							<a href="javascript:;">
+								<img src="./img/index/Martial/0.jpg" alt="">
 							</a>
 						</div>
-						<p><a href="">反派都想打死我</a></p>	
-						<p><a href="">骗人</a></p>	
+						<p><a href="javascript:;">反派都想打死我</a></p>	
+						<p><a href="javascript:;">骗人</a></p>	
 					</li>
 					<!-- 2 -->
 					<li>
 						<div class="book-box">
-							<a href="#">
-								<img src="./img/index/kangfu/1.jpg" alt="">
+							<a href="javascript:;">
+								<img src="./img/index/Martial/1.jpg" alt="">
 							</a>
 						</div>
-						<p><a href="">绝世武侠系统</a></p>	
-						<p><a href="">青草朦胧</a></p>	
+						<p><a href="javascript:;">绝世武侠系统</a></p>	
+						<p><a href="javascript:;">青草朦胧</a></p>	
 					</li>
 					<!-- 3 -->
 					<li>
 						<div class="book-box">
-							<a href="#">
-								<img src="./img/index/kangfu/2.jpg" alt="">
+							<a href="javascript:;">
+								<img src="./img/index/Martial/2.jpg" alt="">
 							</a>
 						</div>
-						<p><a href="">纯阳第一掌教</a></p>	
-						<p><a href="">池宁羽</a></p>	
+						<p><a href="javascript:;">纯阳第一掌教</a></p>	
+						<p><a href="javascript:;">池宁羽</a></p>	
 					</li>
 					<!-- 4 -->
 					<li>
 						<div class="book-box">
-							<a href="#">
-								<img src="./img/index/kangfu/3.jpg" alt="">
+							<a href="javascript:;">
+								<img src="./img/index/Martial/3.jpg" alt="">
 							</a>
 						</div>
-						<p><a href="">血狱江湖</a></p>	
-						<p><a href="">天雨寒</a></p>	
+						<p><a href="javascript:;">血狱江湖</a></p>	
+						<p><a href="javascript:;">天雨寒</a></p>	
 					</li>
 					<!-- 5 -->
 					<li>
 						<div class="book-box">
-							<a href="#">
-								<img src="./img/index/kangfu/4.jpg" alt="">
+							<a href="javascript:;">
+								<img src="./img/index/Martial/4.jpg" alt="">
 							</a>
 						</div>
-						<p><a href="">最强山贼系统 </a>	</p>
-						<p><a href="">蛤蟆大王</a></p>	
+						<p><a href="javascript:;">最强山贼系统 </a>	</p>
+						<p><a href="javascript:;">蛤蟆大王</a></p>	
 					</li>
 					<!-- 6 -->
 					<li>
 						<div class="book-box">
-							<a href="#">
-								<img src="./img/index/kangfu/5.jpg" alt="">
+							<a href="javascript:;">
+								<img src="./img/index/Martial/5.jpg" alt="">
 							</a>
 						</div>
-						<p><a href="">一剑破妄虚</a></p> 
-						<p><a href="">鬼火莹光</a></p>	
+						<p><a href="javascript:;">一剑破妄虚</a></p> 
+						<p><a href="javascript:;">鬼火莹光</a></p>	
 					</li>
 					<!-- 7 -->
 					<li>
 						<div class="book-box">
-							<a href="#">
-								<img src="./img/index/kangfu/6.jpg" alt="">
+							<a href="javascript:;">
+								<img src="./img/index/Martial/6.jpg" alt="">
 							</a>
 						</div>
-						<p><a href="">武侠三千年</a></p> 
-						<p><a href="">名不可简</a></p>	
+						<p><a href="javascript:;">武侠三千年</a></p> 
+						<p><a href="javascript:;">名不可简</a></p>	
 					</li>
 				</ul>
 			</div>
 		</div>
-		<!-- 主体 3楼  -->
+		<!--三. 主体 3楼  -->
 		<!-- 游戏大图 -->
 		<div class="banner-wrap">
-			<a href="">
+			<a href="javascript:;">
 				<img src="./img/index/game/big-pictrue0.jpg" alt="">
 			</a>
 		</div>
@@ -450,22 +507,22 @@
 				<div class="third-body">
 					<div class="top-title clearfix">
 						<p>畅销榜</p>
-						<a class="more-link" href="">更多</a>
+						<a class="more-link" href="javascript:;">更多</a>
 					</div>
 					<div class="list">
 						<ul>
 							<!-- 1 -->
 							<li class="list-imgb">
 								<h3>NO.1</h3>
-								<a class="main-r-no1" href="#">问道章</a>
+								<a class="main-r-no1" href="javascript:;">问道章</a>
 								<p class="digital"><span>30118</span>月票</p> 
 								<p class="third-auther">
-									<a href="">仙侠</a>
+									<a href="javascript:;">仙侠</a>
 									<i>.</i>
-									<a href="">烽火戏诸侯</a>
+									<a href="javascript:;">烽火戏诸侯</a>
 								</p>
 								<div class="list-img">
-									<a href="">
+									<a href="javascript:;">
 										<img src="./img/index/rank/rank1/list-img.JPG" alt="">
 									</a>
 								</div>
@@ -473,56 +530,56 @@
 							<!-- 2 -->
 							<li>
 								<span class="main-r-no2">2</span>
-								<a class="main-rb-a" href="#">剑来</a>
-								<a href="#">虾写</a>
+								<a class="main-rb-a" href="javascript:;">剑来</a>
+								<a href="javascript:;">虾写</a>
 							</li>
 							<!-- 3 -->
 							<li>
 								<span class="main-r-no3">3</span>
-								<a class="main-rb-a" href="#">医路坦途</a>
-								<a href="#">臧福生</a>
+								<a class="main-rb-a" href="javascript:;">医路坦途</a>
+								<a href="javascript:;">臧福生</a>
 							</li>	
 							<!-- 4 -->
 							<li>	
 								<span>4</span>
-								<a class="main-rb-a" href="#">武人无敌</a>
-								<a href="#">奇燃</a>
+								<a class="main-rb-a" href="javascript:;">武人无敌</a>
+								<a href="javascript:;">奇燃</a>
 							</li>
 							<!-- 5 -->
 							<li>					
 								<span>5</span>
-								<a class="main-rb-a" href="#">乘龙佳婿</a>
-								<a href="#">府天</a>
+								<a class="main-rb-a" href="javascript:;">乘龙佳婿</a>
+								<a href="javascript:;">府天</a>
 							</li>
 							<!-- 6 -->
 							<li>
 								<span>6</span>
-								<a class="main-rb-a" href="#">高能来袭</a>
-								<a href="#">薪意</a>
+								<a class="main-rb-a" href="javascript:;">高能来袭</a>
+								<a href="javascript:;">薪意</a>
 							</li>
 							<!-- 7 -->
 							<li>
 								<span>7</span>
-								<a class="main-rb-a" href="#">九星毒奶</a>
-								<a href="#">育</a>
+								<a class="main-rb-a" href="javascript:;">九星毒奶</a>
+								<a href="javascript:;">育</a>
 							</li>
 							<!--8 -->
 							<li>
 								<span>8</span>
-								<a class="main-rb-a" href="#">北宋大丈夫</a>
-								<a href="#">迪巴拉爵士</a>
+								<a class="main-rb-a" href="javascript:;">北宋大丈夫</a>
+								<a href="javascript:;">迪巴拉爵士</a>
 							</li>
 							<!-- 9 -->
 							<li>
 								<span>9</span>
-								<a class="main-rb-a" href="#">吾皇，万岁</a>
-								<a href="#">龙鳞道</a>
+								<a class="main-rb-a" href="javascript:;">吾皇，万岁</a>
+								<a href="javascript:;">龙鳞道</a>
 							</li>
 							<!-- 10 -->
 							<li>
 								<span>10</span>
-								<a class="main-rb-a" href="#">恐怖修仙世界</a>
-								<a href="#">龙蛇枝</a>
+								<a class="main-rb-a" href="javascript:;">恐怖修仙世界</a>
+								<a href="javascript:;">龙蛇枝</a>
 							</li>
 						</ul>
 					</div>
@@ -532,22 +589,22 @@
 				<div class="third-body">
 					<div class="top-title clearfix">
 						<p>用户周点击榜</p>
-						<a class="more-link" href="">更多</a>
+						<a class="more-link" href="javascript:;">更多</a>
 					</div>
 					<div class="list">
 						<ul>
 							<!-- 1 -->
 							<li class="list-imgb">
 								<h3>NO.1</h3>
-								<a class="main-r-no1" href="#">点道为止</a>
+								<a class="main-r-no1" href="javascript:;">点道为止</a>
 								<p class="digital"><span>1336975</span>点击数</p> 
 								<p class="third-auther">
-									<a href="">[都市]</a>
+									<a href="javascript:;">[都市]</a>
 									<i>.</i>
-									<a href="">梦入神机</a>
+									<a href="javascript:;">梦入神机</a>
 								</p>
 								<div class="list-img">
-									<a href="">
+									<a href="javascript:;">
 										<img src="./img/index/rank/rank2/rank-week.JPEG" alt="">
 									</a>
 								</div>
@@ -555,56 +612,56 @@
 							<!-- 2 -->
 							<li>
 								<span class="main-r-no2">2</span>
-								<a class="main-rb-a" href="#">妙医鸿途</a>
-								<span href="#">10550082</span>
+								<a class="main-rb-a" href="javascript:;">妙医鸿途</a>
+								<span>10550082</span>
 							</li>
 							<!-- 3 -->
 							<li>
 								<span class="main-r-no3">3</span>
-								<a class="main-rb-a" href="#">圣武星辰</a>
-								<span href="#">10510933</span>
+								<a class="main-rb-a" href="javascript:;">圣武星辰</a>
+								<span>10510933</span>
 							</li>	
 							<!-- 4 -->
 							<li>	
 								<span>4</span>
-								<a class="main-rb-a" href="#">一剑独尊</a>
-								<span href="#">10279684</span>
+								<a class="main-rb-a" href="javascript:;">一剑独尊</a>
+								<span>10279684</span>
 							</li>
 							<!-- 5 -->
 							<li>					
 								<span>5</span>
-								<a class="main-rb-a" href="#">最强逆袭</a>
-								<span href="#">9990085</span>
+								<a class="main-rb-a" href="javascript:;">最强逆袭</a>
+								<span>9990085</span>
 							</li>
 							<!-- 6 -->
 							<li>
 								<span>6</span>
-								<a class="main-rb-a" href="#">开个诊所来修仙</a>
-								<span href="#">9865716</span>
+								<a class="main-rb-a" href="javascript:;">开个诊所来修仙</a>
+								<span>9865716</span>
 							</li>
 							<!-- 7 -->
 							<li>
 								<span>7</span>
-								<a class="main-rb-a" href="#">祭炼山河</a>
-								<span href="#">9775217</span>
+								<a class="main-rb-a" href="javascript:;">祭炼山河</a>
+								<span>9775217</span>
 							</li>
 							<!--8 -->
 							<li>
 								<span>8</span>
-								<a class="main-rb-a" href="#">医品宗师</a>
-								<span href="#">9683288</span>
+								<a class="main-rb-a" href="javascript:;">医品宗师</a>
+								<span>9683288</span>
 							</li>
 							<!-- 9 -->
 							<li>
 								<span>9</span>
-								<a class="main-rb-a" href="#">长宁帝军</a>
-								<span href="#">9436869</span>
+								<a class="main-rb-a" href="javascript:;">长宁帝军</a>
+								<span>9436869</span>
 							</li>
 							<!-- 10 -->
 							<li>
 								<span>10</span>
-								<a class="main-rb-a" href="#">巴山剑场</a>
-								<span href="#">93733310</span>
+								<a class="main-rb-a" href="javascript:;">巴山剑场</a>
+								<span>93733310</span>
 							</li>
 						</ul>
 					</div>
@@ -614,22 +671,22 @@
 				<div class="third-body">
 					<div class="top-title clearfix">
 						<p>周推荐票榜</p>
-						<a class="more-link" href="">更多</a>
+						<a class="more-link" href="javascript:;">更多</a>
 					</div>
 					<div class="list">
 						<ul>
 							<!-- 1 -->
 							<li class="list-imgb">
 								<h3>NO.1</h3>
-								<a class="main-r-no1" href="#">斗罗大陆IV终极斗罗</a>
+								<a class="main-r-no1" href="javascript:;">斗罗大陆IV终极斗罗</a>
 								<p class="digital"><span>447593</span>推荐票</p> 
 								<p class="third-auther">
-									<a href="">玄幻</a>
+									<a href="javascript:;">玄幻</a>
 									<i>.</i>
-									<a href="">唐家三少</a>
+									<a href="javascript:;">唐家三少</a>
 								</p>
 								<div class="list-img">
-									<a href="">
+									<a href="javascript:;">
 										<img src="./img/index/rank/rank3/week-recommend.JPG" alt="">
 									</a>
 								</div>
@@ -637,56 +694,56 @@
 							<!-- 2 -->
 							<li>
 								<span class="main-r-no2">2</span>
-								<a class="main-rb-a" href="#">锦衣春秋</a>
-								<span href="#">5155932</span>
+								<a class="main-rb-a" href="javascript:;">锦衣春秋</a>
+								<span>5155932</span>
 							</li>
 							<!-- 3 -->
 							<li>
 								<span class="main-r-no3">3</span>
-								<a class="main-rb-a" href="#">圣武星辰</a>
-								<span href="#">2973103</spana>
+								<a class="main-rb-a" href="javascript:;">圣武星辰</a>
+								<span>2973103</spana>
 							</li>	
 							<!-- 4 -->
 							<li>	
 								<span>4</span>
-								<a class="main-rb-a" href="#">祭炼山河</a>
-								<span href="#">2074964</span>
+								<a class="main-rb-a" href="javascript:;">祭炼山河</a>
+								<span>2074964</span>
 							</li>
 							<!-- 5 -->
 							<li>					
 								<span>5</span>
-								<a class="main-rb-a" href="#">一剑独尊</a>
-								<span href="#">2010745</span>
+								<a class="main-rb-a" href="javascript:;">一剑独尊</a>
+								<span>2010745</span>
 							</li>
 							<!-- 6 -->
 							<li>
 								<span>6</span>
-								<a class="main-rb-a" href="#">医品宗师</a>
-								<span href="#">1992916</span>
+								<a class="main-rb-a" href="javascript:;">医品宗师</a>
+								<span>1992916</span>
 							</li>
 							<!-- 7 -->
 							<li>
 								<span>7</span>
-								<a class="main-rb-a" href="#">最强逆袭</a>
-								<span href="#">1992407</span>
+								<a class="main-rb-a" href="javascript:;">最强逆袭</a>
+								<span>1992407</span>
 							</li>
 							<!--8 -->
 							<li>
 								<span>8</span>
-								<a class="main-rb-a" href="#">长宁帝军</a>
-								<span href="#">1292398</span>
+								<a class="main-rb-a" href="javascript:;">长宁帝军</a>
+								<span>1292398</span>
 							</li>
 							<!-- 9 -->
 							<li>
 								<span>9</span>
-								<a class="main-rb-a" href="#">医等狂兵</a>
-								<span href="#">1058269</span>
+								<a class="main-rb-a" href="javascript:;">医等狂兵</a>
+								<span>1058269</span>
 							</li>
 							<!-- 10 -->
 							<li>
 								<span>10</span>
-								<a class="main-rb-a" href="#">巴山剑场</a>
-								<span href="#">8295010</span>
+								<a class="main-rb-a" href="javascript:;">巴山剑场</a>
+								<span>8295010</span>
 							</li>
 						</ul>
 					</div>
@@ -696,22 +753,22 @@
 				<div class="third-body">
 					<div class="top-title clearfix">
 						<p>原创风云榜·新书</p>
-						<a class="more-link" href="">更多</a>
+						<a class="more-link" href="javascript:;">更多</a>
 					</div>
 					<div class="list">
 						<ul>
 							<!-- 1 -->
 							<li class="list-imgb">
 								<h3>NO.1</h3>
-								<a class="main-r-no1" href="#">同桌凶猛</a>
+								<a class="main-r-no1" href="javascript:;">同桌凶猛</a>
 								<p class="digital"><span>10245</span>月票</p> 
 								<p class="third-auther">
-									<a href="">都市</a>
+									<a href="javascript:;">都市</a>
 									<i>.</i>
-									<a href="">柳下挥</a>
+									<a href="javascript:;">柳下挥</a>
 								</p>
 								<div class="list-img">
-									<a href="">
+									<a href="javascript:;">
 										<img src="./img/index/rank/rank4/new-rank-book.JPG" alt="">
 									</a>
 								</div>
@@ -719,56 +776,56 @@
 							<!-- 2 -->
 							<li>
 								<span class="main-r-no2">2</span>
-								<a class="main-rb-a" href="#">超神制卡师</a>
-								<span href="#">5651</span>
+								<a class="main-rb-a" href="javascript:;">超神制卡师</a>
+								<span>5651</span>
 							</li>
 							<!-- 3 -->
 							<li>
 								<span class="main-r-no3">3</span>
-								<a class="main-rb-a" href="#">科技霸权</a>
-								<span href="#">4414</span>
+								<a class="main-rb-a" href="javascript:;">科技霸权</a>
+								<span>4414</span>
 							</li>	
 							<!-- 4 -->
 							<li>	
 								<span>4</span>
-								<a class="main-rb-a" href="#">联盟之佣兵系统</a>
-								<span href="#">3423</span>
+								<a class="main-rb-a" href="javascript:;">联盟之佣兵系统</a>
+								<span>3423</span>
 							</li>
 							<!-- 5 -->
 							<li>					
 								<span>5</span>
-								<a class="main-rb-a" href="#">篮坛之氪金无敌</a>
-								<span href="#">3256</span>
+								<a class="main-rb-a" href="javascript:;">篮坛之氪金无敌</a>
+								<span>3256</span>
 							</li>
 							<!-- 6 -->
 							<li>
 								<span>6</span>
-								<a class="main-rb-a" href="#">我真是良民</a>
-								<span href="#">3238</span>
+								<a class="main-rb-a" href="javascript:;">我真是良民</a>
+								<span>3238</span>
 							</li>
 							<!-- 7 -->
 							<li>
 								<span>7</span>
-								<a class="main-rb-a" href="#">全球影帝</a>
-								<span href="#">3182</span>
+								<a class="main-rb-a" href="javascript:;">全球影帝</a>
+								<span>3182</span>
 							</li>
 							<!--8 -->
 							<li>
 								<span>8</span>
-								<a class="main-rb-a" href="#">我家后门通洪荒</a>
-								<span href="#">2781</span>
+								<a class="main-rb-a" href="javascript:;">我家后门通洪荒</a>
+								<span>2781</span>
 							</li>
 							<!-- 9 -->
 							<li>
 								<span>9</span>
-								<a class="main-rb-a" href="#">没有谁，我惹不起</a>
-								<span href="#">2162</span>
+								<a class="main-rb-a" href="javascript:;">没有谁，我惹不起</a>
+								<span>2162</span>
 							</li>
 							<!-- 10 -->
 							<li>
 								<span>10</span>
-								<a class="main-rb-a" href="#">绝代名师</a>
-								<span href="#">2065</span>
+								<a class="main-rb-a" href="javascript:;">绝代名师</a>
+								<span>2065</span>
 							</li>
 						</ul>
 					</div>
@@ -777,11 +834,11 @@
 		</div>
 		<!-- 大图 -->
 		<div class="banner-wrap">
-				<a href="">
+				<a href="javascript:;">
 					<img src="./img/index/game/big-pictrue1.jpg" alt="">
 				</a>
 			</div>
-		<!-- 4楼 热门作品 -->
+		<!--三. 4楼 热门作品 -->
 		<div class="hot-work-wrap clearfix">
 			<!-- hot 轮播 -->
 			<div class="hot-book-box">
@@ -793,17 +850,17 @@
 						<div class="slide-wrap">
 							<ul>
 								<li>
-									<a href="">
+									<a href="javascript:;">
 										<img src="./img/index/hot/hot-slide1.jpg" alt="">
 									</a>	
 								</li>
 								<li>
-									<a href="">
+									<a href="javascript:;">
 										<img src="./img/index/hot/hot-slide2.jpg" alt="">
 									</a>
 								</li>
 								<li>
-									<a href="">
+									<a href="javascript:;">
 										<img src="./img/index/hot/hot-slide3.jpg" alt="">
 									</a>
 								</li>
@@ -812,9 +869,9 @@
 						<div class="slide-box">
 							<ul>
 								<li>
-									<h3><a href="">至尊特工</a> </h3>
+									<h3><a href="javascript:;">至尊特工</a> </h3>
 									<p class="auther">
-										<a href="">8难</a>
+										<a href="javascript:;">8难</a>
 										<em>·</em>
 										8.4分
 									</p>
@@ -823,7 +880,7 @@
 										<span>人气</span>
 									</p>
 									<p class="intro">一脉单传，16岁被师傅丢入龙组？！</p>
-									<a class="book-details" href="">书籍详情</a>
+									<a class="book-details" href="javascript:;">书籍详情</a>
 								</li>
 							</ul>
 						</div>
@@ -842,24 +899,24 @@
 						<div class="hot-wrap-list">
 							<dl>
 								<dd>
-									<a href="">「玄幻」</a>
-									<a href="">我在诸夏当大王</a>
+									<a href="javascript:;">「玄幻」</a>
+									<a href="javascript:;">我在诸夏当大王</a>
 								</dd>
 								<dd>
-									<a href="">「玄幻」</a>
-									<a href="">一枪打爆星辰,获得经验值</a>
+									<a href="javascript:;">「玄幻」</a>
+									<a href="javascript:;">一枪打爆星辰,获得经验值</a>
 								</dd>
 								<dd>
-									<a href="">「玄幻」</a>
-									<a href="">这是一个宠物的世界</a>
+									<a href="javascript:;">「玄幻」</a>
+									<a href="javascript:;">这是一个宠物的世界</a>
 								</dd>
 								<dd>
-									<a href="">「奇幻」</a>
-									<a href="">解锁诸天神殿召唤文臣武将</a>
+									<a href="javascript:;">「奇幻」</a>
+									<a href="javascript:;">解锁诸天神殿召唤文臣武将</a>
 								</dd>
 								<dd>
-									<a href="">「奇幻」</a>
-									<a href="">吃货魔女横扫霍格沃茨</a>
+									<a href="javascript:;">「奇幻」</a>
+									<a href="javascript:;">吃货魔女横扫霍格沃茨</a>
 								</dd>
 							</dl>
 						</div>
@@ -873,24 +930,24 @@
 						<div class="hot-wrap-list">
 							<dl>
 								<dd>
-									<a href="">「仙侠」</a>
-									<a href="">精神病院，中二修仙！</a>
+									<a href="javascript:;">「仙侠」</a>
+									<a href="javascript:;">精神病院，中二修仙！</a>
 								</dd>
 								<dd>
-									<a href="">「仙侠」</a>
-									<a href="">午夜梦醒，聊斋书生！</a>
+									<a href="javascript:;">「仙侠」</a>
+									<a href="javascript:;">午夜梦醒，聊斋书生！</a>
 								</dd>
 								<dd>
-									<a href="">「仙侠」</a>
-									<a href="">穿越洪荒，第一头鲸鱼！</a>
+									<a href="javascript:;">「仙侠」</a>
+									<a href="javascript:;">穿越洪荒，第一头鲸鱼！</a>
 								</dd>
 								<dd>
-									<a href="">「仙侠」</a>
-									<a href="">一场黄粱梦，棋盘掌局人。</a>
+									<a href="javascript:;">「仙侠」</a>
+									<a href="javascript:;">一场黄粱梦，棋盘掌局人。</a>
 								</dd>
 								<dd>
-									<a href="">「仙侠」</a>
-									<a href="">不断轮回重生，积累气运</a>
+									<a href="javascript:;">「仙侠」</a>
+									<a href="javascript:;">不断轮回重生，积累气运</a>
 								</dd>
 							</dl>
 						</div>
@@ -904,24 +961,24 @@
 						<div class="hot-wrap-list">
 							<dl>
 								<dd>
-									<a href="">「都市」</a>
-									<a href="">悠闲的种田生活</a>
+									<a href="javascript:;">「都市」</a>
+									<a href="javascript:;">悠闲的种田生活</a>
 								</dd>
 								<dd>
-									<a href="">「都市」</a>
-									<a href="">走出一条最强导演之路</a>
+									<a href="javascript:;">「都市」</a>
+									<a href="javascript:;">走出一条最强导演之路</a>
 								</dd>
 								<dd>
-									<a href="">「都市」</a>
-									<a href="">过气歌手靠聊天群崛起</a>
+									<a href="javascript:;">「都市」</a>
+									<a href="javascript:;">过气歌手靠聊天群崛起</a>
 								</dd>
 								<dd>
-									<a href="">「都市」</a>
-									<a href="">无限世界开直播咯</a>
+									<a href="javascript:;">「都市」</a>
+									<a href="javascript:;">无限世界开直播咯</a>
 								</dd>
 								<dd>
-									<a href="">「都市」</a>
-									<a href="">二手商贩开黑店的日子</a>
+									<a href="javascript:;">「都市」</a>
+									<a href="javascript:;">二手商贩开黑店的日子</a>
 								</dd>
 							</dl>
 						</div>
@@ -935,24 +992,24 @@
 						<div class="hot-wrap-list">
 							<dl>
 								<dd>
-									<a href="">「历史」</a>
-									<a href="">领略战国最惊心动魄的时期</a>
+									<a href="javascript:;">「历史」</a>
+									<a href="javascript:;">领略战国最惊心动魄的时期</a>
 								</dd>
 								<dd>
-									<a href="">「历史」</a>
-									<a href="">领略战国最惊心动魄的时期</a>
+									<a href="javascript:;">「历史」</a>
+									<a href="javascript:;">领略战国最惊心动魄的时期</a>
 								</dd>
 								<dd>
-									<a href="">「历史」</a>
-									<a href="">意外来到魏国，成为彭城王</a>
+									<a href="javascript:;">「历史」</a>
+									<a href="javascript:;">意外来到魏国，成为彭城王</a>
 								</dd>
 								<dd>
-									<a href="">「历史」</a>
-									<a href="">穿越唐朝也不改吃货本色。</a>
+									<a href="javascript:;">「历史」</a>
+									<a href="javascript:;">穿越唐朝也不改吃货本色。</a>
 								</dd>
 								<dd>
-									<a href="">「历史」</a>
-									<a href="">佣兵力作：全球狙杀！</a>
+									<a href="javascript:;">「历史」</a>
+									<a href="javascript:;">佣兵力作：全球狙杀！</a>
 								</dd>
 							</dl>
 						</div>
@@ -966,24 +1023,24 @@
 						<div class="hot-wrap-list">
 							<dl>
 								<dd>
-									<a href="">「游戏」</a>
-									<a href="">异世界取材，经历做成游戏</a>
+									<a href="javascript:;">「游戏」</a>
+									<a href="javascript:;">异世界取材，经历做成游戏</a>
 								</dd>
 								<dd>
-									<a href="">「游戏」</a>
-									<a href="">我在漫威玩游戏</a>
+									<a href="javascript:;">「游戏」</a>
+									<a href="javascript:;">我在漫威玩游戏</a>
 								</dd>
 								<dd>
-									<a href="">「游戏」</a>
-									<a href="">游戏在我离开后运行了百年</a>
+									<a href="javascript:;">「游戏」</a>
+									<a href="javascript:;">游戏在我离开后运行了百年</a>
 								</dd>
 								<dd>
-									<a href="">「游戏」</a>
-									<a href="">传奇之超级法师</a>
+									<a href="javascript:;">「游戏」</a>
+									<a href="javascript:;">传奇之超级法师</a>
 								</dd>
 								<dd>
-									<a href="">「游戏」</a>
-									<a href="">NBA赛场的指挥官传说！</a>
+									<a href="javascript:;">「游戏」</a>
+									<a href="javascript:;">NBA赛场的指挥官传说！</a>
 								</dd>
 							</dl>
 						</div>
@@ -997,24 +1054,24 @@
 						<div class="hot-wrap-list">
 							<dl>
 								<dd>
-									<a href="">「科幻」</a>
-									<a href="">我是游荡在漫威世界的灰烬</a>
+									<a href="javascript:;">「科幻」</a>
+									<a href="javascript:;">我是游荡在漫威世界的灰烬</a>
 								</dd>
 								<dd>
-									<a href="">「科幻」</a>
-									<a href="">以无尽智慧跨越虚空万界！</a>
+									<a href="javascript:;">「科幻」</a>
+									<a href="javascript:;">以无尽智慧跨越虚空万界！</a>
 								</dd>
 								<dd>
-									<a href="">「科幻」</a>
-									<a href="">舰娘之红色血统！</a>
+									<a href="javascript:;">「科幻」</a>
+									<a href="javascript:;">舰娘之红色血统！</a>
 								</dd>
 								<dd>
-									<a href="">「科幻」</a>
-									<a href="">有座通往诸天万界的时空城</a>
+									<a href="javascript:;">「科幻」</a>
+									<a href="javascript:;">有座通往诸天万界的时空城</a>
 								</dd>
 								<dd>
-									<a href="">「科幻」</a>
-									<a href="">我在鬼怪横行的世界做大佬</a>
+									<a href="javascript:;">「科幻」</a>
+									<a href="javascript:;">我在鬼怪横行的世界做大佬</a>
 								</dd>
 							</dl>
 						</div>
@@ -1028,24 +1085,24 @@
 						<div class="hot-wrap-list">
 							<dl>
 								<dd>
-									<a href="">「二次元」</a>
-									<a href="">化身毒液在漫威</a>
+									<a href="javascript:;">「二次元」</a>
+									<a href="javascript:;">化身毒液在漫威</a>
 								</dd>
 								<dd>
-									<a href="">「二次元」</a>
-									<a href="">我爸是穿越者</a>
+									<a href="javascript:;">「二次元」</a>
+									<a href="javascript:;">我爸是穿越者</a>
 								</dd>
 								<dd>
-									<a href="">「二次元」</a>
-									<a href="">金手指是积分十倍</a>
+									<a href="javascript:;">「二次元」</a>
+									<a href="javascript:;">金手指是积分十倍</a>
 								</dd>
 								<dd>
-									<a href="">「二次元」</a>
-									<a href="">海贼世界暗影之王</a>
+									<a href="javascript:;">「二次元」</a>
+									<a href="javascript:;">海贼世界暗影之王</a>
 								</dd>
 								<dd>
-									<a href="">「二次元」</a>
-									<a href="">漫威世界的圣斗士</a>
+									<a href="javascript:;">「二次元」</a>
+									<a href="javascript:;">漫威世界的圣斗士</a>
 								</dd>
 							</dl>
 						</div>
@@ -1054,8 +1111,8 @@
 					<li class="list-l">
 						<div>
 							<div class="list-l-top">
-								<p><a class="title" href="">架空历史</a></p>
-								<h4><a href="">大明崇祯第一权臣</a></h4>
+								<p><a class="title" href="javascript:;">架空历史</a></p>
+								<h4><a href="javascript:;">大明崇祯第一权臣</a></h4>
 								<p class="digital">
 									<b>1,410,662</b>
 									<em>人气</em> 
@@ -1063,15 +1120,15 @@
 								<p class="details">五年就打败所有列强。</p>
 							</div>
 							<div class="list-l-b">
-								<a href="#">
+								<a href="javascript:;">
 									<img src="./img/index/hot/hot-wrap1.jpg" alt="">
 								</a>
 							</div>
 						</div>
 						<div>
 							<div class="list-l-top">
-								<p><a class="title" href="">异世大陆</a></p>
-								<h4><a href="">邪物召唤</a></h4>
+								<p><a class="title" href="javascript:;">异世大陆</a></p>
+								<h4><a href="javascript:;">邪物召唤</a></h4>
 								<p class="digital">
 									<b>99,442</b>
 									<em>人气</em> 
@@ -1079,7 +1136,7 @@
 								<p class="details">能打死怪物的只有怪物</p>
 							</div>
 							<div class="list-l-b">
-								<a href="#">
+								<a href="javascript:;">
 									<img class="hot-img2" src="./img/index/hot/hot-wrap2.jpg" alt="">
 								</a>
 							</div>
@@ -1088,21 +1145,21 @@
 				</ul>
 			</div>
 		</div>
-		<!-- 5楼 限时免费 -->
+		<!--三. 5楼 限时免费 -->
 		<div class="time-limit-wrap">
 			<ul>
 				<li class="time-box">
 					<p class="title">限时免费</p>
 					<p class="free">VIP章节免费读</p>
 					<em></em>
-					<p class="timer">
-						<cite>1</cite>
-						<em>天</em>
-						<i>
-							<cite>12</cite>:
-							<cite>23</cite>:
-							<cite>21</cite>
-						</i>
+					<p class="timer" data-toggle="timer">
+						<!--<cite>0</cite> -->
+						<!--<em>天</em> -->
+						<!--<i> -->
+						<!-- <cite>00</cite>: -->
+						<!-- <cite>00</cite>: -->
+						<!-- <cite>00</cite> -->
+						<!--</i> -->
 					</p>
 					<a class="blue">进入限免频道<span>&gt;</span></a>
 				</li>
@@ -1111,76 +1168,95 @@
 						<img src="./img/index/timer-free/free1.jpg" alt="">
 						<span>9</span>
 					</div>
-					<a class="name" href="#">间谍的战争</a>
+					<a class="name" href="javascript:;">间谍的战争</a>
 					<s>5起点币⁄千字</s>
-					<a class="free-blue-btn" href="#">免费阅读</a>
+					<a class="free-blue-btn" href="javascript:;">免费阅读</a>
 				</li>
 				<li class="obb">
 					<div>
 						<img src="./img/index/timer-free/free2.jpg" alt="">
 						<span>9</span>
 					</div>
-					<a class="name" href="#">无限先知</a>
+					<a class="name" href="javascript:;">无限先知</a>
 					<s>5起点币⁄千字</s>
-					<a class="free-blue-btn" href="#">免费阅读</a>
+					<a class="free-blue-btn" href="javascript:;">免费阅读</a>
 				</li>
 				<li class="even">
 					<div>
 						<img src="./img/index/timer-free/free3.jpg" alt="">
 						<span>9</span>
 					</div>
-					<a class="name" href="#">恒行诸天</a>
+					<a class="name" href="javascript:;">恒行诸天</a>
 					<s>5起点币⁄千字</s>
-					<a class="free-blue-btn" href="#">免费阅读</a>
+					<a class="free-blue-btn" href="javascript:;">免费阅读</a>
 				</li>
 				<li class="obb">
 					<div>
 						<img src="./img/index/timer-free/free4.jpg" alt="">
 						<span>9</span>
 					</div>
-					<a class="name" href="#">天下豪商</a>
+					<a class="name" href="javascript:;">天下豪商</a>
 					<s>5起点币⁄千字</s>
-					<a class="free-blue-btn" href="#">免费阅读</a>
+					<a class="free-blue-btn" href="javascript:;">免费阅读</a>
 				</li>
 				<li class="even">
 					<div>
 						<img src="./img/index/timer-free/free5.jpg" alt="">
 						<span>9</span>
 					</div>
-					<a class="name" href="#">草莽年代</a>
+					<a class="name" href="javascript:;">草莽年代</a>
 					<s>5起点币⁄千字</s>
-					<a class="free-blue-btn" href="#">免费阅读</a>
+					<a class="free-blue-btn" href="javascript:;">免费阅读</a>
 				</li>
 				<li class="obb">
 					<div>
 						<img src="./img/index/timer-free/free6.jpg" alt="">
 						<span>9</span>
 					</div>
-					<a class="name" href="#">掌门要逆天</a>
+					<a class="name" href="javascript:;">掌门要逆天</a>
 					<s>5起点币⁄千字</s>
-					<a class="free-blue-btn" href="#">免费阅读</a>
+					<a class="free-blue-btn" href="javascript:;">免费阅读</a>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<iframe src="footer.html" frameborder="0" width="100%" height="190px" scrolling="no"></iframe>
-	<!-- 悬浮导航栏 -->
+	<!--四 页面底部 -->
+	<iframe src="footer.html" frameborder="0" width="1519px" height="190px" scrolling="no"></iframe>
+	<!--五 悬浮导航栏 -->
 	<div class="pin-nav-wrap clearfix" id="pin">
 		<div class="box-center">
 			<div class="left-nav">
 				<ul>
-					<li><a href="#">首页</a> </li>
-					<li><a href="#">玄幻</a> </li>
-					<li><a href="#">都市</a> </li>
-					<li><a href="#">仙侠</a> </li>
-					<li><a href="#">科幻</a> </li>
-					<li><a href="#">历史</a> </li>
-					<li><a href="#">排行</a> </li>
-					<li><a href="#">更多</a> </li>
+					<li><a href="javascript:;">首页</a> </li>
+					<li><a href="javascript:;">玄幻</a> </li>
+					<li><a href="javascript:;">都市</a> </li>
+					<li><a href="javascript:;">仙侠</a> </li>
+					<li><a href="javascript:;">科幻</a> </li>
+					<li><a href="javascript:;">历史</a> </li>
+					<li><a href="javascript:;">排行</a> </li>
+					<!-- 下拉选项 -->
+					<li class="dropdown">
+						<!-- 下拉按钮 -->
+						<a data-toggle="dropdown" href="javascript:;">更多</a> 
+						<span class="angle"></span>
+						<dl class="dropdown">
+							<dd><a href="javascript:;">全部作品</a></dd>
+							<dd><a href="javascript:;">二次元</a></dd>
+							<dd><a href="javascript:;">奇幻</a></dd>
+							<dd><a href="javascript:;">武侠</a></dd>
+							<dd><a href="javascript:;">悬疑灵异</a></dd>
+							<dd><a href="javascript:;">军事</a></dd>
+							<dd><a href="javascript:;">现实</a></dd>
+							<dd><a href="javascript:;">体育</a></dd>
+							<dd><a href="javascript:;">短篇</a></dd>
+						</dl>
+					</li>
 				</ul>
 			</div>	
+			<!-- 导航右侧 -->
 			<div class="right-nav">
 				<div>
+					<!-- 搜索框 -->
 					<input class="pin-search" type="text" placeholder="我真是个富二代">
 					<label for="top-pin-box">
 						<em></em>
@@ -1188,15 +1264,84 @@
 					<input id="top-pin-box" type="submit">
 				</div>
 				<p>
-					|<a href="#">登陆</a>
-					<a href="#">注册</a>|
-					<em></em>
-					<a href="#">我的书架</a> 
+					|<a href="javascript:;" data-toggle="login-box">登陆</a>
+					<a href="javascript:;">注册</a>|
+					<a href="javascript:;">
+						<i class="iconfont icon-shujia"></i>
+						我的书架</a> 
 				</p>
 			</div>
 		</div>
 	</div>
+	<!--六。 登陆框 -->
+	<div class="mask" id="login-box">
+		<!-- 登陆 -->
+		<div class="login">
+			<div class="login-box">
+				<!-- 关闭登录按钮 -->
+				<em class="close-login-box" data-toggle="close">X</em>
+				<div class="login-top" data-toggle="switch">
+					<span class="visible" data-target="#login-body">账号登陆</span>
+					<span data-target="#qq-login-wrap">QQ登陆</span>
+					<span data-target="#weixin">微信登陆</span>
+				</div>
+				<!-- 正常登录 -->
+				<div>
+					<div class="login-body" id="login-body">
+						<div class="uname">
+							<em class="iconfont icon-huiyuandenglu"></em> 
+							<input type="text" placeholder="手机/邮箱/用户名">
+						</div>
+						<div class="pwd">
+							<em class="iconfont icon-mima"></em> 
+							<input type="password" placeholder="密码">
+						</div>
+						<div class="auto-login-box">
+							<input type="checkbox" id="auto-login">
+							<label for="auto-login">自动登录</label>
+							<a href="javascript:;">忘记密码</a>
+						</div>
+						<div class="login-wrap">
+							<a href="javascript:;">登录</a>
+						</div>
+						<div class="reg-wrap">
+							<a class="phone" href="javascript:;">手机验证码登录</a>
+							<span>|</span>
+							<a class="free-reg" href="javascript:;">免费注册</a>
+						</div>
+						<div class="many-login">
+							<div>
+								<a href="javascript:;"><i class="iconfont icon-baidu1"></i></a> 
+								<a href="javascript:;"><i class="iconfont icon-zhifubao2"></i></a>
+								<a href="javascript:;"><i class="iconfont icon-weibo2"></i></a>
+							</div>
+							<a data-toggle="many-login" href="javascript:;">更多登录方式</a>
+						</div>
+					</div>
+					<!-- qq登录 -->
+					<div class="qq-login-wrap" id="qq-login-wrap">
+						<div>
+							<p><img src="./img/login/qq.png"></p>
+						</div>
+						<p>您将转跳至指定页面进行登录操作。</p>
+						<a href="javascript:;">前往QQ</a>
+					</div>
+					<!-- 微信登陆 -->
+					<div class="weixin" id="weixin">
+						<div>
+							<p>
+								<img src="./img/login/weixin.jpg" alt="">
+							</p>
+						</div>
+						<p>请使用微信扫描二维码登录</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/header.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
