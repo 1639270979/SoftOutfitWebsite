@@ -1,8 +1,9 @@
 /* 顶部导航布局 */
 .pin-nav-wrap{
-    position:relative !important;
+    position: absolute !important;
     top:0px !important;
     display:block !important;
+    z-index: 999;
 }
 /* 游戏广告图 */
 .game-img img{
@@ -144,8 +145,10 @@
 }
 .book-details-wrap .book-detail>p:last-child a:last-child{
     font-size:12px;
-    line-height: 16px;
+	height:36px;
+    line-height: 36px;
     color:#ddd;
+	word-wrap:break-word;
     border:1px solid #ed4259;
     background: #bf2c24;
 }
@@ -177,7 +180,7 @@
     color:#999;
     font-size:14px;
     text-align:right;
-    margin:10px 0 15px 0;
+    margin:5px 0 5px 0;
 }
 .book-details-wrap .score .number span{
     color:#999;
@@ -194,7 +197,7 @@
 .book-details-wrap .score>div{
     color:#ddd;
     font-size:24px;
-    letter-spacing: -1px;
+    letter-spacing: -3px;
 }
 .book-details-wrap .score>div i{
     cursor: pointer;
@@ -249,14 +252,17 @@
     border-bottom:2px solid #ed4259;
     margin-bottom:-1px;
 }
-/* 主体包裹 */
+/* 主体包裹 73*/
 .book-content-wrap{
     position: relative;
+}
+.book-content-wrap .left-wrap{
+    float:left;
 }
 .book-content-wrap .book-info-details {
     width:700px;
 }
-/* <!-- 简介 --> */
+/* <!--1. 简介 --> */
 .book-content-wrap .book-info-details>p{
     font: 14px/28px PingFangSC-Regular,'-apple-system',Simsun;
     overflow: hidden;
@@ -328,7 +334,8 @@
     font: 14px/22px Arial;
     color:#999;
 }
-/* 粉丝互动 */
+
+/*2. 粉丝互动 200*/
 /* 标题 */
 .book-content-wrap .fans-zone>h3{
     margin-bottom:15px;
@@ -339,6 +346,7 @@
 }
 /* 背景 */
 .book-content-wrap .fans-zone dl{
+    width:700px;
     text-align: center;
     background: #f7f6f2;
 }
@@ -350,6 +358,7 @@
 /* 月票  */
 .book-content-wrap .fans-zone dd>h4{
     margin-bottom:14px;
+    color:#999;
 }
 .book-content-wrap .fans-zone dd>h4 span{
     font:400 18px FZZCYSK;
@@ -372,6 +381,8 @@
 .book-content-wrap .fans-zone dd .mum{
     text-align:center;
     font: 30px/33px Arial;
+    margin-bottom: 7px;
+    height:33px;
 }
 /* 排名 */
 .book-content-wrap .fans-zone dd .rank{
@@ -381,7 +392,53 @@
     margin-bottom: 14px;
 }
 .book-content-wrap .fans-zone dd .rank em{
-    color:#ed4259;
+    font: 14px/16px Arial;
+    display: inline-block;
+    height: 16px;
+    margin: -2px 3px 0;
+    vertical-align: middle;
+    color: #ed4259;
+}
+/* 图标 */
+.book-content-wrap .fans-zone .icon-box{
+	width:44px;
+    height:44px;
+	margin:0 auto;
+    text-align:center;
+	overflow:hidden;
+	position:relative;
+}
+/*清除外边距溢出*/
+.book-content-wrap .fans-zone .icon-box:before{
+	content:"";
+	display:table;
+}
+/*图标大小*/
+.book-content-wrap .fans-zone .icon-box span{
+	display:inline-block;
+	position:absolute;
+	top:14px;
+	left:14px;
+	width:16px;
+	height:18px;
+	transform:scale(2.5);
+	color:#f4a118;
+}
+/*红色*/
+.book-content-wrap .fans-zone .icon-box .red{
+	color:#d67772;
+}
+.book-content-wrap .fans-zone .icon-box b.red{
+	border-bottom:2px solid #d67772;
+}
+.book-content-wrap .fans-zone .icon-box b{
+	display:inline-block;
+	width:44px;
+	position:absolute;
+	top:42px;
+	left:0px;
+	height:0;
+	border-bottom:2px solid #f4a118;
 }
 /* 按钮 */
 .book-content-wrap .fans-zone dd .month-btn{
@@ -397,13 +454,596 @@
     border-radius: 20px;
     background-color: #bf2c24;
 }
+.book-content-wrap .fans-zone dd .month-btn:hover{
+    color: #fff !important;
+    border-color: #ed4259;
+    background: #ed4259
+}
+/* 线 */
+.book-content-wrap .fans-zone .line{
+    width: 0;
+    height: 208px;
+    margin-top: 28px;
+    border-left: 1px solid #e5e5e5;
+}
+/* 月票比率 */
 .book-content-wrap .fans-zone dd .tip{
     font: 12px/28px PingFangSC-Regular,'-apple-system',Simsun;
     color: grey;
     text-align: center;
 }
 /* 打赏 */
+.book-content-wrap .fans-zone .raword h4{
+    color:#ed4259;
+    font:400 18px FZZCYSK;
+    line-height: 26px;
+    margin-bottom:14px;
+}
 /* 我的粉丝等级 */
+.book-content-wrap .fans-zone .myFans>h4{
+    font:400 18px/22px FZZCYSK;
+    color:#000;
+}
+/* 未登录 */
+.book-content-wrap .myFans .fans-rank{
+    width:190px;
+    margin:0 auto;
+    margin-bottom:18px;
+    border-bottom:1px solid #e5e5e5;
+}
+/* 图片大小 */
+.book-content-wrap .myFans .fans-rank img{
+    width:44px;
+    height:44px;
+}
+/*未登录  255*/
+.book-content-wrap .myFans .fans-rank .loginUp{
+    display:inline-block;
+    height:44px;
+    line-height:44px;
+    color: #3f5a93;
+    font: 12px PingFangSC-Regular,'-apple-system',Simsun;
+    vertical-align: middle;
+    margin-left:5px;
+} 
+.book-content-wrap .myFans .fans-rank>span{
+    display:inline-block;
+    height:44px;
+    line-height:44px;
+    color: #333;
+    font: 12px PingFangSC-Regular,'-apple-system',Simsun;
+    vertical-align: middle;
+    margin-left:5px;
+} 
+/* 本书粉丝动态 */
+.book-content-wrap .myFans .fans-dynamic dl{
+    width:200px;
+    margin:0 auto;
+}
+.book-content-wrap .myFans .fans-dynamic dd{
+    padding:0;
+    width:200px;
+    font: 12px/28px PingFangSC-Regular,'-apple-system',Simsun;
+    margin-bottom:1px solid #999;
+    text-align: left;
+}
+.book-content-wrap .myFans .fans-dynamic>h4{
+    font:400 18px/22px FZZCYSK;
+    color:#000;
+    margin-bottom:10px;
+}
+/* 投票状态 */
+.book-content-wrap .myFans .fans-dynamic a
+,.book-content-wrap .myFans .fans-dynamic span{
+    color:#262626;
+    overflow: hidden;
+    max-width: 80px;
+    height: 28px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.book-content-wrap .myFans .fans-dynamic .gray{
+    color:#999;
+}
+/*投票小图标*/
+.book-content-wrap .myFans .fans-dynamic i{
+	float:right;
+}
+.book-content-wrap .myFans .fans-dynamic .tui{
+	color:#3ebcd0;
+}
+.book-content-wrap .myFans .fans-dynamic .blue{
+	color:#54c3d5;
+}
+.book-content-wrap .myFans .fans-dynamic .yellow{
+	color:#e8a926;
+}
+/* <!--3. 游戏图 包裹 284--> */
+.book-content-wrap .game-op-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top:35px;
+}
+/* 4. 喜欢更多 289*/
+/*  */
+.book-content-wrap .like-more{
+    margin-top:25px;
+}
+/* 标题 */
+.book-content-wrap .like-more>h3{
+    font:500 22px FZZCYSK;
+    line-height: 25px;
+    height: 25px;
+    margin-bottom: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+.book-content-wrap .like-more-link li{
+    width:86px;
+    float:left;
+    margin-left:36px;
+}
+.book-content-wrap .like-more-link li:first-child{
+    margin-left:0px;
+}
+/* 图片大小设置 */
+.book-content-wrap .like-more-link li>div a{ 
+    display:block;
+    margin:0 auto;
+    box-shadow: 0 1px 6px rgba(0,0,0,.35), 0 0 5px #f9f2e9 inset;
+    width:86px;
+    height:112px;
+    overflow: hidden;
+    margin-bottom:8px;
+}
+.book-content-wrap .like-more-link li>div img{
+    width:84px;
+    height:112px;
+}
+/* 描述 */
+.book-content-wrap .like-more-link li>a{
+    display:inline-block;
+    font: 700 14px/21px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    height: 21px;
+    color:#262626;
+}
+.book-content-wrap .like-more-link li>p{
+    font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    height: 40px;
+    color: #666;
+}
+
+/* 用户评论区 */
+/* 标题 */
+.book-content-wrap .user-comment{
+    margin-top:40px;
+}
+.book-content-wrap .user-comment>h3{
+    font:400 22px  FZZCYSK;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    color: #a6a6a6;
+    line-height: 25px;
+    height: 25px;
+}
+.book-content-wrap .user-comment>h3 .act{
+    color: #262626;
+}
+.book-content-wrap .user-comment>h3 i{
+    font-family: Arial;
+    font-size: 20px;
+    padding: 0 12px;
+}
+/* 我要发帖 */
+.book-content-wrap .user-comment>h3 a{
+    font: 12px PingFangSC-Regular,'-apple-system',Simsun;
+    display: block;
+    width: 68px;
+    padding: 7px 0;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #3f5a93;
+    border:1px solid #3f5a93;
+    float:right;
+}
+/* 蓝色按钮 */
+.book-content-wrap .user-comment>h3 a:hover{
+    color: #2972cc !important;
+    border-color: #2972cc;
+    background: #f0f5ff
+}
+
+
+
+
+
+
+
+/* 右包裹 作者信息 */
+.right-wrap{
+    float:right;
+    width:250px;
+}
+.right-wrap .auther-state{
+    text-align: center;
+    padding:20px 12px 20px;; 
+    background: #f7f6f2;
+}
+/* 头像 */
+.right-wrap .auther-info:first-child .img{
+    position: relative;
+    width:100px;
+    margin:0 auto;
+    margin:0px auto 20px;
+}
+/*  */
+.right-wrap .auther-info>div:first-child{
+    padding-bottom:20px;
+    border-bottom:1px solid #ddd;
+}
+.right-wrap .auther-info .img>img{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+}
+/* 等级 */
+.right-wrap .auther-info .img span{
+    position: absolute;
+    font: italic 12px/16px Arial;
+    background: #fc6c28;
+    position: absolute;
+    z-index: 1;
+    bottom: -6px;
+    left: 50%;
+    width: 28px;
+    height: 16px;
+    margin-left: -14px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+}
+.right-wrap .auther-info .auther{
+    display:block;
+    font: 18px/22px PingFangSC-Regular,'-apple-system',Simsun;
+    color:#000;
+}
+/* 作品状态 296 */
+.right-wrap .auther-info .work-state dl{
+    padding-left:12px;
+    margin-top:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid #ddd;
+}
+.right-wrap .auther-info .work-state dl dd{
+    width:50px;
+    float:left;
+    margin-left:28px;
+}
+/* 清除第一个左边距 */
+.right-wrap .auther-info .work-state dl dd:first-child{
+    margin-left:0;
+}
+.right-wrap .auther-info .work-state dl dd p{
+    font: 12px/18px PingFangSC-Regular,'-apple-system',Simsun;
+    color: #666;
+    margin-bottom:5px;
+}
+.right-wrap .auther-info .work-state dl dd em{
+    font: 14px/18px Arial;
+    white-space: nowrap;
+    color: #bf2c24;
+}
+
+/* 统计 */
+.right-wrap .auther-info .work-state dd img{
+    width:48px;
+    height:48px;
+    padding-bottom:5px;
+}
+/* 其它作品 标题  */
+.right-wrap .auther-info .other-works{
+    margin-top:20px;
+    margin-bottom:5px;
+}
+.right-wrap .auther-info .other-works h3{
+    font:400 18px FZZCYSK;
+    line-height: 21px;
+    overflow: hidden;
+    height: 21px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.right-wrap .auther-info .other-works h3 a{
+    font: 12px/16px PingFangSC-Regular,'-apple-system',Simsun;
+    float: right;
+    margin-top: 3px;
+    color:#3f5a93;
+}
+/* 其他作品 详情 */
+.right-wrap .auther-info .other-works .img{
+    width:84px;
+    height:112px;
+    overflow: hidden;
+    margin:20px auto 10px;
+}
+.right-wrap .auther-info .other-works .img a{
+    width:84px;
+    height:112px;
+}
+/* 书名 */
+.right-wrap .auther-info .other-works h4{
+    font: 18px/24px PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
+    overflow: hidden;
+    height: 24px;
+    margin-bottom: 9px;
+}
+.right-wrap .auther-info .other-works h4 a{
+    color:#262626;
+}
+/* 分数 */
+.right-wrap .auther-info .other-works .red{
+    font: 12px/16px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    height: 16px;
+    margin-bottom: 10px;
+}
+.right-wrap .auther-info .other-works .red a,
+.right-wrap .auther-info .other-works .red span{
+    color: #bf2c24;
+}
+/* 描述 */
+.right-wrap .auther-info .other-works .discrible{
+    font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    height: 60px;
+    margin-bottom: 16px;
+    text-align: justify;
+    color: grey;
+}
+/* 加入书架 按钮 */
+.right-wrap .auther-info .other-works .shelf{
+    font: 14px PingFangSC-Regular,'-apple-system',Simsun;
+    display: block;
+    width: 98px;
+    margin: 0 auto;
+    padding: 7px 0;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #3f5a93;
+    border-color: #3f5a93;
+}
+/* 蓝色按钮 */
+.right-wrap .auther-info .other-works .shelf:hover{
+    color: #2972cc !important;
+    border-color: #2972cc;
+    background: #f0f5ff
+}
+/*  右包裹 2.本周强推清单 */
+.right-wrap .book-list-wrap{
+    background:#f7f6f2;
+    padding:20px 10px 10px;
+    margin-top:15px;
+}
+/* 强推清单标题 */
+.right-wrap .book-list-wrap .strong-list>h3{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    overflow: hidden;
+    height: 24px;
+    color: #1a1a1a;
+}
+.right-wrap .book-list-wrap .strong-list>h3 i{
+    margin:0 5px 0 2px;
+}
+/* 强推列表 */
+.right-wrap .book-list-wrap .strong-list .list li{
+    height: 31px;
+    border-top: 1px solid #e6e6e6;
+    overflow: hidden;
+}
+/* 推荐类型 */
+.right-wrap .book-list-wrap .strong-list .list li .type{
+    font: 14px/32px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    min-width: 56px;
+    height: 32px;
+    margin-left: -5px;
+    color: grey;
+}
+/* 书名 */
+.right-wrap .book-list-wrap .strong-list .list li .book-name{
+    font: 14px/32px PingFangSC-Regular,'-apple-system',Simsun;
+    overflow: hidden;
+    height:32px;
+    line-height:32px;
+    color:#333;
+}
+/* 3.右游戏大图 */
+.right-wrap .right-op-wrap{
+    margin:15px 0;
+}
+.right-wrap .right-op-wrap a{
+    width:250px;
+    height:174px;
+    overflow: hidden;
+}
+.right-wrap .right-op-wrap a img{
+    width:250px;
+    height:174px;
+} 
+/* 4.粉丝排行榜 */
+.right-wrap .right-fans-rank{
+    background:#f7f6f2;
+    padding:20px 10px 10px;
+    margin-top:15px;
+}
+/* 标题 */
+.right-wrap .right-fans-rank>div>h3{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    overflow: hidden;
+    height: 24px;
+    color: #1a1a1a;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.right-wrap .right-fans-rank>div>h3 a{
+    font: 12px/16px PingFangSC-Regular,'-apple-system',Simsun;
+    float: right;
+    margin-top: 3px;
+    color: #3f5a93;
+}
+/* 列表 */
+.right-wrap .right-fans-rank>div .list .top{
+    overflow: visible;
+    zoom: 1;
+    height: auto;
+    padding: 5px 0 7px;
+    border-top: 1px solid #e6e6e6;
+}
+/* 排名 1*/
+.right-wrap .right-fans-rank>div .list .top .num-box{
+    float: left;
+    width: 28px;
+    height: 32px;
+    margin-top: 8px;
+}
+.right-wrap .right-fans-rank>div .list .top .num-box span{
+    color: #fff;
+    font: 700 14px/16px Arial;
+    display: block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+/* 1 */
+.right-wrap .right-fans-rank>div .list .top .num-box .num1{
+    background: #bf2c24;
+}
+/* 2 */
+.right-wrap .right-fans-rank>div .list .top .num-box .num2{
+    background: #e67225;
+}
+/* 3 */
+.right-wrap .right-fans-rank>div .list .top .num-box .num3{
+    background: #e6bf25;
+}
+/* 粉丝名 */
+.right-wrap .right-fans-rank>div .list .top .name-box{
+    font: 14px/22px PingFangSC-Regular,'-apple-system',Simsun;
+    float: left;
+    overflow: hidden;
+    width: 164px;
+    height: 44px;
+    padding-top: 5px;
+}
+.right-wrap .right-fans-rank>div .list .top .name-box>a{
+    font: 14px/22px PingFangSC-Regular,'-apple-system',Simsun;
+    display: block;
+    overflow: hidden;
+    width: 160px;
+    height: 22px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color:#262626;
+}
+.right-wrap .right-fans-rank>div .list .top .name-box p{
+    font-size: 12px;
+    overflow: hidden;
+    height: 22px;
+    color: #a6a6a6;
+}
+.right-wrap .right-fans-rank>div .list .top .name-box p span{
+    font-family: Arial;
+    line-height: 1;
+    margin-right: 5px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+/* 粉丝贡献总数 */
+.right-wrap .right-fans-rank>div .list .top .fans-total{
+    position: relative;
+    z-index: 1;
+    float: right;
+    width: 34px;
+    height: 34px;
+    margin-top: 4px;
+}
+.right-wrap .right-fans-rank>div .list .top .fans-total a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.right-wrap .right-fans-rank>div .list .top .fans-total img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.right-wrap .right-fans-rank>div .list .top .fans-total span{
+    position: absolute;
+    bottom: -2px;
+    left: 6px;
+    width: 30px;
+    height: 16px;
+    color:#262626;
+}
+/* 排名 */
+.right-wrap .right-fans-rank>div .list li{
+    height: 31px;
+    border-top: 1px solid #e6e6e6;
+    line-height: 31px;
+    vertical-align: middle;
+}
+.right-wrap .right-fans-rank>div .list li .rank{
+    position: relative;
+    top:-8px;
+    font: 700 14px/16px Arial;
+    display: inline-block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    color: #666;
+    background: #ededed;
+}
+.right-wrap .right-fans-rank>div .list li>a{
+    display: inline-block;
+    overflow: hidden;
+    height: 31px;
+    padding-left:7px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #1a1a1a;
+    width: 123px;
+    font: 14px/31px PingFangSC-Regular,'-apple-system',Simsun;
+}
+.right-wrap .right-fans-rank>div .list li .total{
+    display: inline-block;
+    font: 12px/32px PingFangSC-Regular,'-apple-system',Simsun;
+    width: 48px;
+    overflow: hidden;
+    width: 69px;
+    text-align: right;
+    white-space: normal;
+    text-overflow: ellipsis;
+    color: #b3b3b3;
+}
+
 
 
 

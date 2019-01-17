@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/details.css">
 </head>
@@ -17,7 +18,7 @@
 			<div class="left-nav">
 				<ul>
                     <!-- 导航列表 -->
-					<li><a href="javascript:;">首页</a> </li>
+					<li><a href="index.html">首页</a> </li>
 					<li><a href="javascript:;">玄幻</a> </li>
 					<li><a href="javascript:;">都市</a> </li>
 					<li><a href="javascript:;">仙侠</a> </li>
@@ -29,7 +30,8 @@
 						<!-- 下拉按钮 -->
 						<a data-toggle="dropdown" href="javascript:;">更多</a> 
 						<span class="angle"></span>
-						<dl class="dropdown">
+						<dl>
+                            <!-- 下拉选项内容 -->
 							<dd><a href="javascript:;">全部作品</a></dd>
 							<dd><a href="javascript:;">二次元</a></dd>
 							<dd><a href="javascript:;">奇幻</a></dd>
@@ -49,7 +51,7 @@
 					<!-- 搜索框 -->
 					<input class="pin-search" type="text" placeholder="我真是个富二代">
 					<label for="top-pin-box">
-						<em></em>
+						<em class="iconfont icon-icon- "></em>
 					</label>
 					<input id="top-pin-box" type="submit">
 				</div>
@@ -66,11 +68,11 @@
     </div>
     <!-- 游戏game大图 -->
     <div class="game-img">
-        <a href="">
+        <a href="javascript:;">
             <img src="./img/details/game.jpg" alt="">
         </a>
     </div>
-    <!--1. 详情主体 -->
+    <!--1. 详情主体 252-->
     <div class="book-details-wrap">
         <!-- 书籍信息 -->
         <div class="book-info clearfix">
@@ -130,10 +132,10 @@
                 <h3>
                     <span>8.</span><i>9</i> 
                 </h3>
-                <!-- 评价 --> 
+                <!-- 评价 195--> 
                 <p class="number"><span>316</span>人评价</p>
                 <p class="assess">我要评价</p>
-                <div>
+                <div data-toggle="stars">
                     <i class="iconfont icon-xingxing"></i>
                     <i class="iconfont icon-xingxing"></i>
                     <i class="iconfont icon-xingxing"></i>
@@ -160,75 +162,541 @@
             <a href="javascript:;">作品讨论<span>(4513条)</span></a>
         </div>
         <!-- 主体包裹 -->
-        <div class="book-content-wrap">
-            <!-- 详细信息 -->
-            <div class="book-info-details">
-                <!-- 简介 -->
-                <p class="book-intro"> 青梅竹马的同桌竟然成了大明星，又凶又萌。<br>
-                    近卫军冲锋右营：92411492</p>
-                <!-- 获得荣誉 -->
-                <div class="honor clearfix">
-                    <div>荣誉动态</div>
-                    <div>
-                        <strong>2018-10-28 累积获得十万个收藏</strong>
-                        <!-- 荣誉图 -->
-                        <p>
-                            <img src="./img/details/gengshangyicenglou.png" alt="">
-                            <img src="./img/details/jingpinpindao.png" alt="">
-                            <img src="./img/details/rijindoujin.png" alt="">
-                            <a href="javascript:;">荣誉殿堂</a>
-                        </p>
+        <div class="book-content-wrap clearfix">
+            <!-- 左包裹部分 -->
+            <div class="left-wrap">
+                <!--1. 详细信息 -->
+                <div class="book-info-details">
+                    <!-- 简介 -->
+                    <p class="book-intro"> 青梅竹马的同桌竟然成了大明星，又凶又萌。<br>
+                        近卫军冲锋右营：92411492</p>
+                    <!-- 获得荣誉 -->
+                    <div class="honor clearfix">
+                        <div>荣誉动态</div>
+                        <div>
+                            <strong>2018-10-28 累积获得十万个收藏</strong>
+                            <!-- 荣誉图 -->
+                            <p>
+                                <img src="./img/details/gengshangyicenglou.png" alt="">
+                                <img src="./img/details/jingpinpindao.png" alt="">
+                                <img src="./img/details/rijindoujin.png" alt="">
+                                <a href="javascript:;">荣誉殿堂</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 最近更新状态 -->
+                    <div class="update clearfix">
+                        <div>最近更新</div>
+                        <!-- 最新章节 -->
+                        <div>
+                            <p>
+                                <a href="javascript:;">第一百三十九章、劝架！劝人吵架！</a>
+                                <em>.</em>
+                                <span>昨日15:52</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <!-- 最近更新状态 -->
-                <div class="update clearfix">
-                    <div>最近更新</div>
-                    <!-- 最新章节 -->
-                    <div>
-                        <p>
-                            <a href="javascript:;">第一百三十九章、劝架！劝人吵架！</a>
-                            <em>.</em>
-                            <span>昨日15:52</span>
-                        </p>
+                <!--2. 粉丝互动 338-->
+                <div class="fans-zone">
+                    <h3>粉丝互动</h3>
+                    <!-- 粉丝互动 -->
+                    <dl class="clearfix">
+                        <!-- 月票 -->
+                        <dd data-slide="ticket">
+                            <h4>
+                                <span class="active">月票</span>|
+                                <span>推荐票</span>
+                            </h4>
+                            <div>
+                                <p class="month-count">本月票数</p>
+                                <!-- 票数 -->
+                                <p class="mum">2517</p>
+                                <!-- 排名 -->
+                                <p class="rank">排名102·还差<em>10</em>  票追上前一名</p>
+                                <div class="icon-box">
+									<span class="iconfont icon-yuepiao1 red"></span>
+									<b class="red"></b>
+								</div>
+                                <!-- 按钮 -->
+                                <a class="month-btn" href="javascript:;">投月票</a>
+                                <p class="tip">1张月票=100点粉丝值</p>
+                            </div>
+                        </dd>
+                        <!-- 线 -->
+                        <dd class="line"></dd>
+                        <!-- 打赏 -->
+                        <dd data-slide="ticket" class="raword">
+                            <h4>打赏</h4>
+                            <div>
+                                <p class="month-count">本周打赏人数</p>
+                                <!-- 票数 -->
+                                <p class="mum">30</p>
+                                <!-- 排名 -->
+                                <p class="rank">今日<em>10</em>人打赏</p>
+                                <div class="icon-box">
+									<span class="iconfont icon-dashang"></span>
+									<b></b>
+								</div>
+                                <!-- 按钮 -->
+                                <a class="month-btn" href="javascript:;">打赏作者</a>
+                                <p class="tip">1张月票=100点粉丝值</p>
+                            </div>
+                        </dd>
+                        <!-- 线 -->
+                        <dd class="line"></dd>
+                        <!-- 我的粉丝等级 -->
+                        <dd class="myFans">
+                            <h4>我的粉丝等级</h4>
+                            <!-- 未登录 -->
+                            <p class="fans-rank">
+                                <a href="javascript:;">
+                                    <img src="./img/details/user.png" alt="">
+                                </a>   
+								<!-- 461 -->
+                                <a class="loginUp" href="javascript:;">登录</a>
+                                <span>查看粉丝等级</span>
+                            </p>
+                            <div class="fans-dynamic">
+                                <h4>本书粉丝动态</h4>
+                                <dl class="clearfix">
+                                    <dd>
+                                        <a href="javascript:;">我是我来412</a>
+                                        <span class="gray">投了</span>
+                                        <span>1张推荐票</span>
+                                        <i class="iconfont icon-tuijianyuepiao tui"></i>
+                                    </dd>
+                                    <dd>
+                                        <a href="javascript:;">一个人的飞雪</a>
+                                        <span class="gray">投了</span>
+                                        <span>1张推荐票</span>
+                                        <i class="iconfont icon-tuijianyuepiao tui"></i>
+                                    </dd>
+                                    <dd>
+                                        <a href="javascript:;">寻找勇气</a>
+                                        <span class="gray">打赏</span>
+                                        <span>500起点币</span>
+                                        <i class="iconfont icon-ziyuanjrit blue"></i>
+                                    </dd>
+                                    <dd>
+                                        <a href="javascript:;">略北</a>
+                                        <span class="gray">投了</span>
+                                        <span>1张月票 </span>
+                                        <i class="iconfont icon-yuepiao1 yellow"></i>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <!--3. 游戏图 包裹 -->
+                <div class="game-op-wrap">
+                    <a href="javascript:;"><img src="./img/details/other/0.jpg" alt=""></a>
+                    <a href="javascript:;"><img src="./img/details/other/0 (1).jpg" alt=""></a>
+                </div>
+                <!--4. 喜欢更多 -->
+                <div class="like-more">
+                    <!-- 标题 -->
+                    <h3>喜欢这本书的人还喜欢</h3>
+                    <!-- 更多书的连接 -->
+                    <div class="like-more-link">
+                        <ul class="clearfix">
+                            <!-- 1 -->
+                            <li>
+                               <div>
+                                   <a href="javascript:;">
+                                       <img src="./img/details/other/more-like1.jpg" alt=""> 
+                                    </a>
+                                </div>
+                               <a href="javascirpt:;">听说我死后超凶的</a>
+                               <p>61%的用户读过</p>
+                            </li>
+                            <!-- 2 -->
+                            <li>
+                                <div>
+                                   <a href="javascript:;">
+                                       <img src="./img/details/other/more-like2.jpg" alt=""> 
+                                    </a>
+                                </div>
+                               <a href="javascirpt:;">原来我是妖二代</a>
+                               <p>61%的用户读过</p>
+                            </li>
+                            <!-- 3 -->
+                            <li>
+                                <div>
+                                   <a href="javascript:;">
+                                       <img src="./img/details/other/more-like3.jpg" alt=""> 
+                                    </a>
+                                </div>
+                               <a href="javascirpt:;">我真的长生不老</a>
+                               <p>59%的用户读过</p>
+                            </li>
+                            <!-- 4 -->
+                            <li>
+                                <div>
+                                   <a href="javascript:;">
+                                       <img src="./img/details/other/more-like4.jpg" alt=""> 
+                                    </a>
+                                </div>
+                               <a href="javascirpt:;">我真是个富二代</a>
+                               <p>59%的用户读过</p>
+                            </li>
+                            <!-- 5 -->
+                            <li>
+                                <div>
+                                   <a href="javascript:;">
+                                       <img src="./img/details/other/more-like5.jpg" alt=""> 
+                                    </a>
+                                </div>
+                               <a href="javascirpt:;">大道朝天</a>
+                               <p>50%的用户读过</p>
+                            </li>
+                            <!-- 6 -->
+                            <li>
+                                <div>
+                                   <a href="javascript:;">
+                                       <img src="./img/details/other/more-like6.jpg" alt=""> 
+                                    </a>
+                                </div>
+                               <a href="javascirpt:;">我妈是剑仙</a>
+                               <p>45%的用户读过</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--5. 用户讨论区 -->
+                <div class="user-comment">
+                    <!-- 标题 -->
+                    <h3>
+                        <span class="comment-on act">作品讨论区</span>
+                        <i>|</i>
+                        <span class="judge-of">书友评价</span>
+                        <a href="javascript:;">我要发帖</a>
+                    </h3>
+                    <!-- 评论区 -->
+                    <div class="user-discuss">
+                    
                     </div>
                 </div>
             </div>
-            <!-- 粉丝互动 -->
-            <div class="fans-zone">
-                <h3>粉丝互动</h3>
-                <dl class="clearfix">
-                    <!-- 月票 -->
-                    <dd>
-                        <h4>
-                            <span class="active">月票</span>|
-                            <span>推荐票</span>
-                        </h4>
-                        <p class="month-count">本月票数</p>
-                        <!-- 票数 -->
-                        <p class="mum">2517</p>
-                        <!-- 排名 -->
-                        <p class="rank">排名102·还差<em>10</em>  票追上前一名</p>
-                        <div class="icon-box"></div>
-                        <!-- 按钮 -->
-                        <a class="month-btn" href="javascript:;">投月票</a>
-                        <p class="tip"></p>
-                    </dd>
-                    <!-- 打赏 -->
-                    <dd>
-                        <h4>打赏</h4>
-                    </dd>
-                    <!-- 我的粉丝等级 -->
-                    <dd>
-                        <h4>我的粉丝等级</h4>
-                    </dd>
-                </dl>
+            <!-- 右包裹 -->
+            <div class="right-wrap">
+                <!--1. 作者状态 -->
+                <div class="auther-state">
+                    <div class="auther-info">
+                        <!-- 作者 -->
+                        <div>
+                            <!-- 作者头像信息 -->
+                            <div class="img">
+                                <img src="./img/details/0.jpg" alt="">
+                                <span>lv.3</span>
+                            </div>
+                            <a class="auther">柳下挥</a>
+                        </div>
+                        <!-- 作品总数统计 557-->
+                        <div class="work-state">
+                            <dl class="clearfix">
+                                <dd>
+                                    <img src="./img/details/total.png" alt="">
+                                    <p>作品总数</p>
+                                    <em>2</em>
+                                </dd>
+                                <dd>
+                                    <img src="./img/details/bianqian.png" alt="">
+                                    <p>累计字数</p>
+                                    <em>65.70万</em>
+                                </dd>
+                                <dd>
+                                    <img src="./img/details/tea.png" alt="">
+                                    <p>创作天数</p>
+                                    <em>715</em>
+                                </dd>
+                            </dl>  
+                        </div>
+                        <!-- 其他作品 611-->
+                        <div class="other-works">
+                            <!-- 标题 -->
+                            <h3>其他作品
+                                <a href="javascript:;">更多<em></em></a>
+                            </h3>
+                            <!-- 其他作品 -->
+                            <div>
+                                <!-- 图片 -->
+                                <div class="img">
+                                    <a href="javascript:;">
+                                        <img src="./img/details/other/other-works.jpg" alt="">
+                                    </a>
+                                </div>
+                                <!-- 详情 -->
+                                <h4><a href="javascript:;">六迹之贪狼</a> </h4>
+                                <p class="red"><a href="">都市</a><span>·8.7分</span> </p>
+                                <p class="discrible">神石破碎，无数碎片散落世界，灵气溃散使得修真消亡。平静的都市下，神石碎片的能量激发，一部分人更改基因，开启觉</p>
+                                <a class="shelf" href="javascript:;">加入书架</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!--2. 推荐列表 -->
+                <div class="book-list-wrap">
+                    <div class="strong-list">
+                        <!-- 标题 -->
+                        <h3>本周强推<i>·</i>都市</h3>
+                        <div class="list">
+                            <ul>
+                                <!-- 1 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「都市生活」</a>
+                                    <a class="book-name" href="javascript:;">重生2002之纳米人生</a>
+                                </li>
+                                <!-- 2 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「异术超能」</a>
+                                    <a class="book-name" href="javascript:;">挖掘地球</a>
+                                </li>
+                                <!-- 3 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「青春校园」</a>
+                                    <a class="book-name" href="javascript:;">神童向前冲</a>
+                                </li>
+                                <!-- 4 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「都市生活」</a>
+                                    <a class="book-name" href="javascript:;">超神建筑商</a>
+                                </li>
+                                <!-- 5 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「娱乐明星」</a>
+                                    <a class="book-name" href="javascript:;">华娱终极大亨</a>
+                                </li>
+                                <!-- 6 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「都市生活」</a>
+                                    <a class="book-name" href="javascript:;">从支教到巨星</a>
+                                </li>
+                                <!-- 7 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「都市生活」</a>
+                                    <a class="book-name" href="javascript:;">我真的不无敌</a>
+                                </li>
+                                <!-- 8 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「都市生活」</a>
+                                    <a class="book-name" href="javascript:;"> 我们的电影时代</a>
+                                </li>
+                                <!-- 9 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「娱乐明星」</a>
+                                    <a class="book-name" href="javascript:;">我成了王牌经纪人</a>
+                                </li>
+                                <!-- 10 -->
+                                <li>
+                                    <a class="type" href="javascript:;">「都市生活」</a>
+                                    <a class="book-name" href="javascript:;">原来我不是一般人</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--3. 右游戏大图 -->
+                <div class="right-op-wrap">
+                    <a href="javascript:;">
+                        <img src="./img/details/other/right-game.jpg" alt="">
+                    </a>
+                </div>
+                <!--4. 粉丝排行榜 -->
+                <div class="right-fans-rank">
+                    <div class="right-fans-lisk">
+                        <!-- 标题 粉丝排行榜 -->
+                        <h3>粉丝排行榜
+                            <a href="javascript:;">更多</a>
+                        </h3>
+                        <div class="list">
+                            <ul>
+                                <!-- 1 -->
+                                <li class="clearfix top">
+                                    <div class="num-box">
+                                        <span class="num1">1</span>
+                                    </div>
+                                    <div class="name-box">
+                                        <a href="javascript:;" class="name">
+                                                温柔可爱小云云</a>
+                                        <p>
+                                            <span>1103664</span>粉丝值
+                                        </p>
+                                    </div>
+                                    <div class="fans-total">
+                                        <a href="javascript:;">
+                                            <img src="./img/details/50.jpg" alt="">
+                                            <span>盟主</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- 2 -->
+                                <li class="clearfix top">
+                                    <div class="num-box">
+                                        <span class="num2">3</span>
+                                    </div>
+                                    <div class="name-box">
+                                        <a href="javascript:;" class="name">
+                                                手指的幸福</a>
+                                        <p>
+                                            <span>1001015</span>粉丝值
+                                        </p>
+                                    </div>
+                                    <div class="fans-total">
+                                        <a href="javascript:;">
+                                            <img src="./img/details/50.jpg" alt="">
+                                            <span>盟主</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- 3 -->
+                                <li class="clearfix top">
+                                    <div class="num-box">
+                                        <span class="num3">3</span>
+                                    </div>
+                                    <div class="name-box">
+                                        <a href="javascript:;" class="name">
+                                                末小夕Loli瓷児</a>
+                                        <p>  
+                                            <span>515949</span>粉丝值
+                                        </p>
+                                    </div>
+                                    <div class="fans-total">
+                                        <a href="javascript:;">
+                                            <img src="./img/details/501.jpg" alt="">
+                                            <span>盟主</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- 4 -->
+                                <li>
+                                    <span class="rank">4</span>
+                                    <a href="javascript:;">
+                                                明为梦影丶</a>
+                                    <span class="total">458444</span>
+                                </li>
+                                <!-- 5 -->
+                                <li>
+                                    <span class="rank">5</span>
+                                    <a href="javascript:;">
+                                                安靜的美男子</a>
+                                    <span class="total">300983</span>
+                                </li>
+                                <!-- 6 -->
+                                <li>
+                                    <span class="rank">6</span>
+                                    <a href="javascript:;">
+                                                邪神老哥</a>
+                                    <span class="total">201510</span>
+                                </li>
+                                <!-- 7 -->
+                                <li>
+                                    <span class="rank">7</span>
+                                    <a href="javascript:;">
+                                            洛刀刀刀刀</a>
+                                    <span class="total">200302</span>
+                                </li>
+                                <!-- 8 -->
+                                <li>
+                                    <span class="rank">8</span>
+                                    <a href="javascript:;">
+                                            花间七少</a>
+                                    <span class="total">200000</span>
+                                </li>
+                                <!-- 9 -->
+                                <li>
+                                    <span class="rank">9</span>
+                                    <a href="javascript:;">
+                                            丰年年年</a>
+                                    <span class="total">151457</span>
+                                </li>
+                                <!-- 10 -->
+                                <li>
+                                    <span class="rank">10</span>
+                                    <a href="javascript:;">
+                                            Sunny冉冉</a>
+                                    <span class="total">134005</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!--三. 登陆框 -->
+	<div class="mask" id="login-box">
+		<!-- 登陆 -->
+		<div class="login">
+			<div class="login-box">
+				<!-- 关闭登录按钮 -->
+				<em class="close-login-box" data-toggle="close">X</em>
+				<div class="login-top" data-toggle="switch">
+					<span class="visible" data-target="#login-body">账号登陆</span>
+					<span data-target="#qq-login-wrap">QQ登陆</span>
+					<span data-target="#weixin">微信登陆</span>
+				</div>
+				<!-- 正常登录 -->
+				<div>
+					<div class="login-body" id="login-body">
+						<div class="uname">
+							<em class="iconfont icon-huiyuandenglu"></em> 
+							<input type="text" placeholder="手机/邮箱/用户名">
+						</div>
+						<div class="pwd">
+							<em class="iconfont icon-mima"></em> 
+							<input type="password" placeholder="密码">
+						</div>
+						<div class="auto-login-box">
+							<input type="checkbox" id="auto-login">
+							<label for="auto-login">自动登录</label>
+							<a href="javascript:;">忘记密码</a>
+						</div>
+						<div class="login-wrap">
+							<a href="javascript:;">登录</a>
+						</div>
+						<div class="reg-wrap">
+							<a class="phone" href="javascript:;">手机验证码登录</a>
+							<span>|</span>
+							<a class="free-reg" href="javascript:;">免费注册</a>
+						</div>
+						<div class="many-login">
+							<div>
+								<a href="javascript:;"><i class="iconfont icon-baidu1"></i></a> 
+								<a href="javascript:;"><i class="iconfont icon-zhifubao2"></i></a>
+								<a href="javascript:;"><i class="iconfont icon-weibo2"></i></a>
+							</div>
+							<a data-toggle="many-login" href="javascript:;">更多登录方式</a>
+						</div>
+					</div>
+					<!-- qq登录 -->
+					<div class="qq-login-wrap" id="qq-login-wrap">
+						<div>
+							<p><img src="./img/login/qq.png"></p>
+						</div>
+						<p>您将转跳至指定页面进行登录操作。</p>
+						<a href="javascript:;">前往QQ</a>
+					</div>
+					<!-- 微信登陆 -->
+					<div class="weixin" id="weixin">
+						<div>
+							<p>
+								<img src="./img/login/weixin.jpg" alt="">
+							</p>
+						</div>
+						<p>请使用微信扫描二维码登录</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
     <br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/login.js"></script>
+	<script src="js/details.js"></script>
 </body>
 </html>

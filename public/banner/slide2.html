@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+		padding:0;
+		margin:0;
+	}
+	
+	.banner{
+		width:200px;
+		height:150px;
+		margin-top:50px;
+		position:relative;
+		margin-left:100px;
+	}
+	ul{
+		width:200px;
+		height:150px;
+		list-style:none;
+		position:relative;
+	}
+	.clearfix:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	li{
+		/* float:left; */
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:84px;
+		height:112px;
+		margin:0 15px 0 15px;
+	}
+	a{
+		display:block;
+		width:100%;
+		height:100%;
+	}
+	@keyframes slide{
+		0%{
+			transform: scale(0.85);
+		left:0px;
+		top:0px;
+		z-index:10;
+		opacity:0.8;
+		}
+		13%{
+			transform: scale(0.85);
+		left:120px;
+		top:0px;
+		z-index:10;
+		opacity:0.8;
+		}
+		33%{
+			transform: scale(0.85);
+			left:120px;
+			top:0px;
+			z-index:10;
+			opacity:0.8;
+		}
+		36%{
+			transform: scale(1);
+			/* top:-11px; */
+			z-index:20;
+		}
+		46%{
+			transform: scale(1);
+		left:60px;
+		/* top:-11px; */
+		z-index:20;
+		opacity:1;
+		}
+		66%{
+			transform: scale(1);
+			left:60px;
+			/* top:-11px; */
+			z-index:20;
+			opacity:1;
+		}
+		70%{
+			left:0px;
+		}
+		80%{
+			transform: scale(0.85);
+		top:0px;
+		z-index:10;
+		opacity:0.8;
+		}
+		100%{
+			transform: scale(0.85);
+		left:0px;
+		top:0px;
+		z-index:10;
+		opacity:0.8;
+		}
+	}
+	.left{
+		transform: scale(0.85);
+		left:0px;
+		top:0px;
+		z-index:10;
+		opacity:0.8;
+		animation:slide 6s linear infinite 0s;
+		
+	}
+	.center{
+		width:84px;
+		height:112px;
+		left:60px;
+		top:-11px;
+		z-index:20;
+		opacity:1;
+		animation:slide 6s linear infinite -2s;
+	}
+	.right{
+		transform: scale(0.85);
+		left:120px;
+		top:0px;
+		z-index:10;
+		opacity:0.8;
+		animation:slide 6s linear infinite -4s;
+	}
+	img{
+		width:100%;
+		height:100%;
+	}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<ul class="clearfix" data-sl="slide">
+			<li class="left"><a href="javascript:;"><img src="04.jpeg" alt=""></a></li>
+			<li class="center"><a href="javascript:;"><img src="05.jpeg" alt=""></a></li>
+			<li class="right"><a href="javascript:;"><img src="06.jpeg" alt=""></a></li>
+		</ul>
+	</div>
+	<script src="jquery-1.11.3.js"></script>
+	<!-- <script src="js/slide.js"></script> -->
+</body>
+</html>

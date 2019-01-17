@@ -1,6 +1,6 @@
 
 $(function(){
-//1.弹出登录框
+//1.弹出登录框  1267  59
 	//1.查找事件触发对象并绑定事件触发函数
 	$("[data-toggle=login-box]").click(function(){
 		var $id=$(this).attr("data-toggle");
@@ -18,15 +18,12 @@ $(function(){
 	//1.查找事件触发对象并绑定事件触发函数
 	$("[data-toggle=switch]").click(function(e){
 		$target=$(e.target);
-		//使当前点击对象显示
-		$target.addClass("visible");
-		//隐藏其他对象
-		$target.siblings().removeClass("visible");
+		//使当前点击对象显示//隐藏其他对象
+		$target.addClass("visible").siblings().removeClass("visible");
 		//查找登陆主体元素
 		var $id=$target.attr("data-target");
 		var $box=$($id);
-		$box.css("display","block");
-		$box.siblings().css("display","none");
+		$box.css("display","block").siblings().css("display","none");
 	})
 
 //3. 更多登陆方式  显示 隐藏

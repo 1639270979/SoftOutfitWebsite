@@ -8,6 +8,18 @@
 	margin:0 auto;
 	margin-bottom:20px;
 }
+/* 顶部游戏广告大图 */
+.header .big-topPic{
+	width:1200px;
+	height:60px;
+	margin: 0 auto;
+	margin-bottom:20px;
+}
+.header .big-topPic img{
+	width:1200px;
+	height:60px;
+}
+
 /* logo */
 .header .logo a{
 	display:block;
@@ -98,7 +110,7 @@
 /* 页面导航nav */
 .header .top-nav{
 	width:100%;
-	height:45px;	
+	height:40px;	
 	background:#3e3d43;
 }
 .header .top-nav ul>li{
@@ -108,12 +120,15 @@
 .header .top-nav ul>li:hover{
 	border-top:2px solid #ff0000;
     background: #2c2c2c;
-    height:43px;
+    height:38px;
 }
 .header .nav-center{
 	width:1200px;
 	margin:0 auto;	
 	position:relative;
+}
+.header .left-nav{
+	float:left;
 }
 .header .left-nav>ul{
 	width:810px;
@@ -121,8 +136,9 @@
 	justify-content:space-between;
 }
 .header .left-nav a{
-	line-height:45px;
-	font-size:15px;	
+	line-height:40px;
+	font-size:16px;	
+	font-family: normal;
 	color:#fff;
 }
 /* 鼠标悬停字体颜色变化 */
@@ -131,17 +147,20 @@
 }
 /* 导航右侧 */
 .header .right-nav{
-	position:absolute;
+	float:right;
+	position:relative;
 	top:0;
 	right:0;
 	display:flex;
 	justify-content:space-between;
 }
-.header .right-nav a{
-	line-height:45px;
+.header .right-nav>a{
+	font: 18px/40px PingFangSC-Regular,'-apple-system',Simsun;
 	margin-right:30px;
-	color:#fff;
+	color:#e84848;
 }
-
+.header .right-nav>a:hover{
+	color:#fd2d52 !important;
+}
 
 

@@ -26,6 +26,7 @@
     float:left;
     font-weight: 700;
     font-size: 18px;
+    font-family: arial;
     color: #333;
 }
 .main-one .fb{
@@ -68,19 +69,22 @@
     font-size:18px;
     text-align:center;
     margin-bottom:7px;
+    font: 700 16px/24px PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
 }
 .main-one .banner-details h3 a{
-    color:#333;
+    color:#1a1a1a;
 }
 .main-one .banner-details .auther{
     display:block;
     color:#999;
+    font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
     text-align:center;
     margin-bottom:10px;
 }
 .main-one .banner-details>p{
     text-align: center;
     margin-bottom:20px;
+    color:#999;
 }
 /* main-one  1楼 左 小轮博图布局 */
 .main-one .banner-details>p a{
@@ -96,11 +100,13 @@
 }
 .main-one .banner-details>span{
     display:block;
+    font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
     padding-right:20px;
     padding-left:20px;
     height:95px;
     overflow:hidden;
-    color:#666;
+    color:#626260;
+    text-align: justify;
 }
 /* main-one  1楼 左 立即略读按钮 */
 .main-one-left .d-box{
@@ -109,7 +115,7 @@
     height:30px;
     text-align:center;
     margin:0 auto;
-    margin-top:20px;
+    margin-top:60px;
     margin-bottom:10px;
     line-height:30px;
     color:#fff;
@@ -141,6 +147,7 @@
 .main-one-mid .fc-mid{
     font-weight: 700;
     font-size: 18px;
+    font-family: Arial;
     color: #333;
     height:30px;
     line-height:30px;
@@ -163,13 +170,13 @@
 }
 
 .main-one-mid .r-right p{
-    height:70px;
+    height:55px;
     overflow: hidden;
     font-size:13px;
     color:#666;
     letter-spacing: 1.93px;
-    margin-bottom:10px;
-    margin-top:10px;
+    margin-bottom:13px;
+    margin-top:13px;
     text-align:justify;
 }
 /* main-one 1楼中 right边距 */
@@ -179,12 +186,12 @@
 }
 .main-one .r-right>a{
     line-height:21px;
-    font-size:16px;
+    font:600 18px/21px PingFangSC-Regular,'-apple-system',Simsun;
     color:#333;
 }
 /* a color */
 .main-one .r-right>div>a{
-    font-size:13px;
+    font: 14px/20px PingFangSC-Regular,'-apple-system',Simsun;
     color:#999;
 }
 .main-one-mid img{
@@ -196,13 +203,13 @@
     position:relative;
 }
 .main-one-mid .mr-right{
+    font: 14px/20px PingFangSC-Regular,'-apple-system',Simsun;
     position:absolute;
     right:2px;
     bottom:1px;
     display:inline-block;
     width:70px;
     height:20px;
-    line-height:19px;
     text-align: center;
     border-radius: 4px;
     border:1px solid #bbb;
@@ -241,7 +248,7 @@
     margin:7px 9px 0 0;
 }
 .main-one .main-r-body li .main-rb-a{  
-    font-size:14px;
+    font: 14px/20px PingFangSC-Regular,'-apple-system',Simsun;
     color:#333;
     line-height:32px;
     float:left; 
@@ -285,27 +292,20 @@
     float:left;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background:url(../img/index/Martial/bg1.png) no-repeat;
-    background-size:100% 100%;
     
 }
 .main-two-fu .main-fu-img{
-    width:140px;
-    height:180px;
+    width:200px;
+    height:250px;
     margin:0 auto;
-    margin-top:35px;
     border-radius:5px;
     box-shadow: 0px 2px 10px 1px #9e9c93;
-    background:url(../img/index/Martial/fu.jpg) no-repeat;
-    background-position:center center;
-    background-size:140px 180px;
 }
-.main-two-fu p{
-    font-size:14px;
-    margin:0 auto;
-    vertical-align: middle;
+.main-two-fu .main-fu-img img{
+    width:200px;
+    height:250px;
 }
-/* 主体 2楼 右 407*/
+/* 主体 2楼 右 415*/
 .main-two .book-slide-wrap{
     width:1000px;
     height:250px;
@@ -316,7 +316,31 @@
     border-radius:6px;
     position:relative;
 }
-.main-two .book-slide-wrap li{
+.main-two .book-slide-wrap>div{
+    width:2000px;
+    height:250px;
+    position:absolute;
+}
+/* 轮播图片 */
+.main-two .book-slide-wrap>div>ul{
+    width:1000px;
+    height:250px;
+	position:absolute;
+	top:0;
+    float:left;
+}
+/* slide-img1 
+.main-two .book-slide-wrap>div .slide-img1{
+    position:absolute;
+    top:0;
+}
+// slide-img1 
+.main-two .book-slide-wrap>div .slide-img2{
+    position:absolute;
+    top:0;
+}*/
+/* 单个轮播项目 */
+.main-two .book-slide-wrap>div>ul li{
     float:left;
     width:199px;
     height:250px;
@@ -324,7 +348,7 @@
 }
 /* 位置调整 */
 .main-two .book-slide-wrap .book-box{
-    margin-top:20px;
+    margin-top:25px;
     margin-left:45px;
     width:110px;
     height:150px;
@@ -351,8 +375,9 @@
     color:#666;
 }
 /* 左右箭头 */
-.main-two .two-prev{
-    display:inline-block;
+/* 左箭头 */
+.main-two .left-prev{
+    display:none;
     width:35px;
     height:60px;
     border-top-right-radius: 60px;
@@ -360,36 +385,37 @@
     position: absolute;
     top:95px;
     left:0;
+    z-index: 1;
     background:rgba(0,0,0,0.1);
     transition:all 1s;
 }
-.main-two .two-prev img{
-    display:block;
+.main-two .left-prev img{
     margin-top:20px;
     margin-left:9px;
 }
-.main-two .two-next{
-    position: absolute;
-    display:inline-block;
+/* 右箭头 */
+.main-two .right-next{
+    display:none;
     width:35px;
     height:60px;
     border-top-left-radius: 60px;
     border-bottom-left-radius: 60px;
+	position: absolute;
     top:95px;
     right:0;
+    z-index: 1;
     background:rgba(0,0,0,0.1);
     transition:all 1s;
 }
-.main-two .two-next img{
-    display:block;
+.main-two .right-next img{
     margin-top:20px;
     margin-left:13px;
 }
 /* 鼠标悬停时 */
-.main-two .two-prev:hover{
+.main-two .left-prev:hover{
     background:rgba(0,0,0,0.2);
 }
-.main-two .two-next:hover{
+.main-two .right-next:hover{
     background:rgba(0,0,0,0.2);
 }
 /* 主体 三楼 */
@@ -643,7 +669,7 @@
 .hot-work-wrap .slide-box li .intro{
     font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
     overflow: hidden;
-    height: 80px;
+    height: 60px;
     margin-bottom: 20px;
     text-align: left;
     color: #626260;
@@ -936,8 +962,6 @@
     border:1px solid #2972cc;
 }
 /* 顶部悬浮导航 */
-
-
 .pin-nav-wrap{
 	width:100%;
 	height:40px;	
@@ -947,25 +971,21 @@
     top:-40px;
     transition:top .5s linear;
 }
-.hiddened{
-    top:-40px;
-}
-.showed{
-    top:0px;
-}
 .pin-nav-wrap .box-center{
 	width:1200px;
 	margin:0 auto;	
 	position:relative;
 }
+/* 导航左部分 */
 .pin-nav-wrap .left-nav>ul{
     width:700px;
     text-align: center;
 	display:flex;
 	justify-content:space-between;
 }
+/* 导航列表 */
 .pin-nav-wrap .left-nav>ul>li{
-    width:90px;
+    width:87px;
 }
 .pin-nav-wrap .left-nav>ul>li:hover{
     border-top:2px solid #ff0000;
@@ -982,12 +1002,15 @@
     color:#fff !important;
 }
 /* 下拉按钮 */
-.pin-nav-wrap .left-nav dl{
-    width:90px;
+.pin-nav-wrap .left-nav .dropdown dl{
+    width:87px;
     display: none;
     margin-top:-2px;
-    background:#2c2c2c
+    background:#2c2c2c;
+    position:absolute;
+    z-index:999px;
 }
+/* 小三角样式 */
 .pin-nav-wrap .left-nav .angle{
     display: inline-block;
     margin-left:9px;
@@ -1017,6 +1040,7 @@
     margin-left:5px;
 	color:#fff;
 }
+/* 搜索框 */
 .pin-nav-wrap .right-nav .pin-search{
     width:160px;
     height:20px;
@@ -1026,8 +1050,9 @@
     font-size: 14px;
     background: #3e3d43;
     border:0;
-    border-bottom:1px solid #bbb;
+    border-bottom:2px solid #ddd;
 }
+/* 搜索框占位符颜色 */
 .pin-nav-wrap .right-nav .pin-search::placeholder{ 
     color: #ddd; 
     font-size:13px;
@@ -1035,19 +1060,20 @@
 .pin-nav-wrap .right-nav #top-pin-box{
     display: none;
 }
-.pin-nav-wrap .right-nav>div label em{
+/* 搜索图标 */
+.pin-nav-wrap .right-nav>div label{
     display: inline-block;
     width:20px;
     height:40px;
-    line-height:40px; 
+    line-height:40px;
     margin-left:5px;
     margin-right:10px;
-    vertical-align: middle;
-    background: url(../img/index/shelf/8.png) no-repeat;
-    background-position:center center; 
-    background-size:20px 20px;
     cursor: pointer;
 }
+.pin-nav-wrap .right-nav>div label em{
+    color:#ddd;
+}
+/* 登陆注册按钮 */
 .pin-nav-wrap .right-nav>p a{
     color:#ddd;
 }

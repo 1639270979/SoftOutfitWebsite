@@ -12,7 +12,7 @@ td, th, ul, p, a*/
 	border:0px; */
 }
 body{
-	font-size:14px;
+	font: 14px/25px PingFangSC-Regular,'-apple-system',Simsun;
 }
 input{
 	outline:0;

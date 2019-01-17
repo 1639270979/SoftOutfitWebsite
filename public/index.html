@@ -13,7 +13,12 @@
 </head>
 <body>
 	<!--一.顶部header-->
-	 <div class="header">
+	<div class="header">
+		<div class="big-topPic">
+			<a href="javascript:;">
+				<img src="./img/index/game/big-topPic.jpg" alt="">
+			</a>
+		</div>
 		<div class="head clearfix">
 			<!-- 顶部logo -->
 			<div class="logo">
@@ -56,11 +61,16 @@
 					</ul>
 				</div>
 				<div class="right-nav">
-					<p><a href="javascript:;">手机客户端</a> </p>
+					<a href="javascript:;">页游</a>
+					<!-- 页游 -->
+					<div class="m-game"></div>
+					<!-- 手游 -->
+					<a href="javascript:;">手游</a>
+					<div class="web-game"></div>
 				</div>
 			</div>
 		</div>
-    </div>
+  </div>
 	<!--二.页面主体-->
 	<div class="main">
 		<!-- 轮播图 -->
@@ -87,7 +97,7 @@
 					</li>
 					<li>
 						<a href="javascript:;">
-							<img src="./img/banner/11.jpg" alt="">
+							<img src="./img/banner/16.jpg" alt="">
 						</a>
 					</li>
 					<li>
@@ -113,8 +123,9 @@
 				</ul>
 				<a class="ck-left ck-side" data-toggle="prev" href="javascript:;"></a>
 				<a class="ck-right ck-side" data-toggle="next" href="javascript:;"></a>
+				<!-- 下方按钮 -->
 				<div class="btn">
-					<span class="active">我真是个富二代</span>
+					<span class="active">振南明</span>
 					<span>超级基因猎场</span>
 					<span>谋断九州</span>
 					<span>疯狂的手游</span>
@@ -129,16 +140,40 @@
 				</a>
 			</div>
 			<!-- 右公告 -->
-			<div class="notice">
-				<a href="javascript:;"><h3 class="text-title">唐家三少新作震撼来袭</h3></a>
+			<div class="notice" data-toggle="notice">
+				<!-- 隐藏的更多按钮 -->
+				<a class="hide" href="javascript:;">
+					<i class="iconfont icon-gengduo1"></i>
+					<!-- 将更多按钮隐藏的块 -->
+					<em></em>
+				</a>
+				<!-- 标题 -->
+				<a href="javascript:;"><h3 class="text-title">2018十二天王发布</h3></a>
+				<!-- 列表 -->
 				<ul>
 					<li><a href="javascript:;"><span>[公告]</span>唐家三少新作震撼来袭</a> </li>
 					<li><a href="javascript:;"><span>[公告]</span>烟雨江南新作震撼来袭</a> </li>
 					<li><a href="javascript:;"><span>[公告]</span>横扫天涯，笔耕十年</a></li>
 					<li><a href="javascript:;"><span>[公告]</span>江雪落——芬芳满堂</a></li>
-					<li><a href="javascript:;"><span>[公告]</span>大神府天新书震撼发布</a></li>
-					<li><a href="javascript:;"><span>[公告]</span>迪巴拉爵士新书来袭</a></li>
+					<li><a class="webGame" href="javascript:;"><span>页游</span>三国群雄传</a></li>
+					<li><a class="webGame" href="javascript:;"><span>页游</span>魔幻境界</a></li>
 				</ul>
+				<div>
+					<!-- 公告 225-->
+					<!-- 公告图标 -->
+					<em class="iconfont icon-gonggaoxiaolaba"></em>
+					<ul data-toggle="notice-slide">
+						<li><a href="javascript:;">svgngj订阅了《重生封神之逆天成圣》</a></li>
+						<li><a href="javascript:;">风月风云订阅了《末世超级商人》</a></li>
+						<li><a href="javascript:;">？小小？订阅了《超级美食帝国》</a></li>
+						<li><a href="javascript:;">修罗之刻订阅了《特拉福买家俱乐部》</a></li>
+						<li><a href="javascript:;">猫修罗订阅了《最强炊事兵》</a></li>
+						<li><a href="javascript:;">暗夜※繁星订阅了《有扇通往地下城的门》</a></li>
+						<li><a href="javascript:;">永夜之旅订阅了《美酒供应商》</a></li>
+						<li><a href="javascript:;">放飞的人订阅了《校花的贴身高手》</a></li>
+						<li><a href="javascript:;">svgngj订阅了《重生封神之逆天成圣》</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!--三. 主体  1楼 -->
@@ -200,7 +235,7 @@
 							</a> 
 						</div>
 						<div class="r-right">
-							<a href="javascript:;">同桌凶猛</a>
+							<a href="details.html" target="_blank">同桌凶猛</a>
 							<p>青梅竹马的同桌竟然成了大明星，又凶又萌。</p>
 							<div>
 								<a href="javascript:;">柳下挥</a>
@@ -229,79 +264,79 @@
 					</div>
 				</div>
 				<div class="main-index">
-						<div class="top-box-left">
-								<div class="r-left">
-									<a href="javascript:;">
-										<img src="./img/index/recommended/2.jpg" alt="">
-									</a> 
-								</div>
-								<div class="r-right">
-									<a href="#">全职武神</a>
-									<p>这是一个有侠气的故事…………………………</p>
-									<div>
-										<a href="javascript:;">流浪的蛤蟆</a>
-										<a class="mr-right" href="javascript:;">古典仙侠</a>
-									</div>
-								</div>
+					<div class="top-box-left">
+						<div class="r-left">
+							<a href="javascript:;">
+								<img src="./img/index/recommended/2.jpg" alt="">
+							</a> 
+						</div>
+						<div class="r-right">
+							<a href="#">全职武神</a>
+							<p>这是一个有侠气的故事…………………………</p>
+							<div>
+								<a href="javascript:;">流浪的蛤蟆</a>
+								<a class="mr-right" href="javascript:;">古典仙侠</a>
 							</div>
-							<div class="top-box-right">
-								<div class="r-left">
-									<a href="javascript:;">
-										<img src="./img/index/recommended/3.jpg" alt="">
-									</a> 
-									</div>
-								<div class="r-right">
-									<a href="javascript:;">青梅仙道</a>
-									<p>挥手千尺浪，静坐转阴阳。异世成大道，造化玄元光！
-									</p>
-									<div>
-										<a href="javascript:;">污泥</a>
-										<a class="mr-right" href="javascript:;">古典仙侠</a>
-									</div>
-								</div>
+						</div>
+					</div>
+					<div class="top-box-right">
+						<div class="r-left">
+							<a href="javascript:;">
+								<img src="./img/index/recommended/3.jpg" alt="">
+							</a> 
 							</div>
+						<div class="r-right">
+							<a href="javascript:;">青梅仙道</a>
+							<p>挥手千尺浪，静坐转阴阳。异世成大道，造化玄元光！
+							</p>
+							<div>
+								<a href="javascript:;">污泥</a>
+								<a class="mr-right" href="javascript:;">古典仙侠</a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="main-index">
-						<div class="top-box-left">
-								<div class="r-left">
-									<a href="javascript:;">
-										<img src="./img/index/recommended/4.jpg" alt="">
-									</a> 
-								</div>
-								<div class="r-right">
-									<a href="javascript:;">大劫主</a>
-									<p>一卷道元真解，三千大道奇经。寒门少年踏仙路，
-										十年苦读意难平。仙榜有吾名！无尽天骄崛起，
-										一剑败尽英雄。不愿逐流从庸众，只求仰首见苍穹。
-										此心本天生！</p>
-									<div>
-										<a href="javascript:;">黑山老鬼</a>
-										<a class="mr-right" href="javascript:;">修真文明</a>
-									</div>
-								</div>
+					<div class="top-box-left">
+						<div class="r-left">
+							<a href="javascript:;">
+								<img src="./img/index/recommended/4.jpg" alt="">
+							</a> 
+						</div>
+						<div class="r-right">
+							<a href="javascript:;">大劫主</a>
+							<p>一卷道元真解，三千大道奇经。寒门少年踏仙路，
+								十年苦读意难平。仙榜有吾名！无尽天骄崛起，
+								一剑败尽英雄。不愿逐流从庸众，只求仰首见苍穹。
+								此心本天生！</p>
+							<div>
+								<a href="javascript:;">黑山老鬼</a>
+								<a class="mr-right" href="javascript:;">修真文明</a>
 							</div>
-							<div class="top-box-right">
-								<div class="r-left">
-									<a href="javascript:;">
-										<img src="./img/index/recommended/8.jpg" alt="">
-									</a> 
-									</div>
-								<div class="r-right">
-									<a href="javascript:;">史上最强赘婿</a>
-									<p>
-										穿越异世成为财主家的小白脸赘婿，因太废物被赶
-										出来。于是他发奋图强，找一个更有权有势绝美高
-										贵的豪门千金做了上门女婿。练武是不可能练武的，
-										这辈子都不可能练武，只能靠吃软饭才能维持生活！
-										我要把老婆培养成天下第一高手，谁敢惹我就让我娘
-										子打死你！
-									</p>
-									<div>
-										<a href="javascript:;">沉默的糕点</a>
-										<a class="mr-right" href="javascript:;">东方玄幻</a>
-									</div>
-								</div>
+						</div>
+					</div>
+					<div class="top-box-right">
+						<div class="r-left">
+							<a href="javascript:;">
+								<img src="./img/index/recommended/8.jpg" alt="">
+							</a> 
 							</div>
+						<div class="r-right">
+							<a href="javascript:;">史上最强赘婿</a>
+							<p>
+								穿越异世成为财主家的小白脸赘婿，因太废物被赶
+								出来。于是他发奋图强，找一个更有权有势绝美高
+								贵的豪门千金做了上门女婿。练武是不可能练武的，
+								这辈子都不可能练武，只能靠吃软饭才能维持生活！
+								我要把老婆培养成天下第一高手，谁敢惹我就让我娘
+								子打死你！
+							</p>
+							<div>
+								<a href="javascript:;">沉默的糕点</a>
+								<a class="mr-right" href="javascript:;">东方玄幻</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!--三. 1楼 right -->
@@ -404,94 +439,134 @@
 				</div>
 			</div>
 		</div>
-		<!--二. 主体 2楼 尚武阁 308-->
+		<!--二. 主体 2楼 武 280-->
 		<div class="main-two clearfix">
 			<!-- 左 -->
-			<div class="main-two-fu" title="武">
+			<div class="main-two-fu" title="onePlus">
 				<div class="main-fu-img">
-					<img src="" alt="">
+					<a href="javascript:;"><img src="./img/index/Martial/advert.jpg" alt=""></a>	
 				</div>
 			</div>
-			<!-- 右轮播 -->
+			<!-- 右轮播 314-->
 			<div class="book-slide-wrap">
-				<a class="two-prev" href="javascript:;">
+				<!-- 左箭头 -->
+				<a class="left-prev" href="javascript:;">
 					<img src="./img/index/Martial/arrow-left.png" alt="">
 				</a>
-				<a class="two-next" href="javascript:;">
+				<!-- 右箭头 -->
+				<a class="right-next" href="javascript:;">
 					<img src="./img/index/Martial/arrow-right.png" alt="">
 				</a>
-				<ul class="clearfix">
-					<!-- 1 -->
-					<li>
-						<div class="book-box">
-							<a href="javascript:;">
-								<img src="./img/index/Martial/0.jpg" alt="">
-							</a>
-						</div>
-						<p><a href="javascript:;">反派都想打死我</a></p>	
-						<p><a href="javascript:;">骗人</a></p>	
-					</li>
-					<!-- 2 -->
-					<li>
-						<div class="book-box">
-							<a href="javascript:;">
-								<img src="./img/index/Martial/1.jpg" alt="">
-							</a>
-						</div>
-						<p><a href="javascript:;">绝世武侠系统</a></p>	
-						<p><a href="javascript:;">青草朦胧</a></p>	
-					</li>
-					<!-- 3 -->
-					<li>
-						<div class="book-box">
-							<a href="javascript:;">
-								<img src="./img/index/Martial/2.jpg" alt="">
-							</a>
-						</div>
-						<p><a href="javascript:;">纯阳第一掌教</a></p>	
-						<p><a href="javascript:;">池宁羽</a></p>	
-					</li>
-					<!-- 4 -->
-					<li>
-						<div class="book-box">
-							<a href="javascript:;">
-								<img src="./img/index/Martial/3.jpg" alt="">
-							</a>
-						</div>
-						<p><a href="javascript:;">血狱江湖</a></p>	
-						<p><a href="javascript:;">天雨寒</a></p>	
-					</li>
-					<!-- 5 -->
-					<li>
-						<div class="book-box">
-							<a href="javascript:;">
-								<img src="./img/index/Martial/4.jpg" alt="">
-							</a>
-						</div>
-						<p><a href="javascript:;">最强山贼系统 </a>	</p>
-						<p><a href="javascript:;">蛤蟆大王</a></p>	
-					</li>
-					<!-- 6 -->
-					<li>
-						<div class="book-box">
-							<a href="javascript:;">
-								<img src="./img/index/Martial/5.jpg" alt="">
-							</a>
-						</div>
-						<p><a href="javascript:;">一剑破妄虚</a></p> 
-						<p><a href="javascript:;">鬼火莹光</a></p>	
-					</li>
-					<!-- 7 -->
-					<li>
-						<div class="book-box">
-							<a href="javascript:;">
-								<img src="./img/index/Martial/6.jpg" alt="">
-							</a>
-						</div>
-						<p><a href="javascript:;">武侠三千年</a></p> 
-						<p><a href="javascript:;">名不可简</a></p>	
-					</li>
-				</ul>
+				<!-- 轮播图片 一个大包裹div包裹两个ul-->
+				<!-- 通过左移ul来实现轮播 325-->
+				<div class="slide-box" data-toggle="two-slide">
+					<!-- 一 -->
+					<ul class="slide-img1 clearfix" style="left:0px">
+						<!-- 1 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/0.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">反派都想打死我</a></p>	
+							<p><a href="javascript:;">骗人</a></p>	
+						</li>
+						<!-- 2 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/1.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">绝世武侠系统</a></p>	
+							<p><a href="javascript:;">青草朦胧</a></p>	
+						</li>
+						<!-- 3 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/2.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">纯阳第一掌教</a></p>	
+							<p><a href="javascript:;">池宁羽</a></p>	
+						</li>
+						<!-- 4 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/3.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">血狱江湖</a></p>	
+							<p><a href="javascript:;">天雨寒</a></p>	
+						</li>
+						<!-- 5 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/4.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">最强山贼系统 </a>	</p>
+							<p><a href="javascript:;">蛤蟆大王</a></p>	
+						</li>
+					</ul>
+					<!-- 二 -->
+					<ul class="slide-img2 clearfix" style="left:1000px">
+						<!-- 1 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/5.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">一剑破妄虚</a></p> 
+							<p><a href="javascript:;">鬼火莹光</a></p>	
+						</li>
+						<!-- 2 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/6.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">武侠三千年</a></p> 
+							<p><a href="javascript:;">名不可简</a></p>	
+						</li>
+						<!-- 3 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/7.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">小刀乱</a></p> 
+							<p><a href="javascript:;">马亮专用 </a></p>	
+						</li>
+						<!-- 4 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/8.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">西幻世界中的魔教教主</a></p> 
+							<p><a href="javascript:;">雪白大米饭</a></p>	
+						</li>
+						<!-- 5 -->
+						<li>
+							<div class="book-box">
+								<a href="javascript:;">
+									<img src="./img/index/Martial/9.jpg" alt="">
+								</a>
+							</div>
+							<p><a href="javascript:;">幻变诸天归一剑 </a></p> 
+							<p><a href="javascript:;">回首朱门外</a></p>	
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!--三. 主体 3楼  -->
@@ -1259,13 +1334,13 @@
 					<!-- 搜索框 -->
 					<input class="pin-search" type="text" placeholder="我真是个富二代">
 					<label for="top-pin-box">
-						<em></em>
+							<em class="iconfont icon-icon- "></em>
 					</label>
 					<input id="top-pin-box" type="submit">
 				</div>
 				<p>
 					|<a href="javascript:;" data-toggle="login-box">登陆</a>
-					<a href="javascript:;">注册</a>|
+					<a href="register.html">注册</a>|
 					<a href="javascript:;">
 						<i class="iconfont icon-shujia"></i>
 						我的书架</a> 
@@ -1279,7 +1354,7 @@
 		<div class="login">
 			<div class="login-box">
 				<!-- 关闭登录按钮 -->
-				<em class="close-login-box" data-toggle="close">X</em>
+				<em class="close-login-box" data-toggle="close"><i class="iconfont ">X</i></em>
 				<div class="login-top" data-toggle="switch">
 					<span class="visible" data-target="#login-body">账号登陆</span>
 					<span data-target="#qq-login-wrap">QQ登陆</span>

@@ -1,6 +1,6 @@
 
 
-
+///*
 //1.首页轮播
 $(function(){
 	var $banner=$("#banner");
@@ -11,8 +11,8 @@ $(function(){
 	//需求，能够让任意对象移动到指定的位置
 	//下一页
 	//传入任意对象obj,指定位置为target
-	function prev_pic(){
-		var newLeft;
+	function prev_pic(p){
+		var newLeft;//声明一个步长
 		if($slide.css("left")=="-3750px"){
 			$slide.css("left","0px");
 			newLeft=-p;
@@ -47,7 +47,7 @@ $(function(){
 			//获取当前对象的位置
 			var $leader=parseInt($obj.css("left"));
 			//设置步长
-			var step=5;
+			var step=10;
 			step=$leader<target?step:-step;
 			//距离大于步长
 			if(Math.abs($leader-target)>=Math.abs(step)){
@@ -72,7 +72,7 @@ $(function(){
 			 $("#banner .btn>span").eq(index).siblings().removeClass("active");
 			 $("#banner .btn>span").eq(index).addClass("active");
 			}
-		},5)
+		},3)
 	}
 	//获取左右箭头//获得按钮元素
 	var $prev=$("[data-toggle=prev]");
@@ -127,17 +127,31 @@ $(function(){
 					prev_pic(p);
 				}
 			}
-		},3500);
+		},2500);
 	}
 	autoPlay();
 	$banner.mouseenter(function () {
 	//清除自动轮播定时器
 		clearInterval(timer);
+		$prev.show();
+		$next.show();
 	});
 	//鼠标移开，自动轮播    
 	$banner.mouseleave(function () {
 		autoPlay();
+		$prev.hide();
+		$next.hide();
 	});
+	//定时器的控制
+	// $banner.hover(function(){
+	// 	clearInterval(timer);
+	// 	$prev.show();
+	// 	$next.show();
+	// },function(){
+	// 	autoPlay();
+	// 	$prev.hide();
+	// 	$next.hide();
+	// })
 
 	//小圆点点击事件
 	var $imgWs=$("#banner .btn>span");
@@ -154,6 +168,70 @@ $(function(){
 			})(i);	
 		}	
 });
+//*/
+
+//1. 首轮轮播
+/*
+$(function(){
+	//每个固定的时间移动图片
+	var $banner=$("#banner");
+	var $slide=$("[data-toggle=slide]");
+	var $prev=$("[data-toggle=prev]");
+	var $next=$("[data-toggle=next]");
+	var timer = setInterval(picLoop,3000);
+	var index = 1;
+	function picLoop(){
+		index++;
+		if (index>=6) {
+			index=1;
+			$slide.css("left","0px");
+		}
+		$slide.animate({"left":-750*index},1000);
+		$("#banner>div>span").eq(index-1).addClass("active")
+			   .siblings().removeClass("active");
+	}
+
+	//定时器的控制
+	$banner.hover(function(){
+		clearInterval(timer);
+		$prev.show();
+		$next.show();
+	},function(){
+		timer = setInterval(picLoop,3000);
+		$prev.hide();
+		$next.hide();
+	})
+
+	$("#banner>div>span").click(function(){
+		$(this).addClass("active")
+			   .siblings().removeClass("active");
+		index = $(this).index();
+		index++;
+		$slide.css("left",-750*index);//0  1
+	})
+
+	$prev.click(function(){
+		index++;
+		if (index>=6) {
+			index=1;
+			$slide.css("left","0px");
+		}
+		$slide.animate({"left":-750*index},1000);
+		$("#banner>div>span").eq(index-1).addClass("active")
+			   .siblings().removeClass("active");
+	})
+	$next.click(function(){
+		index--;
+		if (index<=-1) {
+			index=4;
+			$slide.css("left","-3750px");
+		}
+		$slide.animate({"left":-750*index},1000);
+		$("#banner>div>span").eq(index-1).addClass("active")
+			   .siblings().removeClass("active"); 
+	})
+})
+*/
 
 //2.顶部悬浮导航栏
 $(function(){
@@ -193,30 +271,9 @@ $(function(){
 	// 	}       
 	// });
 
-// 3.下拉选项
-	//1. 查找触发事件的元素
-	//2. 绑定事件
-	$("[data-toggle=dropdown]").parent().mouseenter(function(){
-		//3. 查找要修改的元素:当前按钮的下一个兄弟ul
-		$(this).children(":last-child").css("display","block");
-		//4. 修改元素，
-		$(this).children("span").css({
-			"border-bottom":"4px solid #ccc",
-			"border-top":"0 none"
-		});
-		
-	}).mouseleave(function(){
-		$(this).children(":last-child").css("display","none");
-		$(this).children("span").css({
-			"border-top":"4px solid #ccc",
-			"border-bottom":"0 none"
-		});
-		//console.log($(this));
-	}).children(":last-child").css("display","none");
-
 });
 
-//4. 底部5楼定时器
+//3. 底部5楼定时器
 //封装函数
 $(function(){
 	//封装定时器函数
@@ -249,17 +306,147 @@ $(function(){
 	var $timer=setInterval(task,1000);
 })
 
-//二楼轮播图
+//
+
+
+
+
+//4 楼轮播图
+//想要平缓的动画只能用定位来写动画
 $(function(){
+	// 定义动画
+	var autoSlide=setInterval(picLoop,2000);
+	var index=0;//0 一个ul的初始值
+	var index2=-5;//1 第二个ul的初始值
+	// slide-img1
+	var $slide1=$("[data-toggle=two-slide]>.slide-img1");
+	// slide-img2
+	var $slide2=$("[data-toggle=two-slide]>.slide-img2");
+	//动画执行前延迟自动调用动画一次
+	picLoop();
+	// 封装动画函数
+	// 自动播放
+	function picLoop(){
+		index++;
+		index2++;
+		// parseInt($slide1.css("left"))==-1000
+		if(index>=6){
+			$slide1.css("left","1000px")
+			index=-4;
+		}
+		if(index2>=6){
+			$slide2.css("left","1000px")
+			index2=-4;
+		}
+		// slide-img1
+		$slide1.animate({
+			"left":(-200*index),
+		},1000)
+		// slide-img2
+		$slide2.animate({
+			"left":(-200*index2),
+		},1000)
+	}
+	// 定时器的控制
+	$("[data-toggle=two-slide]").parent().hover(function(){
+		clearInterval(autoSlide);
+		$("[data-toggle=two-slide]").parent().children().eq(0).fadeIn();
+	},function(){
+		autoSlide=setInterval(picLoop,2000);
+		$("[data-toggle=two-slide]").parent().children().eq(0).fadeOut();
+	})
+	// 向前动
+	$("[data-toggle=two-slide]").parent().children().eq(0).click(function(){
+		index++;
+		index2++;
+		// parseInt($slide1.css("left"))==-1000
+		if(index>=6){
+			$slide1.css("left","1000px")
+			index=-4;
+		}
+		if(index2>=6){
+			$slide2.css("left","1000px")
+			index2=-4;
+		}
+		// ul 1
+		$slide1.animate({
+			"left":(-200*index),
+		},1000)
+		// ul2
+		$slide2.animate({
+			"left":(-200*index2),
+		},1000)
+		
+	})
+	// 向后动
 	
+	$("[data-toggle=two-slide]").parent().children().eq(1).click(function(){
+		index--;
+		index2--;
+		console.log(index);
+		if(index<=-6){
+			$slide1.css("left","-1000px")
+			index=4;
+		}
+		if(index2<=-6){
+			$slide2.css("left","-1000px")
+			index2=4;
+		}
+		// ul 1
+		$slide1.animate({
+			"left":(-200*index),
+		},1000)
+		// ul2
+		$slide2.animate({
+			"left":(-200*index2),
+		},1000)
+		
+	})
 })
 
+//5.一楼 右侧
+$(function(){
+	$("[data-toggle=notice]").mouseenter(function(){
+		$(this).find(".hide>em").css({
+			top:"18px",
+			right:"18px"
+		})
+	}).mouseleave(function(){
+		$(this).find(".hide>em").css({
+		top:"-18px",
+		right:"-18px"
+		})
+	})
+})
 
-
-
-
-
-
+/*
+//6. 一楼右侧公告轮播
+$(function(){
+	//查找触发事件元素并绑定事件
+	var $nSlide=$("[data-toggle=notice-slide]");
+	var autoNo=setInterval(notLoop,2000);
+	var i=0
+	notLoop();
+	function notLoop(){
+		i++;
+		// 判断
+		if(i==9){
+			$nSlide.css("top","0px");
+			i=1;
+		}
+		$nSlide.animate({
+			top:25*-i
+		},500)
+	}
+	// 定时器控制
+	$nSlide.hover(
+		function(){
+			clearInterval(autoNo);
+		},function(){
+			autoNo=setInterval(notLoop,2000);
+	})
+})
+*/
 
 
 
