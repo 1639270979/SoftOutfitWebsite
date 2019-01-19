@@ -72,7 +72,7 @@ $(function(){
 			 $("#banner .btn>span").eq(index).siblings().removeClass("active");
 			 $("#banner .btn>span").eq(index).addClass("active");
 			}
-		},3)
+		},5)
 	}
 	//获取左右箭头//获得按钮元素
 	var $prev=$("[data-toggle=prev]");
@@ -127,7 +127,7 @@ $(function(){
 					prev_pic(p);
 				}
 			}
-		},2500);
+		},3000);
 	}
 	autoPlay();
 	$banner.mouseenter(function () {
@@ -315,7 +315,7 @@ $(function(){
 //想要平缓的动画只能用定位来写动画
 $(function(){
 	// 定义动画
-	var autoSlide=setInterval(picLoop,2000);
+	var autoSlide=setInterval(picLoop,2500);
 	var index=0;//0 一个ul的初始值
 	var index2=-5;//1 第二个ul的初始值
 	// slide-img1
@@ -352,7 +352,7 @@ $(function(){
 		clearInterval(autoSlide);
 		$("[data-toggle=two-slide]").parent().children().eq(0).fadeIn();
 	},function(){
-		autoSlide=setInterval(picLoop,2000);
+		autoSlide=setInterval(picLoop,2500);
 		$("[data-toggle=two-slide]").parent().children().eq(0).fadeOut();
 	})
 	// 向前动
@@ -447,10 +447,210 @@ $(function(){
 	})
 })
 */
-
-
-
-
+//7. 侧边小3D轮播图
+$(function(){
+	//查找触发元素
+	var $slide = $("[data-sl=slide]");
+		var $li=$slide.children();
+		var index=1;
+		//创建一个json数组，每一次轮播都将数组的最后一项移动到第一项
+		var json=[
+			{
+				left:"0",
+				top:"0",
+				zIndex:10,
+				opacity:0.85,
+				width:"67",
+				height:"89"
+			},
+			{
+				left:"40",
+				top:"-11",
+				zIndex:20,
+				opacity:1,
+				width:"84",
+				height:"112"
+			},
+			{
+				left:"100",
+				top:"0",
+				zIndex:5,
+				opacity:0.85,
+				width:"67",
+				height:"89"
+			}
+		]
+		//动画函数
+		function picLoop(){
+			for(var i=0;i<=json.length-1;i++){
+				//左定位left等于40时执行
+				if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==40){
+					$("[data-sl=slide]>li").eq(i).animate(
+					{
+						left:parseInt(json[i].left)-10,
+						zIndex:json[i].zIndex
+					},500).animate({
+						top:json[i].top,
+						width:json[i].width,
+						height:json[i].height,
+						opacity:json[i].opacity,
+						left:json[i].left,
+						zIndex:json[i].zIndex
+					},500);
+				}
+				//左定位left等于100时执行
+				if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==100){
+					$("[data-sl=slide]>li").eq(i).css("z-index",parseInt(json[i].zIndex)-10);
+					$("[data-sl=slide]>li").eq(i).animate(
+						{
+							top:json[i].top,
+							opacity:json[i].opacity,
+							width:json[i].width,
+							height:json[i].height,
+							zIndex:json[i].zIndex
+						},500).animate({
+							left:json[i].left,
+							zIndex:json[i].zIndex
+					},500);
+				}
+				//左定位left等于0时执行
+				if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==0){
+					$("[data-sl=slide]>li").eq(i).css("z-index",json[i].zIndex);
+					$("[data-sl=slide]>li").eq(i).animate({
+						left:json[i].left,
+						zIndex:json[i].zIndex
+					},1000,function(){
+						$slide.next().find("li").eq(index).css("display","block")
+						.siblings().css("display","none"); 
+					});
+				}
+			}
+			
+		}
+		//页面打开时先调用一次
+		addClass();
+		//定义函数，用于将json的最后一项移到第一项
+		function addClass(){
+			//index用于同步下方详情
+			index++;
+			if(index>2){
+				index=0
+			}
+             //json.shift(),删除数组的第一个值，并返回第一个值
+            //json.push(json.shift())将返回的第一个值追加到数组末尾
+             json.unshift(json.pop());
+             //重新遍历
+			picLoop(); 
+				    
+		} 
+		//定义定时器
+		var autoSlide=setInterval(addClass,3000);
+		
+		//定时器控制
+		$slide.mouseenter(function(){
+			clearInterval(autoSlide);
+		}).mouseleave(function(){
+			autoSlide=setInterval(addClass,3000);
+		})
+})
+//重复
+$(function(){
+	var $slide = $("[data-sl=slides]");
+		var $li=$slide.children();
+		var index=1;
+		var json=[
+			{
+				left:"0",
+				top:"0",
+				zIndex:10,
+				opacity:0.85,
+				width:"67",
+				height:"89"
+			},
+			{
+				left:"40",
+				top:"-11",
+				zIndex:20,
+				opacity:1,
+				width:"84",
+				height:"112"
+			},
+			{
+				left:"100",
+				top:"0",
+				zIndex:5,
+				opacity:0.85,
+				width:"67",
+				height:"89"
+			}
+		]
+		//动画函数
+		function picLoop(){
+			for(var i=0;i<=json.length-1;i++){
+				//重第一张到最后一张
+				if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==40){
+					$("[data-sl=slides]>li").eq(i).animate(
+					{
+						left:parseInt(json[i].left)-10,
+						zIndex:json[i].zIndex
+					},500).animate({
+						top:json[i].top,
+						width:json[i].width,
+						height:json[i].height,
+						opacity:json[i].opacity,
+						left:json[i].left,
+						zIndex:json[i].zIndex
+					},500);
+				}
+				if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==100){
+					$("[data-sl=slides]>li").eq(i).css("z-index",parseInt(json[i].zIndex)-10);
+					$("[data-sl=slides]>li").eq(i).animate(
+						{
+							top:json[i].top,
+							opacity:json[i].opacity,
+							width:json[i].width,
+							height:json[i].height,
+							zIndex:json[i].zIndex
+						},500).animate({
+							left:json[i].left,
+							zIndex:json[i].zIndex
+					},500);
+				}
+				if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==0){
+					$("[data-sl=slides]>li").eq(i).css("z-index",json[i].zIndex);
+					$("[data-sl=slides]>li").eq(i).animate({
+						left:json[i].left,
+						zIndex:json[i].zIndex
+					},1000,function(){
+						$slide.next().find("li").eq(index).css("display","block")
+						.siblings().css("display","none"); 
+					});
+				}
+			}
+			
+		}
+		addClass();
+		function addClass(){
+			index++;
+			if(index>2){
+				index=0
+			}
+             //json.shift(),删除数组的第一个值，并返回第一个值
+            //json.push(json.shift())将返回的第一个值追加到数组末尾
+             json.unshift(json.pop());
+             //重新遍历
+			picLoop(); 
+				    
+		} 
+		var autoSlide=setInterval(addClass,3000);
+		
+		//定时器控制
+		$slide.mouseenter(function(){
+			clearInterval(autoSlide);
+		}).mouseleave(function(){
+			autoSlide=setInterval(addClass,3000);
+		})
+})
 
 
 

@@ -41,25 +41,55 @@
 /* 小轮播图 */
 .main-one-left .banner-l{
     width:100%;
-    height:520px;
+    height:500px;
     background: #fafafa;
     border: 1px solid #f5f5f5;
     border-radius:3px;
 }
 .main-one-left .banner-img{
-    width:100px;
-    height:145px;
     margin:0 auto;
     margin-top:40px;
-    overflow: hidden;
+    margin-left:37px;
     cursor:pointer;
+    width:180px;
+	height:120px;
+	position:relative;
 }
 .main-one-left .banner-img li{
     float:left;
+	position:absolute;
+    box-shadow: 0 1px 8px #7f7f7f;
 }
 .main-one-left .banner-img img{
-    width:100px;
-    height:145px;
+    width:100%;
+    height:100%;
+}
+/* 初始位置布局 */
+.main-one-left .slide-left{
+    width:67px;
+    height:89px;
+    left:0px;
+    top:0px;
+    z-index:10;
+    opacity:0.8;
+    
+}
+.main-one-left .slide-center{
+    width:84px;
+    height:112px;
+    left:40px;
+    top:-11px;
+    z-index:20;
+    opacity:1;
+    
+}
+.main-one-left .slide-right{
+    width:67px;
+    height:89px;
+    left:100px;
+    top:0px;
+    z-index:10;
+    opacity:0.8;
 }
 /* main-one  1楼 左 小轮播图详情 */
 .main-one .banner-details{
@@ -79,31 +109,43 @@
     color:#999;
     font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
     text-align:center;
-    margin-bottom:10px;
+    margin-bottom:5px;
 }
-.main-one .banner-details>p{
+.main-one .banner-details>ul>li>p{
     text-align: center;
-    margin-bottom:20px;
+    margin-bottom:10px;
     color:#999;
 }
 /* main-one  1楼 左 小轮博图布局 */
-.main-one .banner-details>p a{
+.main-one .banner-details>ul{
+    height:301px;
+    overflow:hidden;
+}
+.main-one .banner-details>ul>li{
+    float:left;
+    height:301px;
+    display:none;
+}
+.main-one .banner-details>ul>li.visible{
+    display:block;
+}
+.main-one .banner-details>ul>li>p a{
     margin-right:10px;
     color:#666;
 }
-.main-one .banner-details>p span{
+.main-one .banner-details>ul>li>p span{
     margin-left:5px;
     color:#666;
 }
-.main-one .banner-details>p a:visited{
+.main-one .banner-details>ul>li>p a:visited{
     color:#999;
 }
-.main-one .banner-details>span{
+.main-one .banner-details>ul>li>span{
     display:block;
     font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
     padding-right:20px;
     padding-left:20px;
-    height:95px;
+    height:100px;
     overflow:hidden;
     color:#626260;
     text-align: justify;
@@ -131,7 +173,7 @@
 .main-one-mid .main-index{
     display:flex;
     justify-content: space-between;
-    margin-top:40px;
+    margin-top:33px;
 }
 
 .main-one-mid .main-index img{
@@ -607,17 +649,53 @@
     background: #f7f5f0;
     overflow: hidden;
 }
-/* banner 图 */
+/* banner 图 945*/
 .hot-work-wrap .hot-book-box .hot-book .slide-wrap{
-    width:84px;
-    height:112px;
-    overflow: hidden;
-    margin-left:66px;
-    margin-bottom:10px;
+    margin:20px 0 10px 25px;
+    position:relative;
+    cursor:pointer;
+    width:180px;
+	height:120px;
+	position:relative;
 }
-.hot-work-wrap .hot-book-box .slide-wrap>ul>li img{
+.hot-work-wrap .hot-book-box .slide-wrap>li{
+    position:absolute;
+    float:left;
+    box-shadow: 0 1px 8px #7f7f7f;
+}
+.hot-work-wrap .hot-book-box .slide-wrap>li a{
+    display:block;
+}
+/* 初始位置布局 */
+.hot-work-wrap .hot-book-box .hot-book .slide-wrap .slide-left{
+    width:67px;
+    height:89px;
+    left:0px;
+    top:0px;
+    z-index:10;
+    opacity:0.8;
+    
+}
+.hot-work-wrap .hot-book-box .hot-book .slide-wrap .slide-center{
     width:84px;
     height:112px;
+    left:40px;
+    top:-11px;
+    z-index:20;
+    opacity:1;
+    
+}
+.hot-work-wrap .hot-book-box .hot-book .slide-wrap .slide-right{
+    width:67px;
+    height:89px;
+    left:100px;
+    top:0px;
+    z-index:10;
+    opacity:0.8;
+}
+.hot-work-wrap .hot-book-box .slide-wrap>li img{
+    width:100%;
+    height:100%;
     float:left;
 }
 /* slide-box 排行主体 */
@@ -631,6 +709,7 @@
     width:192px;
     height:212px;
     float:left;
+    /* display:none; */
 }
 .hot-work-wrap .slide-box li h3{
     margin-bottom:8px;
@@ -961,7 +1040,7 @@
 	color:#2972cc !important;
     border:1px solid #2972cc;
 }
-/* 顶部悬浮导航 */
+/* 顶部悬浮导航 1355*/
 .pin-nav-wrap{
 	width:100%;
 	height:40px;	
@@ -969,6 +1048,7 @@
     /* display: none; */
     position: fixed;
     top:-40px;
+    z-index:999;
     transition:top .5s linear;
 }
 .pin-nav-wrap .box-center{

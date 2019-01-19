@@ -113,11 +113,11 @@
 	height:40px;	
 	background:#3e3d43;
 }
-.header .top-nav ul>li{
+.header .top-nav .left-nav ul>li{
 	text-align: center;
 	width:90px;
 }
-.header .top-nav ul>li:hover{
+.header .top-nav .left-nav ul>li:hover{
 	border-top:2px solid #ff0000;
     background: #2c2c2c;
     height:38px;
@@ -163,4 +163,118 @@
 	color:#fd2d52 !important;
 }
 
-
+/* 页游 64*/
+.header .right-nav .web-game{
+	display:block;
+	width:192px;
+	padding:15px 12px;
+	position: absolute;
+	top:40px;
+	left:-53px;
+	z-index:10;
+	background:#fff;
+	box-shadow: 0 3px 5px #ccc;
+}
+.header .right-nav .web-game>h5{
+	font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #bf2c24;
+}
+/* 列表底部边框 */
+.header .right-nav .web-game .web-game-list ul{
+	border-bottom:1px solid #ddd;
+}
+.header .right-nav .web-game .web-game-list li>h3{
+	margin-bottom: 10px;
+	font-weight: 400;
+    line-height: 18px;
+    overflow: hidden;
+	height: 18px;
+	font-size: 14px;
+}
+.header .right-nav .web-game .web-game-list li>h3 i{
+    font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 12px;
+    float: left;
+    margin-right: 12px;
+    color: #a6a6a6;
+}
+.header .right-nav .web-game .web-game-list li>h3 a{
+    font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 14px;
+    float: left;
+    overflow: hidden;
+    overflow: hidden;
+    width: 84px;
+    height: 18px;
+    margin-right: 12px;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #222;
+	line-height: 18px;
+}
+.header .right-nav .web-game .web-game-list li>h3 a:hover{
+	color:#ed4259 !important;
+}
+.header .right-nav .web-game .web-game-list li>h3 span{
+	font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 12px;
+    font-weight: 400;
+    float: left;
+    min-width: 30px;
+    max-width: 30px;
+    text-align: right;
+	color: #666;
+	line-height: 18px;
+}
+/* hot 图标 */
+.header .right-nav .web-game .web-game-list li>h3 em{
+	margin-left:10px;
+	color:#bf2c24;
+}
+/* 图 */
+.header .right-nav .web-game .web-game-list li>p{
+	display:none;
+}
+.header .right-nav .web-game .web-game-list li>.show{
+	display:block;
+}
+.header .right-nav .web-game .web-game-list li>p{
+	margin-bottom: 5px;
+	position: relative;
+}
+.header .right-nav .web-game .web-game-list li>p img{
+    width: 192px;
+    height: 46px;
+}
+/* 页游底部 */
+.header .right-nav .web-game .web-game-bottom{
+	width: 192px;
+    margin: 0 auto;
+    padding-top: 12px;
+    border-top: 1px solid #e6e6e6;
+}
+.header .right-nav .web-game .web-game-bottom>h3{
+	font: 12px/18px PingFangSC-Regular,'-apple-system',Simsun;
+    margin-bottom: 5px;
+    color: #bf2c24;
+}
+.header .right-nav .web-game .web-game-bottom>p img{
+	display: block;
+    width: 192px;
+    height: 86px;
+    border: none;
+}
+.header .right-nav .angle{
+	position: absolute;
+	top:33px;
+	left:20px;
+	z-index:10;
+	width:0px;
+	height:0px;
+	border-top:0 none;
+	border-bottom:7px solid #fff;
+	border-left:7px solid transparent;
+	border-right:7px solid transparent;
+}
