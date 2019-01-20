@@ -154,26 +154,27 @@
 	display:flex;
 	justify-content:space-between;
 }
-.header .right-nav>a{
+.header .right-nav>div>a{
 	font: 18px/40px PingFangSC-Regular,'-apple-system',Simsun;
 	margin-right:30px;
 	color:#e84848;
 }
-.header .right-nav>a:hover{
+.header .right-nav>div>a:hover{
 	color:#fd2d52 !important;
 }
-
 /* 页游 64*/
 .header .right-nav .web-game{
-	display:block;
+	display:none;
 	width:192px;
 	padding:15px 12px;
 	position: absolute;
-	top:40px;
+	/* top:40px; */
 	left:-53px;
 	z-index:10;
 	background:#fff;
+	margin-top:-10px;
 	box-shadow: 0 3px 5px #ccc;
+	transition:all .1s linear;
 }
 .header .right-nav .web-game>h5{
 	font-family: PingFangSC-Regular,'-apple-system',Simsun;
@@ -268,8 +269,8 @@
 }
 .header .right-nav .angle{
 	position: absolute;
-	top:33px;
-	left:20px;
+	top:-7px;
+	left:75px;
 	z-index:10;
 	width:0px;
 	height:0px;

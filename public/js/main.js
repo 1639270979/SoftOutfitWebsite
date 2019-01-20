@@ -1,6 +1,6 @@
 
 
-///*
+/*
 //1.首页轮播
 $(function(){
 	var $banner=$("#banner");
@@ -168,10 +168,10 @@ $(function(){
 			})(i);	
 		}	
 });
-//*/
+*/
 
 //1. 首轮轮播
-/*
+///*
 $(function(){
 	//每个固定的时间移动图片
 	var $banner=$("#banner");
@@ -179,16 +179,22 @@ $(function(){
 	var $prev=$("[data-toggle=prev]");
 	var $next=$("[data-toggle=next]");
 	var timer = setInterval(picLoop,3000);
+	//声明步数变量 用于控制步数
+	var step=0;
 	var index = 1;
+	//页面加载先调用一次
+	picLoop();
 	function picLoop(){
 		index++;
 		if (index>=6) {
 			index=1;
 			$slide.css("left","0px");
 		}
-		$slide.animate({"left":-750*index},1000);
-		$("#banner>div>span").eq(index-1).addClass("active")
+		$slide.animate({"left":-750*index},1000,function(){
+			$("#banner>div>span").eq(index-1).addClass("active")
 			   .siblings().removeClass("active");
+		});
+		
 	}
 
 	//定时器的控制
@@ -208,30 +214,42 @@ $(function(){
 		index = $(this).index();
 		index++;
 		$slide.css("left",-750*index);//0  1
+		step=0;
 	})
-
+	//点击上一页
 	$prev.click(function(){
-		index++;
-		if (index>=6) {
-			index=1;
-			$slide.css("left","0px");
+		step++;
+		if(step==1){
+			index++;
+			if (index>=6) {
+				index=1;
+				$slide.css("left","0px");
+			}
+			$slide.animate({"left":-750*index},1000,function(){
+				step=0;
+				$("#banner>div>span").eq(index-1).addClass("active")
+				.siblings().removeClass("active");
+			});
 		}
-		$slide.animate({"left":-750*index},1000);
-		$("#banner>div>span").eq(index-1).addClass("active")
-			   .siblings().removeClass("active");
 	})
+	//点击下一页
 	$next.click(function(){
-		index--;
-		if (index<=-1) {
-			index=4;
-			$slide.css("left","-3750px");
+		step++;
+		if(step==1){
+			index--;
+			if (index<=-1) {
+				index=4;
+				$slide.css("left","-3750px");
+			}
+			$slide.animate({"left":-750*index},1000,function(){
+				step=0;
+				$("#banner>div>span").eq(index-1).addClass("active")
+				.siblings().removeClass("active"); 
+			});
 		}
-		$slide.animate({"left":-750*index},1000);
-		$("#banner>div>span").eq(index-1).addClass("active")
-			   .siblings().removeClass("active"); 
 	})
 })
-*/
+//*/
 
 //2.顶部悬浮导航栏
 $(function(){
@@ -308,16 +326,14 @@ $(function(){
 
 //
 
-
-
-
 //4 楼轮播图
 //想要平缓的动画只能用定位来写动画
 $(function(){
 	// 定义动画
-	var autoSlide=setInterval(picLoop,2500);
+	var autoSlide=setInterval(picLoop,3000);
 	var index=0;//0 一个ul的初始值
 	var index2=-5;//1 第二个ul的初始值
+	var step=0;//声明步数变量，用于控制步长
 	// slide-img1
 	var $slide1=$("[data-toggle=two-slide]>.slide-img1");
 	// slide-img2
@@ -350,57 +366,65 @@ $(function(){
 	// 定时器的控制
 	$("[data-toggle=two-slide]").parent().hover(function(){
 		clearInterval(autoSlide);
-		$("[data-toggle=two-slide]").parent().children().eq(0).fadeIn();
+		$("[data-toggle=two-slide]").parent().children(".left-prev,.right-next").fadeIn();
 	},function(){
-		autoSlide=setInterval(picLoop,2500);
-		$("[data-toggle=two-slide]").parent().children().eq(0).fadeOut();
+		autoSlide=setInterval(picLoop,3000);
+		$("[data-toggle=two-slide]").parent().children(".left-prev,.right-next").fadeOut();
 	})
 	// 向前动
 	$("[data-toggle=two-slide]").parent().children().eq(0).click(function(){
-		index++;
-		index2++;
-		// parseInt($slide1.css("left"))==-1000
-		if(index>=6){
-			$slide1.css("left","1000px")
-			index=-4;
+		step++;
+		if(step==1){
+			index++;
+			index2++;
+			// parseInt($slide1.css("left"))==-1000
+			if(index>=6){
+				$slide1.css("left","1000px")
+				index=-4;
+			}
+			if(index2>=6){
+				$slide2.css("left","1000px")
+				index2=-4;
+			}
+			// ul 1
+			$slide1.animate({
+				"left":(-200*index),
+			},1000)
+			// ul2
+			$slide2.animate({
+				"left":(-200*index2),
+			},1000,function(){
+				step=0;
+			})
 		}
-		if(index2>=6){
-			$slide2.css("left","1000px")
-			index2=-4;
-		}
-		// ul 1
-		$slide1.animate({
-			"left":(-200*index),
-		},1000)
-		// ul2
-		$slide2.animate({
-			"left":(-200*index2),
-		},1000)
-		
 	})
 	// 向后动
 	
 	$("[data-toggle=two-slide]").parent().children().eq(1).click(function(){
-		index--;
-		index2--;
-		console.log(index);
-		if(index<=-6){
-			$slide1.css("left","-1000px")
-			index=4;
+		step++;
+		if(step==1){
+			index--;
+			index2--;
+			console.log(index);
+			if(index<=-6){
+				$slide1.css("left","-1000px")
+				index=4;
+			}
+			if(index2<=-6){
+				$slide2.css("left","-1000px")
+				index2=4;
+			}
+			// ul 1
+			$slide1.animate({
+				"left":(-200*index),
+			},1000)
+			// ul2
+			$slide2.animate({
+				"left":(-200*index2),
+			},1000,function(){
+				step=0;
+			})
 		}
-		if(index2<=-6){
-			$slide2.css("left","-1000px")
-			index2=4;
-		}
-		// ul 1
-		$slide1.animate({
-			"left":(-200*index),
-		},1000)
-		// ul2
-		$slide2.animate({
-			"left":(-200*index2),
-		},1000)
-		
 	})
 })
 
@@ -520,6 +544,7 @@ $(function(){
 						left:json[i].left,
 						zIndex:json[i].zIndex
 					},1000,function(){
+						step=0;
 						$slide.next().find("li").eq(index).css("display","block")
 						.siblings().css("display","none"); 
 					});
@@ -552,8 +577,73 @@ $(function(){
 		}).mouseleave(function(){
 			autoSlide=setInterval(addClass,3000);
 		})
+	//点击事件
+	var step=0;
+	$slide.on("click","li",function(){
+		$li=$(this);
+		step++;
+		if(step==1){
+			if(parseInt($li.css("left"))==0){
+				index--;
+				if(index<0){
+					index=2
+				}
+				json.push(json.shift());
+				for(var i=0;i<=json.length-1;i++){
+					//重第一张到最后一张
+					if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==40){
+						$("[data-sl=slide]>li").eq(i).animate(
+						{
+							left:json[i].left,
+							zIndex:json[i].zIndex
+						},500).animate({
+							top:json[i].top,
+							width:json[i].width,
+							height:json[i].height,
+							opacity:json[i].opacity,
+							
+						},500);
+					}
+					if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==0){
+						$("[data-sl=slide]>li").eq(i).css("z-index",parseInt(json[i].zIndex)-10);
+						$("[data-sl=slide]>li").eq(i).animate(
+							{
+								top:json[i].top,
+								left:parseInt(json[i].left)-50,
+								opacity:json[i].opacity,
+								width:json[i].width,
+								height:json[i].height,
+								zIndex:json[i].zIndex
+							},500).animate({
+								left:json[i].left,
+								zIndex:json[i].zIndex
+						},500);
+					}
+					if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==100){
+						$("[data-sl=slide]>li").eq(i).css("z-index",json[i].zIndex-6);
+						$("[data-sl=slide]>li").eq(i).animate({
+							left:json[i].left,
+							zIndex:json[i].zIndex
+						},1000,function(){
+							step=0;
+							$slide.next().find("li").eq(index).css("display","block")
+							.siblings().css("display","none"); 
+						});
+					}
+				}
+			}
+			if(parseInt($li.css("left"))==100){
+				index++;
+				if(index>2){
+					index=0
+				}
+				json.unshift(json.pop());
+				picLoop();	
+			}
+		}
+	})
 })
-//重复
+//重复 侧边三D轮播
 $(function(){
 	var $slide = $("[data-sl=slides]");
 		var $li=$slide.children();
@@ -622,6 +712,7 @@ $(function(){
 						left:json[i].left,
 						zIndex:json[i].zIndex
 					},1000,function(){
+						step=0;
 						$slide.next().find("li").eq(index).css("display","block")
 						.siblings().css("display","none"); 
 					});
@@ -639,8 +730,7 @@ $(function(){
             //json.push(json.shift())将返回的第一个值追加到数组末尾
              json.unshift(json.pop());
              //重新遍历
-			picLoop(); 
-				    
+			picLoop();     
 		} 
 		var autoSlide=setInterval(addClass,3000);
 		
@@ -650,10 +740,99 @@ $(function(){
 		}).mouseleave(function(){
 			autoSlide=setInterval(addClass,3000);
 		})
+	//点击事件
+	var step=0;
+	$slide.on("click","li",function(){
+		$li=$(this);
+		step++;
+		if(step==1){
+			if(parseInt($li.css("left"))==0){
+				index--;
+				if(index<0){
+					index=2
+				}
+				json.push(json.shift());
+				for(var i=0;i<=json.length-1;i++){
+					//重第一张到最后一张
+					if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==40){
+						$("[data-sl=slides]>li").eq(i).animate(
+						{
+							left:json[i].left,
+							zIndex:json[i].zIndex
+						},500).animate({
+							top:json[i].top,
+							width:json[i].width,
+							height:json[i].height,
+							opacity:json[i].opacity,
+							
+						},500);
+					}
+					if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==0){
+						$("[data-sl=slides]>li").eq(i).css("z-index",parseInt(json[i].zIndex)-10);
+						$("[data-sl=slides]>li").eq(i).animate(
+							{
+								top:json[i].top,
+								left:parseInt(json[i].left)-50,
+								opacity:json[i].opacity,
+								width:json[i].width,
+								height:json[i].height,
+								zIndex:json[i].zIndex
+							},500).animate({
+								left:json[i].left,
+								zIndex:json[i].zIndex
+						},500);
+					}
+					if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==100){
+						$("[data-sl=slides]>li").eq(i).css("z-index",json[i].zIndex-6);
+						$("[data-sl=slides]>li").eq(i).animate({
+							left:json[i].left,
+							zIndex:json[i].zIndex
+						},1000,function(){
+							step=0;
+							$slide.next().find("li").eq(index).css("display","block")
+							.siblings().css("display","none"); 
+						});
+					}
+				}
+			}
+			if(parseInt($li.css("left"))==100){
+				index++;
+				if(index>2){
+					index=0
+				}
+				json.unshift(json.pop());
+				picLoop();	
+			}
+		}
+	})
+
 })
 
+// 头部页游动态 页游
+$(function(){
+	var $webGame=$("[data-toggle=webGame]");
+	//下拉列表
+	//查找触发元素
+	$webGame.parent().parent().parent().mouseenter(function(){
+		$webGame.parent().parent().css({
+			display:"block"
+		}).animate({
+			marginTop:0
+		},0);
+	}).mouseleave(function(){
+		$webGame.parent().parent().css({
+			display:"none",
+			marginTop:"-10px"
+		});
+	})
 
-
+	//下拉列表中的手风琴效果
+	$webGame.on("mouseenter","li",function(){
+		$li=$(this);
+		$li.children("p").css("display","block");
+		$li.siblings().children("p").css("display","none");
+	})
+})
 
 
 

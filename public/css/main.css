@@ -1,4 +1,4 @@
-/* main-one 1楼*/
+/* main-one 1楼 298*/
 .main-one{
     width:1200px;
     margin:0 auto;
@@ -125,6 +125,9 @@
     float:left;
     height:301px;
     display:none;
+}
+.main-one .banner-details>ul>li.show{
+    display:block
 }
 .main-one .banner-details>ul>li.visible{
     display:block;
@@ -321,7 +324,7 @@
     color:#fff !important;
     border-radius:3px;
 }
-/* 主体 2楼 尚武阁 */
+/* 主体 2楼 尚武阁 587*/
 .main-two{
     width:1200px;
     margin:0 auto;
@@ -371,16 +374,6 @@
 	top:0;
     float:left;
 }
-/* slide-img1 
-.main-two .book-slide-wrap>div .slide-img1{
-    position:absolute;
-    top:0;
-}
-// slide-img1 
-.main-two .book-slide-wrap>div .slide-img2{
-    position:absolute;
-    top:0;
-}*/
 /* 单个轮播项目 */
 .main-two .book-slide-wrap>div>ul li{
     float:left;
@@ -460,7 +453,7 @@
 .main-two .right-next:hover{
     background:rgba(0,0,0,0.2);
 }
-/* 主体 三楼 */
+/* 主体 三楼 717*/
 /* 游戏大图 */
 .banner-wrap{
     width:1200px;
@@ -625,7 +618,7 @@
     height:88px;
 }
 /* banner-wrap */
-/* 4楼 热门作品 */
+/* 4楼 热门作品 1060*/
 .hot-work-wrap{
     width:1200px;
     margin:0 auto;
@@ -873,7 +866,7 @@
     height: 16px;
     color: #666;
 }
- /* 5楼 限时免费  */
+ /* 5楼 限时免费  1394*/
 .time-limit-wrap>ul{
     display:flex;
     justify-content: space-between;
@@ -1040,7 +1033,7 @@
 	color:#2972cc !important;
     border:1px solid #2972cc;
 }
-/* 顶部悬浮导航 1355*/
+/* 顶部悬浮导航 1472*/
 .pin-nav-wrap{
 	width:100%;
 	height:40px;	
