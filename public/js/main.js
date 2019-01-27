@@ -1,175 +1,5 @@
 
 
-/*
-//1.首页轮播
-$(function(){
-	var $banner=$("#banner");
-	var $slide=$("[data-toggle=slide]");
-	var index=0;
-	//图片轮播
-	//封装图片动画函数
-	//需求，能够让任意对象移动到指定的位置
-	//下一页
-	//传入任意对象obj,指定位置为target
-	function prev_pic(p){
-		var newLeft;//声明一个步长
-		if($slide.css("left")=="-3750px"){
-			$slide.css("left","0px");
-			newLeft=-p;
-		}else{
-			newLeft=parseInt($slide.css("left"))-p;
-		}
-		direction=-1;
-		animate($slide,newLeft);
-		p=750;
-		
-	}
-	//上一页
-	function next_pic(p){
-		var newLeft;
-		if($slide.css("left")=="0px"){
-			$slide.css("left","-3750px");
-			newLeft=parseInt($slide.css("left")) +p;
-		}else{
-			newLeft=parseInt($slide.css("left")) +p;
-		}
-		direction=1;
-		animate($slide,newLeft);
-		p=750;
-	}
-	//封装图片动画函数
-	//传入任意对象obj,指定位置为target
-	function animate($obj,target){
-		//每次执行前先清除定时器，防止重复设置定时器
-		clearInterval($obj.timer);
-		//加上定时器
-		$obj.timer=setInterval(function(){
-			//获取当前对象的位置
-			var $leader=parseInt($obj.css("left"));
-			//设置步长
-			var step=10;
-			step=$leader<target?step:-step;
-			//距离大于步长
-			if(Math.abs($leader-target)>=Math.abs(step)){
-				//动画函数
-				$leader=$leader+step;
-				$obj.css("left",`${$leader}px`);
-			}else{
-				$obj.css("left",`${target}px`);
-				clearInterval($obj.timer);
-				if(direction==-1){
-					index++;
-					if(index>4){
-						index=0;
-					}
-				}else{
-					index--;
-					if(index<0){
-						index=4;
-					}
-				}
-			 //小圆点跟随轮播图片动
-			 $("#banner .btn>span").eq(index).siblings().removeClass("active");
-			 $("#banner .btn>span").eq(index).addClass("active");
-			}
-		},5)
-	}
-	//获取左右箭头//获得按钮元素
-	var $prev=$("[data-toggle=prev]");
-	var $next=$("[data-toggle=next]");
-	//console.log(prev);
-	//添加单机事件
-	//下一页
-	var p=750;
-	var direction=0;
-	$prev.click(function(){
-		p=750;
-		if(parseInt($slide.css("left"))%750==0){
-			prev_pic(p);
-		}else{
-			if(parseInt($slide.css("left"))<-3750){
-				p=p+(p-Math.abs(parseInt($slide.css("left"))%750));
-				prev_pic(p);
-			}else{
-				p=p-Math.abs(parseInt($slide.css("left"))%750);
-				prev_pic(p);
-			}
-		}
-	})
-	//上一页next_pic(p);
-	$next.click(function(){
-		p=750;
-		if(parseInt($slide.css("left"))%750==0){
-			next_pic(p);
-		}else{
-			if(parseInt($slide.css("left"))>0){
-				p=p+Math.abs(parseInt($slide.css("left"))%750);
-				next_pic(p);
-			}else{
-				p=Math.abs(parseInt($slide.css("left"))%750);
-				next_pic(p);
-			}
-		}
-	})
-	//添加定时
-	var timer =null;
-	function autoPlay(){
-		timer =setInterval(function (){
-			p=750;
-			if(parseInt($slide.css("left"))%750==0){
-				prev_pic(p);
-			}else{
-				if(parseInt($slide.css("left"))<-3750){
-					p=p+(p-Math.abs(parseInt($slide.css("left"))%750));
-					prev_pic(p);
-				}else{
-					p=p-Math.abs(parseInt($slide.css("left"))%750);
-					prev_pic(p);
-				}
-			}
-		},3000);
-	}
-	autoPlay();
-	$banner.mouseenter(function () {
-	//清除自动轮播定时器
-		clearInterval(timer);
-		$prev.show();
-		$next.show();
-	});
-	//鼠标移开，自动轮播    
-	$banner.mouseleave(function () {
-		autoPlay();
-		$prev.hide();
-		$next.hide();
-	});
-	//定时器的控制
-	// $banner.hover(function(){
-	// 	clearInterval(timer);
-	// 	$prev.show();
-	// 	$next.show();
-	// },function(){
-	// 	autoPlay();
-	// 	$prev.hide();
-	// 	$next.hide();
-	// })
-
-	//小圆点点击事件
-	var $imgWs=$("#banner .btn>span");
-		for(var i=0;i<=$imgWs.length-1;i++){
-			(function(i){
-				$imgWs.eq(i).click(function(){
-					var $btn=$(this);
-					$slide.css("left",(i+1)*(-750)+"px");
-					$btn.siblings().removeClass("active");
-					$btn.addClass("active");
-					//重置index的数值
-					index=i;
-				})
-			})(i);	
-		}	
-});
-*/
-
 //1. 首轮轮播
 ///*
 $(function(){
@@ -190,13 +20,11 @@ $(function(){
 			index=1;
 			$slide.css("left","0px");
 		}
-		$slide.animate({"left":-750*index},1000,function(){
+		$slide.animate({"left":-750*index},800,function(){
 			$("#banner>div>span").eq(index-1).addClass("active")
 			   .siblings().removeClass("active");
 		});
-		
 	}
-
 	//定时器的控制
 	$banner.hover(function(){
 		clearInterval(timer);
@@ -207,8 +35,7 @@ $(function(){
 		$prev.hide();
 		$next.hide();
 	})
-
-	$("#banner>div>span").click(function(){
+	$("#banner>div.btn>span").click(function(){
 		$(this).addClass("active")
 			   .siblings().removeClass("active");
 		index = $(this).index();
@@ -225,7 +52,7 @@ $(function(){
 				index=1;
 				$slide.css("left","0px");
 			}
-			$slide.animate({"left":-750*index},1000,function(){
+			$slide.animate({"left":-750*index},800,function(){
 				step=0;
 				$("#banner>div>span").eq(index-1).addClass("active")
 				.siblings().removeClass("active");
@@ -241,7 +68,7 @@ $(function(){
 				index=4;
 				$slide.css("left","-3750px");
 			}
-			$slide.animate({"left":-750*index},1000,function(){
+			$slide.animate({"left":-750*index},800,function(){
 				step=0;
 				$("#banner>div>span").eq(index-1).addClass("active")
 				.siblings().removeClass("active"); 
@@ -474,10 +301,15 @@ $(function(){
 //7. 侧边小3D轮播图
 $(function(){
 	//查找触发元素
-	var $slide = $("[data-sl=slide]");
+	var $slide1 = $("[data-sl=slide]");
+	var $slide2=$("[data-sl=slides]"); 
+	slide($slide1);
+	slide($slide2)
+	//封装3D轮播图
+	function slide($slide){
+		//创建一个json数组，每一次轮播都将数组的最后一项移动到第一项
 		var $li=$slide.children();
 		var index=1;
-		//创建一个json数组，每一次轮播都将数组的最后一项移动到第一项
 		var json=[
 			{
 				left:"0",
@@ -508,8 +340,8 @@ $(function(){
 		function picLoop(){
 			for(var i=0;i<=json.length-1;i++){
 				//左定位left等于40时执行
-				if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==40){
-					$("[data-sl=slide]>li").eq(i).animate(
+				if(parseInt($slide.children().eq(i).css("left"))==40){
+					$slide.children().eq(i).animate(
 					{
 						left:parseInt(json[i].left)-10,
 						zIndex:json[i].zIndex
@@ -523,9 +355,9 @@ $(function(){
 					},500);
 				}
 				//左定位left等于100时执行
-				if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==100){
-					$("[data-sl=slide]>li").eq(i).css("z-index",parseInt(json[i].zIndex)-10);
-					$("[data-sl=slide]>li").eq(i).animate(
+				if(parseInt($slide.children().eq(i).css("left"))==100){
+					$slide.children().eq(i).css("z-index",parseInt(json[i].zIndex)-10);
+					$slide.children().eq(i).animate(
 						{
 							top:json[i].top,
 							opacity:json[i].opacity,
@@ -538,9 +370,9 @@ $(function(){
 					},500);
 				}
 				//左定位left等于0时执行
-				if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==0){
-					$("[data-sl=slide]>li").eq(i).css("z-index",json[i].zIndex);
-					$("[data-sl=slide]>li").eq(i).animate({
+				if(parseInt($slide.children().eq(i).css("left"))==0){
+					$slide.children().eq(i).css("z-index",json[i].zIndex);
+					$slide.children().eq(i).animate({
 						left:json[i].left,
 						zIndex:json[i].zIndex
 					},1000,function(){
@@ -591,8 +423,8 @@ $(function(){
 				json.push(json.shift());
 				for(var i=0;i<=json.length-1;i++){
 					//重第一张到最后一张
-					if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==40){
-						$("[data-sl=slide]>li").eq(i).animate(
+					if(parseInt($slide.children().eq(i).css("left"))==40){
+						$slide.children().eq(i).animate(
 						{
 							left:json[i].left,
 							zIndex:json[i].zIndex
@@ -604,9 +436,9 @@ $(function(){
 							
 						},500);
 					}
-					if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==0){
-						$("[data-sl=slide]>li").eq(i).css("z-index",parseInt(json[i].zIndex)-10);
-						$("[data-sl=slide]>li").eq(i).animate(
+					if(parseInt($slide.children().eq(i).css("left"))==0){
+						$slide.children().eq(i).css("z-index",parseInt(json[i].zIndex)-10);
+						$slide.children().eq(i).animate(
 							{
 								top:json[i].top,
 								left:parseInt(json[i].left)-50,
@@ -619,9 +451,9 @@ $(function(){
 								zIndex:json[i].zIndex
 						},500);
 					}
-					if(parseInt($("[data-sl=slide]>li").eq(i).css("left"))==100){
-						$("[data-sl=slide]>li").eq(i).css("z-index",json[i].zIndex-6);
-						$("[data-sl=slide]>li").eq(i).animate({
+					if(parseInt($slide.children().eq(i).css("left"))==100){
+						$slide.children().eq(i).css("z-index",json[i].zIndex-6);
+						$slide.children().eq(i).animate({
 							left:json[i].left,
 							zIndex:json[i].zIndex
 						},1000,function(){
@@ -632,6 +464,11 @@ $(function(){
 					}
 				}
 			}
+			// left=40
+			if(parseInt($li.css("left"))==40){
+				step=0;
+			}
+			// left=100
 			if(parseInt($li.css("left"))==100){
 				index++;
 				if(index>2){
@@ -642,170 +479,7 @@ $(function(){
 			}
 		}
 	})
-})
-//重复 侧边三D轮播
-$(function(){
-	var $slide = $("[data-sl=slides]");
-		var $li=$slide.children();
-		var index=1;
-		var json=[
-			{
-				left:"0",
-				top:"0",
-				zIndex:10,
-				opacity:0.85,
-				width:"67",
-				height:"89"
-			},
-			{
-				left:"40",
-				top:"-11",
-				zIndex:20,
-				opacity:1,
-				width:"84",
-				height:"112"
-			},
-			{
-				left:"100",
-				top:"0",
-				zIndex:5,
-				opacity:0.85,
-				width:"67",
-				height:"89"
-			}
-		]
-		//动画函数
-		function picLoop(){
-			for(var i=0;i<=json.length-1;i++){
-				//重第一张到最后一张
-				if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==40){
-					$("[data-sl=slides]>li").eq(i).animate(
-					{
-						left:parseInt(json[i].left)-10,
-						zIndex:json[i].zIndex
-					},500).animate({
-						top:json[i].top,
-						width:json[i].width,
-						height:json[i].height,
-						opacity:json[i].opacity,
-						left:json[i].left,
-						zIndex:json[i].zIndex
-					},500);
-				}
-				if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==100){
-					$("[data-sl=slides]>li").eq(i).css("z-index",parseInt(json[i].zIndex)-10);
-					$("[data-sl=slides]>li").eq(i).animate(
-						{
-							top:json[i].top,
-							opacity:json[i].opacity,
-							width:json[i].width,
-							height:json[i].height,
-							zIndex:json[i].zIndex
-						},500).animate({
-							left:json[i].left,
-							zIndex:json[i].zIndex
-					},500);
-				}
-				if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==0){
-					$("[data-sl=slides]>li").eq(i).css("z-index",json[i].zIndex);
-					$("[data-sl=slides]>li").eq(i).animate({
-						left:json[i].left,
-						zIndex:json[i].zIndex
-					},1000,function(){
-						step=0;
-						$slide.next().find("li").eq(index).css("display","block")
-						.siblings().css("display","none"); 
-					});
-				}
-			}
-			
-		}
-		addClass();
-		function addClass(){
-			index++;
-			if(index>2){
-				index=0
-			}
-             //json.shift(),删除数组的第一个值，并返回第一个值
-            //json.push(json.shift())将返回的第一个值追加到数组末尾
-             json.unshift(json.pop());
-             //重新遍历
-			picLoop();     
-		} 
-		var autoSlide=setInterval(addClass,3000);
-		
-		//定时器控制
-		$slide.mouseenter(function(){
-			clearInterval(autoSlide);
-		}).mouseleave(function(){
-			autoSlide=setInterval(addClass,3000);
-		})
-	//点击事件
-	var step=0;
-	$slide.on("click","li",function(){
-		$li=$(this);
-		step++;
-		if(step==1){
-			if(parseInt($li.css("left"))==0){
-				index--;
-				if(index<0){
-					index=2
-				}
-				json.push(json.shift());
-				for(var i=0;i<=json.length-1;i++){
-					//重第一张到最后一张
-					if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==40){
-						$("[data-sl=slides]>li").eq(i).animate(
-						{
-							left:json[i].left,
-							zIndex:json[i].zIndex
-						},500).animate({
-							top:json[i].top,
-							width:json[i].width,
-							height:json[i].height,
-							opacity:json[i].opacity,
-							
-						},500);
-					}
-					if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==0){
-						$("[data-sl=slides]>li").eq(i).css("z-index",parseInt(json[i].zIndex)-10);
-						$("[data-sl=slides]>li").eq(i).animate(
-							{
-								top:json[i].top,
-								left:parseInt(json[i].left)-50,
-								opacity:json[i].opacity,
-								width:json[i].width,
-								height:json[i].height,
-								zIndex:json[i].zIndex
-							},500).animate({
-								left:json[i].left,
-								zIndex:json[i].zIndex
-						},500);
-					}
-					if(parseInt($("[data-sl=slides]>li").eq(i).css("left"))==100){
-						$("[data-sl=slides]>li").eq(i).css("z-index",json[i].zIndex-6);
-						$("[data-sl=slides]>li").eq(i).animate({
-							left:json[i].left,
-							zIndex:json[i].zIndex
-						},1000,function(){
-							step=0;
-							$slide.next().find("li").eq(index).css("display","block")
-							.siblings().css("display","none"); 
-						});
-					}
-				}
-			}
-			if(parseInt($li.css("left"))==100){
-				index++;
-				if(index>2){
-					index=0
-				}
-				json.unshift(json.pop());
-				picLoop();	
-			}
-		}
-	})
-
+	}
 })
 
 // 头部页游动态 页游
