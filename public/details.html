@@ -75,7 +75,7 @@
     <!--1. 详情主体 252-->
     <div class="book-details-wrap">
         <!-- 书籍信息 -->
-        <div class="book-info clearfix">
+        <div class="book-info clearfix" id="book-info">
             <!-- 图 -->
             <div class="book-img-wrap">
                 <a href="javascript:;">
@@ -168,8 +168,7 @@
                 <!--1. 详细信息 -->
                 <div class="book-info-details">
                     <!-- 简介 -->
-                    <p class="book-intro"> 青梅竹马的同桌竟然成了大明星，又凶又萌。<br>
-                        近卫军冲锋右营：92411492</p>
+                    <p class="book-intro" id="book-intro"></p>
                     <!-- 获得荣誉 -->
                     <div class="honor clearfix">
                         <div>荣誉动态</div>
@@ -391,7 +390,7 @@
                                 <img src="./img/details/0.jpg" alt="">
                                 <span>lv.3</span>
                             </div>
-                            <a class="auther">柳下挥</a>
+                            <a class="auther" id="author"></a>
                         </div>
                         <!-- 作品总数统计 557-->
                         <div class="work-state">
@@ -404,7 +403,7 @@
                                 <dd>
                                     <img src="./img/details/bianqian.png" alt="">
                                     <p>累计字数</p>
-                                    <em>65.70万</em>
+                                    <em><span id="right-word-number"></span> 万</em>
                                 </dd>
                                 <dd>
                                     <img src="./img/details/tea.png" alt="">

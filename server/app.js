@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const index=require('./routes/index_route.js');
+const details = require("./routes/details_route.js");
 var app = express();
 //连接服务器
 app.listen(3000);
@@ -11,3 +12,4 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false}));
 //将/index路由器挂载到index下
 app.use('/index',index);
+app.use('/details',details);

@@ -57,7 +57,7 @@ CREATE TABLE novel_details(
 	author VARCHAR(12),			 #作者
 	img VARCHAR(50),			 #图片路径
 	stats VARCHAR(12),			 #状态
-	label VARCHAR(8),			 #标签
+	label VARCHAR(24),			 #标签
 	word_count DECIMAL(10,2),	 #字数
 	read_passage DECIMAL(10,2),  #阅文总点击数
 	vip_click DECIMAL(10,2),     #会员点击

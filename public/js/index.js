@@ -4,12 +4,14 @@ $(function(){
         get:"get",
         dataType:"json",
         success:function(data){
+            //参数解构
+            var {banners,recs} = data;
             //console.log(data);
             // 轮播图
             var html="";
             var span="";
             // 添加图片  
-            for(var p of data){
+            for(var p of banners){
                 html+=`
                 <li>
                     <a href="${p.href}">
@@ -19,7 +21,7 @@ $(function(){
                 // 添加书名
                 span+=`<span>${p.bname}</span>`;
             }
-            var $first=data[data.length-1];
+            var $first=banners[banners.length-1];
             // 将轮播图代码片段挂载到ul下
             $("#banner>ul").html(`
             <li>
@@ -29,7 +31,106 @@ $(function(){
             </li>`+html);
             // 将span挂载到div.btn下
             $("#banner>div.btn").html(span).eq(1).addClass("active");
-            //
+
+            //强力推荐数据
+            $("#recommend").html(`
+                <div class="main-index">
+                    <div class="top-box-left">
+                        <div class="r-left">
+                            <a href="javascript:;">
+                                <img src="${recs[0].img}" alt="">
+                            </a> 
+                        </div>
+                        <div class="r-right">
+                            <a href="${recs[0].href}" target="blank">${recs[0].rname}</a>
+                            <p>${recs[0].detail}</p>
+                            <div>
+                                <a href="javascript:;">${recs[0].author}</a>
+                                <a class="mr-right" href="javascript:;">${recs[0].label}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-box-right">
+                        <div class="r-left">
+                            <a href="javascript:;">
+                                <img src="${recs[1].img}" alt="">
+                            </a> 
+                        </div>
+                        <div class="r-right">
+                            <a href="${recs[1].href}" target="blank">${recs[1].rname}</a>
+                            <p>${recs[1].detail}</p>
+                            <div>
+                                <a href="javascript:;">${recs[1].author}</a>
+                                <a class="mr-right" href="javascript:;">${recs[1].label}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-index">
+                    <div class="top-box-left">
+                        <div class="r-left">
+                            <a href="javascript:;">
+                                <img src="${recs[2].img}" alt="">
+                            </a> 
+                        </div>
+                        <div class="r-right">
+                            <a href="${recs[2].href}" target="blank">${recs[2].rname}</a>
+                            <p>${recs[2].detail}</p>
+                            <div>
+                                <a href="javascript:;">${recs[2].author}</a>
+                                <a class="mr-right" href="javascript:;">${recs[2].label}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-box-right">
+                        <div class="r-left">
+                            <a href="javascript:;">
+                                <img src="${recs[3].img}" alt="">
+                            </a> 
+                        </div>
+                        <div class="r-right">
+                            <a href="${recs[3].href}" target="blank">${recs[3].rname}</a>
+                            <p>${recs[3].detail}</p>
+                            <div>
+                                <a href="javascript:;">${recs[3].author}</a>
+                                <a class="mr-right" href="javascript:;">${recs[3].label}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-index">
+                    <div class="top-box-left">
+                        <div class="r-left">
+                            <a href="javascript:;">
+                                <img src="${recs[4].img}" alt="">
+                            </a> 
+                        </div>
+                        <div class="r-right">
+                            <a href="${recs[4].href}" target="blank">${recs[4].rname}</a>
+                            <p>${recs[4].detail}</p>
+                            <div>
+                                <a href="javascript:;">${recs[4].author}</a>
+                                <a class="mr-right" href="javascript:;">${recs[4].label}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-box-right">
+                        <div class="r-left">
+                            <a href="javascript:;">
+                                <img src="${recs[5].img}" alt="">
+                            </a> 
+                        </div>
+                        <div class="r-right">
+                            <a href="${recs[5].href}" target="blank">${recs[5].rname}</a>
+                            <p>${recs[5].detail}</p>
+                            <div>
+                                <a href="javascript:;">${recs[5].author}</a>
+                                <a class="mr-right" href="javascript:;">${recs[5].label}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `)
 
 
 
