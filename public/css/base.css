@@ -13,6 +13,7 @@ td, th, ul, p, a*/
 }
 body{
 	font: 14px/25px PingFangSC-Regular,'-apple-system',Simsun;
+	color:#262626;
 }
 input{
 	outline:0;
@@ -23,6 +24,8 @@ ul{
 a{
 	cursor: pointer;
 	text-decoration:none;
+    color: #262626;
+    outline: 0;
 	transition: all 0.3s linear;
 }
 a:visited{
@@ -46,4 +49,8 @@ a:hover{
 }
 .text-title{
 	font-family: "Microsoft YaHei",Helvetica,Arial,sans-serif;
+}
+p{
+	word-wrap:break-word;
+	word-break: break-all;
 }

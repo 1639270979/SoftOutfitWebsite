@@ -283,11 +283,11 @@
 }
 /* 文本字体 */
 .main-one .main-r-body li span{
-    font-size:14px;
+    font:14px/19px PingFangSC-Regular,'-apple-system',Simsun;
     display:inline-block;
     float:left;
-    width:19px;
-    height:19px;
+    width:18px;
+    height:18px;
     text-align: center;
     color:#a9a1b7;
     margin:7px 9px 0 0;

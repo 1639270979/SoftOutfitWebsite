@@ -5,8 +5,7 @@ $(function(){
         dataType:"json",
         success:function(data){
             //参数解构
-            var {banners,recs} = data;
-            //console.log(data);
+            var {banners,recs,clas,news,wus} = data;
             // 轮播图
             var html="";
             var span="";
@@ -14,7 +13,7 @@ $(function(){
             for(var p of banners){
                 html+=`
                 <li>
-                    <a href="${p.href}">
+                    <a href="${p.href}" target="blank">
                         <img src="${p.src}" alt="">
                     </a>
                 </li>`;
@@ -25,19 +24,109 @@ $(function(){
             // 将轮播图代码片段挂载到ul下
             $("#banner>ul").html(`
             <li>
-                <a href="${$first.href}">
+                <a href="${$first.href}" target="blank">
                     <img src="${$first.src}" alt="">
                 </a>
             </li>`+html);
             // 将span挂载到div.btn下
             $("#banner>div.btn").html(span).eq(1).addClass("active");
 
+            //经典完本数据
+            
+            $html=$(`
+                <ul class="banner-img" data-sl="slide">
+                    <li class="slide-left">
+                        <a href="${clas[0].href}" target="blank"><img src="${clas[0].img}" alt=""></a>
+                    </li>
+                    <li class="slide-center">
+                        <a href="${clas[1].href}" target="blank"><img src="${clas[1].img}" alt=""></a>
+                    </li>
+                    <li class="slide-right">
+                        <a href="${clas[2].href}" target="blank"><img src="${clas[2].img}" alt=""></a>
+                    </li>
+                </ul>
+            `);
+            $("#banner-l").prepend($html);
+            var html="";
+            for(var i=0;i<=2;i++){
+                html+=`<li>
+                    <h3><a href="${clas[i].href}" target="blank">${clas[i].cname} </a></h3> 
+                    <a class="auther" href="${clas[i].href}">${clas[i].author}</a>
+                    <p>
+                        <a href="javascript:;"> 修真文明</a>|
+                        <span>${clas[i].word_count}万字</span>
+                    </p>
+                    <span>
+                    ${clas[i].detail}
+                    </span>
+                    <!-- main-one  1楼 左 立即略读按钮 -->
+                    <a class="d-box" href="${clas[i].href}" target="blank">立即阅读</a>
+                </li>`
+            }
+            $("#banner-l>div>ul").html(html);
+            $("#banner-l>div>ul>li").eq(2).addClass("show");
+
+            //新书推荐
+            var html="";
+            for(var i=0;i<3;i++){
+                html+=`
+                <li>
+                    <span class="main-r-no${i+1}">${i+1}</span>
+                    <a class="main-rb-a" href="${news[i].href}" target="blank">${news[i].nname}</a>
+                    <a href="javascript:;">${news[i].author}</a>
+                </li>
+                `;
+            }
+            var elem="";
+            for(var i=3;i<15;i++){
+                elem+=`
+                <li>
+                    <span>${i+1}</span>
+                    <a class="main-rb-a" href="${news[i].href}" target="blank">${news[i].nname}</a>
+                    <a href="javascript:;">${news[i].author}</a>
+                </li>
+                `;
+            }
+            $("#main-r-body>ul").html(html + elem);
+            
+            //三楼排行榜 武数据
+            var html="";
+            for(var i=0;i<5;i++){
+                html+=`
+                <li>
+                    <div class="book-box">
+                        <a href="${wus[i].href}" target="blank">
+                            <img src="${wus[i].img}" alt="">
+                        </a>
+                    </div>
+                    <p><a href="${wus[i].href}" target="blank">${wus[i].wname}</a></p>	
+                    <p><a href="javascript:;">${wus[i].author}</a></p>	
+                </li>
+                `;
+            }
+            $("[data-toggle=two-slide]>.slide-img1").html(html);
+            var elem="";
+            for(var i=5;i<10;i++){
+                elem+=`
+                <li>
+                    <div class="book-box">
+                        <a href="${wus[i].href}" target="blank">
+                            <img src="${wus[i].img}" alt="">
+                        </a>
+                    </div>
+                    <p><a href="${wus[i].href}" target="blank">${wus[i].wname}</a></p>	
+                    <p><a href="javascript:;">${wus[i].author}</a></p>	
+                </li>
+                `;
+            }
+            $("[data-toggle=two-slide]>.slide-img2").html(elem);
+            
             //强力推荐数据
             $("#recommend").html(`
                 <div class="main-index">
                     <div class="top-box-left">
                         <div class="r-left">
-                            <a href="javascript:;">
+                            <a href="${recs[0].href}" target="blank">
                                 <img src="${recs[0].img}" alt="">
                             </a> 
                         </div>
@@ -52,7 +141,7 @@ $(function(){
                     </div>
                     <div class="top-box-right">
                         <div class="r-left">
-                            <a href="javascript:;">
+                            <a href="${recs[1].href}" target="blank">
                                 <img src="${recs[1].img}" alt="">
                             </a> 
                         </div>
@@ -69,7 +158,7 @@ $(function(){
                 <div class="main-index">
                     <div class="top-box-left">
                         <div class="r-left">
-                            <a href="javascript:;">
+                            <a href="${recs[2].href}" target="blank">
                                 <img src="${recs[2].img}" alt="">
                             </a> 
                         </div>
@@ -84,7 +173,7 @@ $(function(){
                     </div>
                     <div class="top-box-right">
                         <div class="r-left">
-                            <a href="javascript:;">
+                            <a href="${recs[3].href}" target="blank">
                                 <img src="${recs[3].img}" alt="">
                             </a> 
                         </div>
@@ -101,7 +190,7 @@ $(function(){
                 <div class="main-index">
                     <div class="top-box-left">
                         <div class="r-left">
-                            <a href="javascript:;">
+                            <a href="${recs[4].href}" target="blank">
                                 <img src="${recs[4].img}" alt="">
                             </a> 
                         </div>
@@ -116,7 +205,7 @@ $(function(){
                     </div>
                     <div class="top-box-right">
                         <div class="r-left">
-                            <a href="javascript:;">
+                            <a href="${recs[5].href}" target="blank">
                                 <img src="${recs[5].img}" alt="">
                             </a> 
                         </div>
@@ -131,11 +220,10 @@ $(function(){
                     </div>
                 </div>
             `)
+            //经典完本数据
 
-
-
-
-
+            
+            
 
             //1. 首轮轮播
             ///*
