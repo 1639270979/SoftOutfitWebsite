@@ -1,3 +1,13 @@
+@media screen and (max-width:1199px){
+	#headerPage{
+		width:1200px;
+	}
+}
+@media screen and (min-width:1200px){
+	#headerPage{
+		width:100%;
+	}
+}
 /* 顶部外包裹 */
 .header{
 	width:100%;
@@ -180,7 +190,7 @@
 	font-family: PingFangSC-Regular,'-apple-system',Simsun;
     font-size: 12px;
     margin-bottom: 8px;
-    color: #bf2c24;
+    color: #ed4259;
 }
 /* 列表底部边框 */
 .header .right-nav .web-game .web-game-list ul{

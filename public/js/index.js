@@ -233,7 +233,6 @@ $(function(){
                 var $slide=$("[data-toggle=slide]");
                 var $prev=$("[data-toggle=prev]");
                 var $next=$("[data-toggle=next]");
-                var timer = setInterval(picLoop,3000);
                 //声明步数变量 用于控制步数
                 var step=0;
                 var index = 1;
@@ -250,6 +249,7 @@ $(function(){
                         .siblings().removeClass("active");
                     });
                 }
+                var timer = setInterval(picLoop,3000);
                 //定时器的控制
                 $banner.hover(function(){
                     clearInterval(timer);

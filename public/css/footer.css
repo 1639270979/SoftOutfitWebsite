@@ -1,4 +1,13 @@
-
+@media screen and (max-width:1199px){
+	.footer-wrap{
+		width:1200px;
+	}
+}
+@media screen and (min-width:1200px){
+	.footer-wrap{
+		width:100%;
+	}
+}
 /* footer */
 .footer{
 	width:100%;

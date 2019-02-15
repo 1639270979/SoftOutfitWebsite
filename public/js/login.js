@@ -5,7 +5,6 @@ $(function(){
 	$("[data-toggle=login-box]").click(function(){
 		var $id=$(this).attr("data-toggle");
 		var $login=$("#"+$id);
-		console.log($login);
 		$login.css("display","block");
 	})
 	//2.关闭登录框

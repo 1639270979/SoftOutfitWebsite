@@ -1,0 +1,66 @@
+<!--五。 登陆框 -->
+<div class="mask" id="login-box">
+		<!-- 登陆 -->
+		<div class="login">
+			<div class="login-box">
+				<!-- 关闭登录按钮 -->
+				<em class="close-login-box" data-toggle="close"><i class="iconfont ">X</i></em>
+				<div class="login-top" data-toggle="switch">
+					<span class="visible" data-target="#login-body">账号登陆</span>
+					<span data-target="#qq-login-wrap">QQ登陆</span>
+					<span data-target="#weixin">微信登陆</span>
+				</div>
+				<!-- 正常登录 -->
+				<div>
+					<div class="login-body" id="login-body">
+						<div class="uname">
+							<em class="iconfont icon-huiyuandenglu"></em> 
+							<input type="text" placeholder="手机/邮箱/用户名">
+						</div>
+						<div class="pwd">
+							<em class="iconfont icon-mima"></em> 
+							<input type="password" placeholder="密码">
+						</div>
+						<div class="auto-login-box">
+							<input type="checkbox" id="auto-login">
+							<label for="auto-login">自动登录</label>
+							<a href="javascript:;">忘记密码</a>
+						</div>
+						<div class="login-wrap">
+							<a href="javascript:;">登录</a>
+						</div>
+						<div class="reg-wrap">
+							<a class="phone" href="javascript:;">手机验证码登录</a>
+							<span>|</span>
+							<a class="free-reg" href="javascript:;">免费注册</a>
+						</div>
+						<div class="many-login">
+							<div>
+								<a href="javascript:;"><i class="iconfont icon-baidu1"></i></a> 
+								<a href="javascript:;"><i class="iconfont icon-zhifubao2"></i></a>
+								<a href="javascript:;"><i class="iconfont icon-weibo2"></i></a>
+							</div>
+							<a data-toggle="many-login" href="javascript:;">更多登录方式</a>
+						</div>
+					</div>
+					<!-- qq登录 -->
+					<div class="qq-login-wrap" id="qq-login-wrap">
+						<div>
+							<p><img src="./img/login/qq.png"></p>
+						</div>
+						<p>您将转跳至指定页面进行登录操作。</p>
+						<a href="javascript:;">前往QQ</a>
+					</div>
+					<!-- 微信登陆 -->
+					<div class="weixin" id="weixin">
+						<div>
+							<p>
+								<img src="./img/login/weixin.jpg" alt="">
+							</p>
+						</div>
+						<p>请使用微信扫描二维码登录</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

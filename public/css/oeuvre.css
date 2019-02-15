@@ -1,3 +1,4 @@
+
 .all-pro-wrap{
     width:1200px;
     margin:0 auto;
@@ -172,9 +173,15 @@
 /* 作品列表 */
 /* 图片 */
 .all-pro-wrap .all-book-list li{
-    width:372px;
+    width:477px;
     float:left;
+    height: 162px;
+    padding-top: 25px;
+    border-top: 1px solid #e6e6e6;
 } 
+.all-pro-wrap .all-book-list .border0{
+    border-top:0;
+}
 .all-pro-wrap .all-book-list .book-img-box{
     position: relative;
     z-index: 3;
@@ -195,7 +202,7 @@
 .all-pro-wrap .all-book-list .book-img-info{
     float:left;
     margin-top: 5px;
-    width:240px;
+    width:343px;
 }
 .all-pro-wrap .all-book-list .book-img-info h3{
     font: 18px/24px PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
@@ -212,7 +219,7 @@
     float: left;
     width: 14px;
     height: 14px;
-    margin: 1px 5px 0 0;
+    margin: 1px 8px 0 0;
 }
 .all-pro-wrap .all-book-list .book-img-info .info em{
     font-size: 12px;
@@ -226,6 +233,8 @@
     line-height: 16px;
     float: left;
     color: #a6a6a6;
+    font-family: PingFangSC-Regular,'-apple-system',Simsun;
+    font-size: 12px;
 }
 .all-pro-wrap .all-book-list .book-img-info .info i{
     font-family: PingFangSC-Regular,'-apple-system',Simsun;
@@ -247,10 +256,13 @@
 .all-pro-wrap .all-book-list .book-img-info .count{
     line-height: 22px;
     font-family: PingFangSC-Regular,'-apple-system',Simsun;
-    font-size: 12px;
+    font-size: 13px;
     color: #a6a6a6;
 }
-
+.all-pro-wrap .all-book-list .book-img-info .count span{
+    height:22px;
+    line-height: 22px;
+}
 
 
 
