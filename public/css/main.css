@@ -60,6 +60,11 @@
 	position:absolute;
     box-shadow: 0 1px 8px #7f7f7f;
 }
+.main-one-left .banner-img li a{
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
 .main-one-left .banner-img img{
     width:100%;
     height:100%;

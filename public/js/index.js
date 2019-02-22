@@ -34,19 +34,18 @@ $(function(){
             //经典完本数据
             
             $html=$(`
-                <ul class="banner-img" data-sl="slide">
-                    <li class="slide-left">
-                        <a href="${clas[0].href}" target="blank"><img src="${clas[0].img}" alt=""></a>
-                    </li>
-                    <li class="slide-center">
-                        <a href="${clas[1].href}" target="blank"><img src="${clas[1].img}" alt=""></a>
-                    </li>
-                    <li class="slide-right">
-                        <a href="${clas[2].href}" target="blank"><img src="${clas[2].img}" alt=""></a>
-                    </li>
-                </ul>
+                <li class="slide-left">
+                    <a href="${clas[0].href}" target="blank"><img src="${clas[0].img}" alt=""></a>
+                </li>
+                <li class="slide-center">
+                    <a href="${clas[1].href}" target="blank"><img src="${clas[1].img}" alt=""></a>
+                </li>
+                <li class="slide-right">
+                    <a href="${clas[2].href}" target="blank"><img src="${clas[2].img}" alt=""></a>
+                </li>
             `);
-            $("#banner-l").prepend($html);
+            $("[data-sl=slide]").prepend($html);
+            
             var html="";
             for(var i=0;i<=2;i++){
                 html+=`<li>
@@ -349,7 +348,7 @@ $(function(){
                 //封装定时器函数
                 function task(){
                     var $start=new Date();
-                    var $end=new Date("2019/2/4 00:00:00");
+                    var $end=new Date("2019/4/5 00:00:00");
                     var $s=parseInt(($end-$start)/1000);
                     if($s>0){
                         //获取天数
@@ -368,7 +367,7 @@ $(function(){
                         
                     }
                     else{
-                        $("[data-toggle=timer]").html("欢度元旦");
+                        $("[data-toggle=timer]").html("欢度清明");
                         clearInterval($timer);
                     }
                 }
@@ -636,11 +635,15 @@ $(function(){
                     })
                 //点击事件
                 var step=0;
+                // 解决点击3D轮播图没有点击事件问题
+                var $href="";
                 $slide.on("click","li",function(){
                     $li=$(this);
                     step++;
                     if(step==1){
                         if(parseInt($li.css("left"))==0){
+                            $href=$li.children("a").attr("href");
+                            $li.children("a").attr("href","javascript:;");
                             index--;
                             if(index<0){
                                 index=2
@@ -691,10 +694,16 @@ $(function(){
                         }
                         // left=40
                         if(parseInt($li.css("left"))==40){
+                            if($href!=null){
+                               $li.children("a").attr("href",$href) 
+                            }
+                            
                             step=0;
                         }
                         // left=100
                         if(parseInt($li.css("left"))==100){
+                            $href=$li.children("a").attr("href");
+                            $li.children("a").attr("href","javascript:;")
                             index++;
                             if(index>2){
                                 index=0
