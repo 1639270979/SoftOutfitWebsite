@@ -1,0 +1,11 @@
+//以1136px的设计稿为基准值
+.rem(@name, @px) {
+	@{name}:@px / 113.6 * 1rem;
+}
+//边框
+.border(@name,@size,@c) {
+	@{name}: @size / 113.6 * 1rem solid @c;
+}
+.border-radius(@size) {
+	border-radius: @size / 113.6 * 1rem;
+}

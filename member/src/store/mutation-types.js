@@ -1,0 +1,1 @@
+export const ALERT_PROMPT_SHOW = 'ALERT_PROMPT_SHOW';//alertPrompt显示隐藏

@@ -1,0 +1,113 @@
+/* @font-face {
+	font-family: 'SourceHanSans';
+	src: url("SourceHanSans-Regular/SourceHanSans-Regular.ttf");
+} */
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-touch-callout: none;
+
+	-webkit-touch-callout:none; /*阻止长按图片之后呼出菜单提示复制的行为*/
+
+	-webkit-user-select:none; /*webkit浏览器*/
+	user-select:none;
+
+	/* -webkit-user-select: text;
+	user-select: text; */
+
+	-webkit-text-size-adjust: 100%;	/*禁用Webkit内核浏览器的文字大小调整功能*/
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form {
+	margin: 0;
+	padding: 0;
+}
+ol,ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none
+}
+.scroll {
+  position: fixed;
+  width: 100%;
+}
+input, textarea {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	resize: none;
+	-webkit-user-select:auto; /*webkit浏览器*/
+}
+a {
+	color: #323232;
+	text-decoration: none;
+	outline: 0;
+	-webkit-tap-highlight-color: transparent;	/*避免点击a标签或者注册了click事件的元素时产生高亮*/
+	-webkit-touch-callout: none;	/*禁止弹出路径框*/
+}
+a:hover {
+	text-decoration: none
+}
+html,body {
+	width: 100%;
+	font-family: PingFangSC-Regular, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	letter-spacing: .5px;
+}
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.noScroll {
+	height: 17.75rem;
+	overflow: hidden;
+}
+.iphonex-pb{
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
+}
+#app {
+	max-width: 640px;
+	margin: 0 auto;
+}
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1530604182395'); /* IE9*/
+  src: url('iconfont.eot?t=1530604182395#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAVcAAsAAAAAB8wAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kiGY21hcAAAAYAAAABlAAABnM9Sa2hnbHlmAAAB6AAAAXgAAAGU0q4TxmhlYWQAAANgAAAALwAAADYR4dsiaGhlYQAAA5AAAAAcAAAAJAfeA4VobXR4AAADrAAAABAAAAAQD+kAAGxvY2EAAAO8AAAACgAAAAoBQACgbWF4cAAAA8gAAAAfAAAAIAETAF1uYW1lAAAD6AAAAUUAAAJtPlT+fXBvc3QAAAUwAAAAKQAAADpT+jjceJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/sU4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVDybxdzwv4EhhrmBoQEozAiSAwAvcA0IeJzFkNENgCAMRK8UDTGO4qdxIL8cgVkYkDXwWvhhAo680l4uKQHABkDJRSIgHwSml664rzjcj3g4J57AO1etpbWpM4knkndqSdmxTLJu9azT6z0m++884BOrdsyvpYPwA57SEecAAAB4nB2QPUvDUBSGz7nX3NvaJDVJk9umrW0abRS1YNOPQbRaXBRBwaE6Km5i1yKKdBEUHAQRunQRQVwE964K/gFXEf0bVhNfzvuMB54XJIDfTzqgSTBgCuZhFbYAkM1gQSVZdLxKicyg6UimSKjUcz2Hu4USXURRYAmrXKsUBeMsjiqOo++Ua16JeFitLJEFLFtZxFTa3tYnMzq9xtGkN34+XCd3aObcTHxpbrg220iU80akI+t6StevIkySIoSMxFU8ElZUio6y4b0Ut81BbprkUE559saukk/rexeVdnZSRBG7XTTSefWhodlacKe2ZegpPqZEkrbiTiSw8x1LGnK2+AVBSAi6Qt4hBgKgHhrUMXAocC108bAYWIlnpmiMHAbkXFPYzy0LuMk1mZFuyJ99JmucdEMC/v9UySukg92ob7pmWLfqVv2w1LeEX681kKpPJ71e77Lf75893hzYNMrrNfIy/Gg1d46Pd5otdN6WhThqwx+Ty0IteJxjYGRgYADi3ssMh+L5bb4ycLMwgMD1RO9pCPr/QxYGZgkgl4OBCSQKACjsCg4AeJxjYGRgYG7438AQw8IAAkCSkQEVsAAARwoCbQQAAAAD6QAABAAAAAQAAAAAAAAAAHYAoADKAAB4nGNgZGBgYGEIZGBlAAEmIOYCQgaG/2A+AwAREgFxAHicZY9NTsMwEIVf+gekEqqoYIfkBWIBKP0Rq25YVGr3XXTfpk6bKokjx63UA3AejsAJOALcgDvwSCebNpbH37x5Y08A3OAHHo7fLfeRPVwyO3INF7gXrlN/EG6QX4SbaONVuEX9TdjHM6bCbXRheYPXuGL2hHdhDx18CNdwjU/hOvUv4Qb5W7iJO/wKt9Dx6sI+5l5XuI1HL/bHVi+cXqnlQcWhySKTOb+CmV7vkoWt0uqca1vEJlODoF9JU51pW91T7NdD5yIVWZOqCas6SYzKrdnq0AUb5/JRrxeJHoQm5Vhj/rbGAo5xBYUlDowxQhhkiMro6DtVZvSvsUPCXntWPc3ndFsU1P9zhQEC9M9cU7qy0nk6T4E9XxtSdXQrbsuelDSRXs1JErJCXta2VELqATZlV44RelzRiT8oZ0j/AAlabsgAAAB4nGNgYoAALgbsgIWRiZGZkYWRlYGxgjU5J784lSUrMy+VgQEAJ5kEYQAAAA==') format('woff'),
+  url('iconfont.ttf?t=1530604182395') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1530604182395#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before { content: "\e69a"; }
+
+.icon-jine:before { content: "\e603"; }
+
+.icon-icon10:before { content: "\e64a"; }

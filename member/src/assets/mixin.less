@@ -1,0 +1,16 @@
+//以640px的设计稿为基准值
+.rem(@name, @px) {
+	@{name}:@px / 64 * 1rem;
+}
+//边框
+.border(@name,@size,@c) {
+	@{name}: @size / 64 * 1rem solid @c;
+}
+.border-radius(@size) {
+	border-radius: @size / 64 * 1rem;
+}
+.hr.scale-half {
+    height: 1px;
+    transform: scaleY(0.5);
+    transform-origin: 50% 100%;
+}

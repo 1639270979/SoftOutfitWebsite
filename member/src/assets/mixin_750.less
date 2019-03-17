@@ -1,0 +1,17 @@
+//以750px的设计稿为基准值
+.rem(@name, @px) {
+	@{name}:@px / 75 * 1rem;
+}
+//边框
+.border(@name,@size,@c) {
+	@{name}: @size / 75 * 1rem solid @c;
+}
+.border-radius(@size) {
+	border-radius: @size / 75 * 1rem;
+}
+.font-family-m() {
+	font-family: PingFangSC-Medium, sans-serif;
+}
+.font-family-r() {
+	font-family: PingFangSC-Regular, sans-serif;
+}

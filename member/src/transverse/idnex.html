@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="js/flexible.js"></script>
+	<script src="js/fastclick.js"></script>
+</head>
+<body>
+	<div class="idmei">
+		<div class="bg"></div>
+		<div class="top">
+			<div class="btn-left">
+				<span class="icon-left"></span>
+			</div>
+			<span class="logo"></span>
+		</div>
+		<!-- <div class="left">效果图中的商品</div>
+		<div class="left-list">
+			<div class="list">
+				<ul>
+					<li>
+						<div>
+							<label for="s1">
+								<div class="checkbox">
+									<input type="checkbox" id="s1">
+									<span class="icon-check"></span>
+								</div>
+							</label>
+						</div>
+						<div class="info">
+							<div class="img">
+								<img src="image/bg1.jpg">
+							</div>
+							<div class="content">
+								<p class="title">红星美凯龙 - 沙发</p>
+								<div class="number">
+									<span class="money">¥2400.00</span>
+									<div class="num fr">
+										<div class="del"></div>
+										<div class="n">1</div>
+										<div class="add"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label for="s2">
+								<div class="checkbox">
+									<input type="checkbox" id="s2">
+									<span class="icon-check"></span>
+								</div>
+							</label>
+						</div>
+						<div class="info">
+							<div class="img">
+								<img src="image/bg1.jpg">
+							</div>
+							<div class="content">
+								<p class="title">红星美凯龙 - 沙发</p>
+								<div class="number">
+									<span class="money">¥2400.00</span>
+									<div class="num fr">
+										<div class="del"></div>
+										<div class="n">1</div>
+										<div class="add"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="btn-bottom">
+				<div class="fl">
+					<label for="s">
+						<div class="checkbox">
+							<input type="checkbox" id="s3">
+							<span class="icon-check"></span>
+						</div>
+						<div class="txt">全选</div>
+					</label>
+				</div>
+				<div class="btn fr">加入购物车</div>
+			</div>
+		</div> -->
+		<div class="cart-icon"></div>
+		<div class="cart-list">
+			<div class="list">
+				<ul>
+					<li>
+						<div class="cart-left">
+							<div class="check">
+								<input type="checkbox" class="cart-check" checked>
+								<span></span>
+							</div>
+							<div class="img"><img src="image/bg1.jpg"></div>
+						</div>
+						<div class="cart-content">
+							<p class="p1">创意人物摆件</p>
+							<p class="p2">¥2400</p>
+							<div class="num-btn">
+								<span class="left-del"></span>
+								<span class="right-add"></span>
+								<div class="txt">12</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="bottom-list-box"></div>
+			<div class="bottom-list">
+				<div class="bottom-check">
+					<input type="checkbox" class="cartAll" checked>
+					<span></span>
+					<font>全选</font>
+				</div>
+				<div class="add-cart-btn">加入购物车</div>
+			</div>
+		</div>
+		<div class="cart-close"></div>
+		<div class="right-list">
+			<ul>
+				<li class="actin"><a href="">客厅</a></li>
+				<li><a href="">餐厅</a></li>
+				<li><a href="">卧室</a></li>
+			</ul>
+		</div>
+		<div class="repeat-layer">
+			<div class="popout">
+				<div class="list">
+					<p class="cart-title">以下商品已存在于您的购物车，是否继续添加？</p>
+					<ul>
+						<li>
+							<div class="cart-left">
+								<div class="check">
+									<input type="checkbox" class="cart-check">
+									<span></span>
+								</div>
+								<div class="img"><img src="image/problem_1.jpg"></div>
+							</div>
+							<div class="cart-content">
+								<p class="p1">创意人物摆件</p>
+								<p class="p2">¥2400</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="layer-bottom">
+					<span>取消</span>
+					<span class="addCart">确认并加入购物车</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+<script>
+	//显示列表
+	$('.cart-icon').on('click',function() {
+		$('.cart-close').show();
+		$('.cart-list').show();
+		$('.cart-icon').hide();
+	});
+
+	//全选按钮
+	$('.cartAll').on('click',function () {
+		var isCheck = $(this).is(':checked');
+		$('.cart-check').prop('checked',isCheck);
+	});
+
+	//加减按钮 -- ‘+’
+    $('.cart-list .right-add').on('click',function () {
+        var num   = $(this).parent().find('.txt').html() / 1;
+        var addnum = num + 1;
+        $(this).parent().find('.txt').html(addnum)
+    });
+
+    //加减按钮 -- ‘-’
+    $('.cart-list .left-del').on('click',function () {
+        var num   = $(this).parent().find('.txt').html() / 1;
+        var delnum = num - 1 > 0 ? num - 1 : 1;
+        $(this).parent().find('.txt').html(delnum)
+    });
+
+    //加入购物车
+    $('.add-cart-btn').on('click',function () {
+        $('.cart-close').hide();
+		$('.cart-list').hide();
+		$('.cart-icon').show();
+    });
+
+    //关闭
+    $('.cart-close').on('click',function() {
+		$(this).hide();
+		$('.cart-list').hide();
+		$('.cart-icon').show();
+    })
+</script>
+</body>
+</html>
