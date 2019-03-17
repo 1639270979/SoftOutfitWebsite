@@ -5,7 +5,10 @@ const pool=require("../pool");
 router.get("/",(req,res)=>{
 	var output={
 		banners:[],
-		recs:[]
+		recs:[],
+		clas:[],
+		news:[],
+		wus:[]
 	}
 	var sql="SELECT * FROM novel_banner";
 	res.writeHead(200,{
@@ -18,9 +21,36 @@ router.get("/",(req,res)=>{
 		var sql="SELECT * FROM novel_recommend";
 		pool.query(sql,[],(err,result)=>{
 			if(err) console.log(err);
-			output.recs=result;
-			res.write(JSON.stringify(output));
-			res.end();
+			if(result){
+				output.recs=result;
+				var sql="SELECT * FROM novel_classic";
+				pool.query(sql,[],(err,result)=>{
+					if(err) console.log(err);
+					if(result){
+						output.clas=result;
+						var sql = "SELECT * FROM novel_new_book";
+						pool.query(sql,[],(err,result)=>{
+							if(err) console.log(err);
+							if(result){
+								output.news=result;
+								var sql="SELECT * FROM novel_wu";
+								pool.query(sql,[],(err,result)=>{
+									if(err) console.log(err);
+									output.wus=result;
+									res.write(JSON.stringify(output));
+									res.end();
+								})
+							}
+						})
+					}else{
+						res.write(JSON.stringify(output));
+						res.end();
+					}
+				})
+			}else{
+				res.write(JSON.stringify(output));
+				res.end();
+			}
 		})
 	})
 })
